@@ -72,7 +72,7 @@ const Content = () => {
             <br />
             SCO Number 8,Vatika Market Place-1, Sector 83
             <br />
-            Gurugram, Haryana 122012
+            Gurugram, Haryana - 122012
           </p>
           <div className="mt-6 space-y-3">
             <p>
