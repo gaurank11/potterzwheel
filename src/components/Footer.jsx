@@ -60,7 +60,7 @@ const Footer1 = () => {
               <span className="font-bold">Office Address:</span><br />
               2nd Floor,<br />
               SCO Number 8,Vatika Market Place-1<br />
-              Sector 83, Gurugram, Haryana 122012<br />
+              Sector 83, Gurugram, Haryana - 122012<br />
             </p>
             <p className="text-sm text-gray-400 mt-4">
               <span className="font-bold">Phone:</span> +91-9810360300<br />
