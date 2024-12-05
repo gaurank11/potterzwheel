@@ -64,7 +64,7 @@ const Content = () => {
             fontFamily: "NOURD Bold, sans-serif",
           }}
         >
-          <h2 className="text-3xl font-bold mb-4 text-blue-300">Reach Us</h2>
+          <h2 className="text-3xl font-bold mb-4 text-white">Reach Us</h2>
           <p>
             Office Address:
             <br />
@@ -76,7 +76,7 @@ const Content = () => {
           </p>
           <div className="mt-6 space-y-3">
             <p>
-              <span className="text-lg font-bold text-blue-400">Phone:</span>{" "}
+              <span className="text-lg font-bold text-white">Phone:</span>{" "}
               <a
                 href="tel:+919811092501"
                 className="underline text-teal-500 hover:text-teal-400 transition-colors"
@@ -85,7 +85,7 @@ const Content = () => {
               </a>
             </p>
             <p>
-              <span className="text-lg font-bold text-blue-400">Email:</span>{" "}
+              <span className="text-lg font-bold text-white">Email:</span>{" "}
               <a
                 href="mailto:vishal@potterzwheel.com"
                 className="underline text-teal-500 hover:text-teal-400 transition-colors"
@@ -94,7 +94,7 @@ const Content = () => {
               </a>
             </p>
             <p>
-              <span className="text-lg font-bold text-blue-400">Website:</span>{" "}
+              <span className="text-lg font-bold text-white">Website:</span>{" "}
               <a
                 href="https://potterzwheel.com"
                 target="_blank"
@@ -119,7 +119,7 @@ const Content = () => {
           }}
         >
           <h2 className="text-3xl font-bold text-gray-800 mb-6">
-            Contact Form
+            Let's Get in Touch
           </h2>
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Name Field */}
@@ -208,13 +208,13 @@ const Content = () => {
                 className="w-full border border-gray-300 rounded-md p-3 focus:ring-2 focus:ring-blue-500 focus:outline-none"
                 required
               >
-                <option value="">Select a Service</option>
-                <option value="service1">Residential</option>
-                <option value="service2">Commercial</option>
-                <option value="service3">SCO</option>
-                <option value="service4">Studio Apartments</option>
-                <option value="service5">Plots</option>
-                <option value="service6">Fractional Ownership</option>
+                <option value="">Select a Property Type</option>
+                <option value="Residential">Residential</option>
+                <option value="Commercial">Commercial</option>
+                <option value="SCO<">SCO</option>
+                <option value="Studio Apartments">Studio Apartments</option>
+                <option value="Plots">Plots</option>
+                <option value="Fractional Ownership">Fractional Ownership</option>
               </select>
             </div>
 
