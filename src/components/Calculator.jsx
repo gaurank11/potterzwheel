@@ -25,23 +25,26 @@ const EmiCalculator = () => {
   ];
 
   const calculateEMI = () => {
-    const totalPrePayment = prePayments.reduce((sum, p) => sum + parseFloat(p), 0);
+    const totalPrePayment = prePayments.reduce((sum, p) => sum + parseFloat(p || 0), 0);
     const p = parseFloat(principal) - totalPrePayment;
-    const r = rate / 12 / 100;
-    const n = tenure * 12; // Tenure in months
+    const r = rate; // Annual rate of interest
+    const t = tenure; // Tenure in years
 
     if (p <= 0 || isNaN(p)) {
       alert("Principal amount after pre-payments must be greater than zero.");
       return;
     }
 
-    const emiValue = (p * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
-    const totalPaymentValue = emiValue * n;
-    const totalInterestValue = totalPaymentValue - p;
+    // Calculate Simple Interest (SI)
+    const simpleInterest = (p * r * t) / 100;
+
+    // Calculate Total Payment and EMI
+    const totalPaymentValue = p + simpleInterest;
+    const emiValue = totalPaymentValue / (t * 12);
 
     setEmi(emiValue.toFixed(2));
     setTotalPayment(totalPaymentValue.toFixed(2));
-    setTotalInterest(totalInterestValue.toFixed(2));
+    setTotalInterest(simpleInterest.toFixed(2));
   };
 
   const addPrePayment = () => {
@@ -60,7 +63,7 @@ const EmiCalculator = () => {
     datasets: [
       {
         data: [
-          parseFloat(principal) - prePayments.reduce((sum, p) => sum + parseFloat(p), 0),
+          parseFloat(principal) - prePayments.reduce((sum, p) => sum + parseFloat(p || 0), 0),
           1000, // Placeholder for processing fee
           totalInterest || 0,
         ],
@@ -70,11 +73,14 @@ const EmiCalculator = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-br from-green-400 via-blue-500 to-purple-500">
+    <div className="min-h-screen bg-gradient-to-br from-green-400 via-blue-500 to-purple-500 py-10 px-4">
       {/* Main Content */}
-      <main className="flex-grow p-6">
+      <h1 className="text-4xl font-extrabold text-white mb-6 text-center">
+        EMI Calculator
+      </h1>
+      <main className="flex-grow p-3 ">
         <div className="max-w-screen-md mx-auto bg-white p-6 rounded-lg shadow-lg">
-          <h2 className="text-xl font-bold text-center mb-6">Loan Details</h2>
+
 
           <form
             onSubmit={(e) => {
