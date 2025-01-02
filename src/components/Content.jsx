@@ -77,7 +77,7 @@ const Content = () => {
           </p>
           <div className="mt-10 md:mx-10 space-y-5 ">
         
-            <p className="flex text-center">
+            <p className="flex items-center">
               <Mail className="mr-2 text-red-100 h-4 w-4 md:h-7 md:w-7" />
               <span className="text-md md:text-2xl font-bold text-white mx-1">Email :</span>{" "}
               <a
