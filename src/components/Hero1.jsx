@@ -13,6 +13,8 @@ export default function HeroSection() {
     autoplay: true,
     autoplaySpeed: 1500,
     arrows: false,
+    fade: true,
+
   };
 
   const images = [
@@ -64,8 +66,6 @@ export default function HeroSection() {
               <p className="text-lg md:text-2xl font-semibold">{texts[index]}</p>
             </div>
 
-            {/* Overlay */}
-            <div className="absolute inset-0 bg-black opacity-30"></div>
           </div>
         ))}
       </Slider>

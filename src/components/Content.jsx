@@ -77,12 +77,12 @@ const Content = () => {
           </p>
           <div className="mt-10 md:mx-10 space-y-5 ">
         
-            <p className="flex items-center">
+            <p className="flex text-center">
               <Mail className="mr-2 text-red-100 h-4 w-4 md:h-7 md:w-7" />
               <span className="text-md md:text-2xl font-bold text-white mx-1">Email :</span>{" "}
               <a
                 href="mailto:hi@potterzwheel.com"
-                className="underline text-red-50 hover:text-red-50 transition-colors mx-8 text-sm md:text-xl"
+                className="underline text-red-50 hover:text-red-50 transition-colors mx-2 md:mx-8 text-sm md:text-xl"
               >
                   hi@potterzwheel.com
               </a>
@@ -93,7 +93,7 @@ const Content = () => {
               <span className=" text-md md:text-2xl font-bold text-white mx-1">Phone :</span>{" "}
               <a
                 href="tel:+919810360300"
-                className="underline text-teal-50 hover:text-teal-100 transition-colors mx-6 text-sm md:text-xl" 
+                className="underline text-teal-50 hover:text-teal-100 transition-colors mx-1 md:mx-6 text-sm md:text-xl" 
               >
                 +91-9810360300
               </a>
@@ -105,7 +105,7 @@ const Content = () => {
                 href="https://potterzwheel.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="underline text-blue-100 hover:text-blue-50 transition-colors mx-3 md:mx-2 text-sm md:text-xl "
+                className="underline text-blue-100 hover:text-blue-50 transition-colors mx-0 md:mx-2 text-sm md:text-xl "
               >
                   potterzwheel.com
               </a>
