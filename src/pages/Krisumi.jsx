@@ -23,15 +23,24 @@ const Krisumi = () => {
   const mapImage = '/Krisumi_location.png';
 
   const amenities = [
-    'Swimming Pool',
-    'Gymnasium',
-    'Spa & Sauna',
-    'Clubhouse',
-    'Kids Play Area',
-    '24x7 Security',
-    'Amphitheatre',
-    'Walking Trails',
+    { name: 'Round the Clock Security', icon: '/Amenities/a1.svg' },
+    { name: '24 Hours Electricity and Waterm', icon: '/Amenities/a2.svg' },
+    { name: '100% Power Back-up', icon: '/Amenities/a3.svg' },
+    { name: 'Piped Gas System', icon: '/Amenities/a4.svg' },
+    { name: 'Open & Covered Parking Spaces', icon: '/Amenities/a5.svg' },
+    { name: 'All the Lobbies are Air-conditioned', icon: '/Amenities/a6.svg' },
+    { name: 'High Speed Elevators with Service Lift', icon: '/Amenities/a7.svg' },
+    { name: 'Swimming Pools', icon: '/Amenities/a8.svg' },
+    { name: 'Convenience Store', icon: '/Amenities/a9.svg' },
+    { name: 'Landspace & Green Areas', icon: '/Amenities/a10.svg' },
+    { name: 'Water Features', icon: '/Amenities/a11.svg' },
+    { name: 'Seating Areas', icon: '/Amenities/a12.svg' },
+    { name: 'Resident’s Lounge/ Gym/ Business Centre', icon: '/Amenities/a13.svg' },
   ];
+
+  const locationDescription = `
+    Nestled in sector 36-A, Waterside Residences on Dwarka Expressway offers unmatched connectivity to Delhi and other sectors of Gurugram.
+  `;
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
@@ -45,6 +54,7 @@ const Krisumi = () => {
       mapImage={mapImage}
       onFormSubmit={handleFormSubmit}
       amenities={amenities}
+      locationDescription={locationDescription}
     />
   );
 };

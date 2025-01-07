@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaFacebook, FaInstagramSquare, FaLinkedin} from 'react-icons/fa'; // Importing social media icons from react-icons
+import { FaFacebook, FaInstagramSquare, FaLinkedin } from 'react-icons/fa'; // Importing social media icons from react-icons
 
 const PropertyDetails = ({ images, description, price, mapImage, onFormSubmit, amenities }) => {
   const [showPopup, setShowPopup] = useState(true);
@@ -26,13 +26,12 @@ const PropertyDetails = ({ images, description, price, mapImage, onFormSubmit, a
         </div>
       )}
 
-      {/* Images Section */}
-      <div className="flex flex-wrap gap-0">
+      {/* Images Section (Grid Layout) */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-0">
         {images.map((image, index) => (
           <div
             key={index}
-            className="flex-1 p-0"
-            style={{ flexBasis: 'calc(50% - 0px)' }} // Two images per row on laptop
+            className="flex justify-center items-center"
           >
             <img
               src={image}
@@ -57,23 +56,21 @@ const PropertyDetails = ({ images, description, price, mapImage, onFormSubmit, a
 
       {/* Buttons and Share Section */}
       <div className="flex flex-col md:w-1/4 mt-8">
-        
         <button className="px-6 py-3 bg-transparent border-2 border-black text-black font-semibold rounded-lg hover:bg-gray-900  transition hover:text-white">
-        Request Details
-       </button>
-       <button className="px-6 py-3 bg-transparent border-2 border-black text-black font-semibold rounded-lg hover:bg-gray-900  transition hover:text-white">
-       Schedule a Showing
-       </button>
-       <button className="px-6 py-3 bg-transparent border-2 border-black text-black font-semibold rounded-lg hover:bg-gray-900  transition hover:text-white">
-       View More Listings
-       </button>
+          Request Details
+        </button>
+        <button className="px-6 py-3 bg-transparent border-2 border-black text-black font-semibold rounded-lg hover:bg-gray-900  transition hover:text-white">
+          Schedule a Showing
+        </button>
+        <button className="px-6 py-3 bg-transparent border-2 border-black text-black font-semibold rounded-lg hover:bg-gray-900  transition hover:text-white">
+          View More Listings
+        </button>
         <div className="mt-5">
           <p>Share This Listing:</p>
           <div className="flex gap-3 mt-2">
             <button className="p-2 bg-gray-300 text-black rounded-md"><FaFacebook size={24} /></button>
             <button className="p-2 bg-gray-300 text-black rounded-md"><FaInstagramSquare size={24} /></button>
             <button className="p-2 bg-gray-300 text-black rounded-md"><FaLinkedin size={24} /></button>
-           
           </div>
         </div>
       </div>
@@ -88,18 +85,26 @@ const PropertyDetails = ({ images, description, price, mapImage, onFormSubmit, a
             alt="Map location"
             className="w-full h-auto mb-3"
           />
-          <button className="px-4 py-2 bg-blue-600 text-white rounded-md">Open in Map</button>
+          <button className="px-4 py-2 bg-gray-900 text-white rounded-md">Open in Map</button>
         </div>
       </div>
 
       {/* Project Amenities Section */}
       <div className="text-center my-8">
         <h2 className="text-2xl font-semibold">Project Amenities</h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 justify-items-center mt-4">
-          {amenities.slice(0, 6).map((amenity, index) => (
-            <div key={index} className="p-4 border border-gray-300 rounded-md w-24 h-24 flex justify-center items-center">
-              <img src={amenity.icon} alt={amenity.name} className="w-12 h-12" />
-              <p className="mt-2">{amenity.name}</p>
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-4 justify-items-center mt-4">
+          {/* Logo in Center and Description Below (For First Amenity) */}
+          <div className="p-6 border border-gray-300 rounded-md w-40 h-40 flex flex-col justify-center items-center text-center">
+            <img src={amenities[0].icon} alt={amenities[0].name} className="w-20 h-20 mb-2 mx-auto" />
+            <p className="mt-2 text-sm">{amenities[0].name}</p>
+            <p className="text-xs">{amenities[0].description}</p>
+          </div>
+
+          {/* Rest of the Amenities */}
+          {amenities.slice(1).map((amenity, index) => (
+            <div key={index} className="p-6 border border-gray-300 rounded-md w-40 h-40 flex flex-col justify-center items-center text-center">
+              <img src={amenity.icon} alt={amenity.name} className="w-16 h-16 mb-2 mx-auto" />
+              <p className="mt-2 text-sm">{amenity.name}</p>
             </div>
           ))}
         </div>
