@@ -13,7 +13,7 @@ const AboutUs = () => {
           {/* Founder 1 */}
           <div className="founder bg-white shadow-xl rounded-xl p-8 transform transition duration-300 hover:scale-105 hover:shadow-2xl">
             <img
-              src="/image.png" // Replace with actual image path
+              src="/image.png"
               alt="Vishal Awasthi"
               className="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-blue-500"
             />
@@ -26,7 +26,7 @@ const AboutUs = () => {
           {/* Founder 2 */}
           <div className="founder bg-white shadow-xl rounded-xl p-8 transform transition duration-300 hover:scale-105 hover:shadow-2xl">
             <img
-              src="/image.png" // Replace with actual image path
+              src="/image.png" 
               alt="Amandeep Malhotra"
               className="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-blue-500"
             />

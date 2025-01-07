@@ -21,7 +21,7 @@ const ClientsPartners = () => {
             style={{
               animation: 'marquee 20s linear infinite',
               display: 'flex',
-              width: 'calc(200% + 24px)', // Adjust for smoother scrolling
+              width: 'calc(200% + 24px)',
             }}
           >
             {partners.map((partner, index) => (
@@ -40,7 +40,7 @@ const ClientsPartners = () => {
                 )}
               </div>
             ))}
-            {/* Duplicate the logos for continuous scroll */}
+         
             {partners.map((partner, index) => (
               <div
                 key={index + partners.length}

@@ -55,7 +55,7 @@ const Header = () => {
       <div className="flex-shrink-0">
         <Link to="/">
           <img
-            src="/logo.png" // Replace with the actual image path
+            src="/logo.png" 
             alt="Logo"
             className="h-12 w-auto" // Increased size for better visibility
           />
