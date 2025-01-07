@@ -21,6 +21,7 @@ const Krisumi = () => {
   `;
 
   const mapImage = '/Krisumi_location.png';
+  const mapUrl = 'https://www.google.com/maps/place/Krisumi+Sales+Lounge/@28.4192531,76.9649014,17z/data=!3m1!4b1!4m6!3m5!1s0x390d3d63b59907ff:0x92efb89d2926d143!8m2!3d28.4192485!4d76.9697723!16s%2Fg%2F11f57wszxq?entry=ttu&g_ep=EgoyMDI1MDEwMS4wIKXMDSoASAFQAw%3D%3D';
 
   const amenities = [
     { name: 'Round the Clock Security', icon: '/Amenities/a1.svg' },
@@ -38,6 +39,14 @@ const Krisumi = () => {
     { name: 'Resident’s Lounge/ Gym/ Business Centre', icon: '/Amenities/a13.svg' },
   ];
 
+  const location =[
+    { name: '2 Widest Roads in Gurugram’s NPR and CPR', icon: 'https://krisumi.com/project/waterside-residences/images/icon/location-icon/the-confluence-SPR-CPR.svg' },
+    { name: '3 Minute Drive to NH-48', icon: 'https://krisumi.com/project/waterside-residences/images/icon/location-icon/Connected-to-NH-48.svg' },
+    { name: 'Planned Mass Rapid Transit System along NPR and CPR', icon: 'https://krisumi.com/project/waterside-residences/images/icon/location-icon/planned-mass-rapid.svg' },
+    { name: 'Encircled by 220 acres of Green Zone and a 50-metre Green Belt', icon: 'https://krisumi.com/project/waterside-residences/images/icon/location-icon/surrounded-by-220.svg' },
+    { name: 'Adjacent to Gurgram’s Newest Business Centre', icon: 'https://krisumi.com/project/waterside-residences/images/icon/location-icon/adjacent-to-global.svg' },
+    { name: 'Unhindered Connectivity to IGI Airport', icon: 'https://krisumi.com/project/waterside-residences/images/icon/location-icon/Near-IGI-Airport.svg' },
+  ];
   const locationDescription = `
     Nestled in sector 36-A, Waterside Residences on Dwarka Expressway offers unmatched connectivity to Delhi and other sectors of Gurugram.
   `;
@@ -46,15 +55,21 @@ const Krisumi = () => {
     event.preventDefault();
     alert('Form submitted successfully!');
   };
-
+  const handleOpenInMap = (mapUrl) => {
+    window.open(mapUrl, '_blank'); 
+  };
+  
   return (
     <PropertyDetails
       images={images}
       description={description}
       mapImage={mapImage}
+      mapUrl={mapUrl} 
       onFormSubmit={handleFormSubmit}
       amenities={amenities}
       locationDescription={locationDescription}
+      location = {location}
+      handleOpenInMap={handleOpenInMap}
     />
   );
 };

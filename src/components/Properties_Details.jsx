@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FaFacebook, FaInstagramSquare, FaLinkedin } from 'react-icons/fa'; // Importing social media icons from react-icons
 
-const PropertyDetails = ({ images, description, price, mapImage, onFormSubmit, amenities }) => {
+const PropertyDetails = ({ images, description, price, mapImage,mapUrl, onFormSubmit, amenities,location, locationDescription, handleOpenInMap }) => {
   const [showPopup, setShowPopup] = useState(true);
 
   const closePopup = () => {
@@ -9,7 +9,7 @@ const PropertyDetails = ({ images, description, price, mapImage, onFormSubmit, a
   };
 
   return (
-    <div className="m-5">
+    <div className="mt-15">
       {/* Popup Form */}
       {showPopup && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
@@ -50,7 +50,7 @@ const PropertyDetails = ({ images, description, price, mapImage, onFormSubmit, a
         </div>
         <div className="w-full md:w-1/3 text-center md:text-left mt-4 md:mt-0">
           <h3 className="text-xl font-semibold">Price</h3>
-          <p className="text-lg text-green-600">{price}</p>
+          <p className="text-lg text-gray-900">{price}</p>
         </div>
       </div>
 
@@ -76,39 +76,81 @@ const PropertyDetails = ({ images, description, price, mapImage, onFormSubmit, a
       </div>
 
       {/* Project Location Section */}
-      <div className="my-8">
-        <h2 className="text-2xl font-semibold text-center">Project Location</h2>
-        <p className="text-center">Description about the location goes here.</p>
+      <div className="my-8 ">
+        <h2 className="text-2xl font-semibold text-center md:text-3xl">Project Location</h2>
+        <p className="text-center p-6">{locationDescription}</p>
         <div className="text-center mt-4">
           <img
             src={mapImage}
             alt="Map location"
             className="w-full h-auto mb-3"
           />
-          <button className="px-4 py-2 bg-gray-900 text-white rounded-md">Open in Map</button>
+        
+      
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center mt-4">
+          {location.map((location, index) => (
+            <div
+              key={index}
+              className="p-6 border border-gray-300 rounded-md w-full flex items-center gap-4"
+            >
+              <img src={location.icon} alt={location.name} className="w-16 h-16" />
+              <div className="text-left">
+                <p className="font-medium">{location.name}</p>
+                <p className="text-sm">{location.description}</p>
+              </div>
+            </div>
+          ))}
+        </div >
+          <button className=" mt-4 px-4 py-2 bg-gray-900 text-white rounded-md"
+           onClick={() => handleOpenInMap(mapUrl)}>Open in Map</button>
         </div>
       </div>
 
-      {/* Project Amenities Section */}
+      {/* Amenities Section */}
       <div className="text-center my-8">
-        <h2 className="text-2xl font-semibold">Project Amenities</h2>
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-4 justify-items-center mt-4">
-          {/* Logo in Center and Description Below (For First Amenity) */}
-          <div className="p-6 border border-gray-300 rounded-md w-40 h-40 flex flex-col justify-center items-center text-center">
-            <img src={amenities[0].icon} alt={amenities[0].name} className="w-20 h-20 mb-2 mx-auto" />
-            <p className="mt-2 text-sm">{amenities[0].name}</p>
-            <p className="text-xs">{amenities[0].description}</p>
-          </div>
-
-          {/* Rest of the Amenities */}
-          {amenities.slice(1).map((amenity, index) => (
-            <div key={index} className="p-6 border border-gray-300 rounded-md w-40 h-40 flex flex-col justify-center items-center text-center">
-              <img src={amenity.icon} alt={amenity.name} className="w-16 h-16 mb-2 mx-auto" />
-              <p className="mt-2 text-sm">{amenity.name}</p>
+        <h2 className="text-2xl font-semibold md:text-3xl">Project Amenities</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center mt-4">
+          {amenities.map((amenity, index) => (
+            <div
+              key={index}
+              className="p-6 border border-gray-300 rounded-md w-full flex items-center gap-4"
+            >
+              <img src={amenity.icon} alt={amenity.name} className="w-16 h-16" />
+              <div className="text-left">
+                <p className="font-medium">{amenity.name}</p>
+                <p className="text-sm">{amenity.description}</p>
+              </div>
             </div>
           ))}
         </div>
       </div>
+      <div className="w-full bg-gray-800 text-white py-8 px-4">
+        <div className="max-w-4xl mx-auto">
+          <h3 className="text-lg font-semibold text-center">Interested in this?</h3>
+          <form onSubmit={onFormSubmit} className="mt-4">
+            <input
+              type="text"
+              placeholder="Name"
+              required
+              className="block w-full md:w-3/4 mx-auto p-2 mb-3 border rounded-md"
+            />
+            <input
+              type="email"
+              placeholder="Email"
+              required
+              className="block w-full md:w-3/4 mx-auto p-2 mb-3 border rounded-md"
+            />
+            <textarea
+              placeholder="Message"
+              rows="4"
+              className="block w-full md:w-3/4 mx-auto p-2 mb-3 border rounded-md"
+            ></textarea>
+            <button type="submit" className="px-4 py-2 bg-red-900 text-white rounded-md block mx-auto">
+              Submit
+            </button>
+          </form>
+        </div>
+        </div>
     </div>
   );
 };
