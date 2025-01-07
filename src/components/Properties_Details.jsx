@@ -42,20 +42,27 @@ const PropertyDetails = ({ images, description, price, mapImage,mapUrl, onFormSu
         ))}
       </div>
 
-      {/* Property Description and Pricing */}
-      <div className="flex justify-between mt-8">
-        <div className="w-full md:w-2/3 pr-4">
-          <h2 className="text-2xl font-semibold">Project Overview</h2>
-          <p>{description}</p>
-        </div>
-        <div className="w-full md:w-1/3 text-center md:text-left mt-4 md:mt-0">
-          <h3 className="text-xl font-semibold">Price</h3>
-          <p className="text-lg text-gray-900">{price}</p>
-        </div>
-      </div>
+      <div className="flex flex-col mt-8">
+  {/* Description Section */}
+  <div className="w-full pt-10 pl-20 pr-20">
+    <h2 className="text-2xl font-bold md:text-4xl">Project Overview</h2>
+    <p className="mt-4">
+      <span className="text-4xl font-semibold">
+        {description.trim()[0].toUpperCase()}
+      </span>
+      {description.trim().slice(1)}
+    </p>
+  </div>
+
+  {/* Price Section */}
+  <div className="w-full  p-4 rounded-md pl-20 pr-20">
+    <h3 className="text-xl font-semibold ">Price:</h3>
+    <p className="text-lg text-gray-900 ">{price}</p>
+  </div>
+</div>
 
       {/* Buttons and Share Section */}
-      <div className="flex flex-col md:w-1/4 mt-8">
+      <div className="flex flex-col md:w-1/4 mt-8 pl-20 pr-20">
         <button className="px-6 py-3 bg-transparent border-2 border-black text-black font-semibold rounded-lg hover:bg-gray-900  transition hover:text-white">
           Request Details
         </button>
@@ -77,7 +84,7 @@ const PropertyDetails = ({ images, description, price, mapImage,mapUrl, onFormSu
 
       {/* Project Location Section */}
       <div className="my-8 ">
-        <h2 className="text-2xl font-semibold text-center md:text-3xl">Project Location</h2>
+        <h2 className="text-2xl font-bold text-center md:text-3xl">Project Location</h2>
         <p className="text-center p-6">{locationDescription}</p>
         <div className="text-center mt-4">
           <img
@@ -108,7 +115,7 @@ const PropertyDetails = ({ images, description, price, mapImage,mapUrl, onFormSu
 
       {/* Amenities Section */}
       <div className="text-center my-8">
-        <h2 className="text-2xl font-semibold md:text-3xl">Project Amenities</h2>
+        <h2 className="text-2xl font-bold md:text-3xl">Project Amenities</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center mt-4">
           {amenities.map((amenity, index) => (
             <div
