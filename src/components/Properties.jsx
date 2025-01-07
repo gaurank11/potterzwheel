@@ -7,7 +7,7 @@ const PropertiesPage = () => {
 
   // Function to handle image click and navigate
   const handleImageClick = () => {
-    navigate('/property-details'); // Update with the actual property details page path
+    navigate('/Krisumi'); // Update with the actual property details page path
   };
 
   return (
@@ -31,13 +31,14 @@ const PropertiesPage = () => {
             className="relative group cursor-pointer"
             onClick={handleImageClick}
           >
+            
             <img
-              src="https://static1.squarespace.com/static/58487dc4b8a79b6d02499b60/584d011359cc6892ae083eb5/62563bfe2f381a350f45dd0d/1649969146311/Francis+York+One+of+the+Most+Beautiful+Homes+For+Sale+in+Illinois+17.jpg?format=1500w"
-              alt="Modern Living Room"
+              src="/Krisumi_Homepage.png"
+              alt="Krisumi Properties"
               className="w-full h-auto object-cover rounded-md transition-transform duration-300 group-hover:scale-105"
             />
             <div className="absolute inset-x-0 bottom-0 bg-black bg-opacity-50 text-white p-4 flex justify-between items-center group-hover:opacity-100 opacity-0 transition-all">
-              <span className="w-7/12">Property Name</span>
+              <span className="w-7/12">Krisumi Properties</span>
               <button className="bg-red-900 px-4 py-2 rounded-md">View Details</button>
             </div>
           </div>

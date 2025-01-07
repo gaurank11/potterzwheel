@@ -47,19 +47,19 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-gray-900 text-white py-2 font-NOURD">
-      {/* Main container */}
-      <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-12">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <Link to="/">
-              <img
-                src="/logo.png" // Replace with the actual image path
-                alt="Logo"
-                className="h-12 w-auto" // Increased size for better visibility
-              />
-            </Link>
+    <header className="fixed top-0 left-0 w-full bg-gray-900 text-white py-2 font-NOURD z-50 shadow-md">
+  {/* Main container */}
+  <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="flex items-center justify-between h-12">
+      {/* Logo */}
+      <div className="flex-shrink-0">
+        <Link to="/">
+          <img
+            src="/logo.png" // Replace with the actual image path
+            alt="Logo"
+            className="h-12 w-auto" // Increased size for better visibility
+          />
+        </Link>
           </div>
 
           {/* Hamburger Menu for Mobile */}

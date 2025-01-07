@@ -11,10 +11,10 @@ const OurServices = () => {
           <div className="service relative bg-cover bg-center rounded-lg p-8 h-[350px] flex items-center justify-center transform transition duration-300 group"
             style={{ backgroundImage: 'url(https://assets.upstox.com/content/assets/images/news/property-price.webp)' }} // Replace with your actual image
           >
-            <div className="absolute inset-0 bg-white opacity-50"></div>
-            <div className="relative z-10 text-center text-black">
+            <div className="absolute inset-0 bg-red-900 opacity-80"></div>
+            <div className="relative z-10 text-center text-white">
               <h3 className="text-2xl font-semibold mb-2">
-                <span className="relative inline-block px-4 py-2 border-4 border-gray-800 transition-all duration-300 group-hover:border-8 group-hover:px-8 group-hover:py-8 group-hover:w-[250px] group-hover:h-[250px] group-hover:absolute group-hover:top-1/2 group-hover:left-1/2 group-hover:transform group-hover:-translate-x-1/2 group-hover:-translate-y-1/2">
+                <span className="relative inline-block px-4 py-2 border-4 border-gray-300 transition-all duration-300 group-hover:border-8 group-hover:px-8 group-hover:py-8 group-hover:w-[250px] group-hover:h-[250px] group-hover:absolute group-hover:top-1/2 group-hover:left-1/2 group-hover:transform group-hover:-translate-x-1/2 group-hover:-translate-y-1/2">
                   Property Sales
                 </span>
               </h3>
@@ -28,7 +28,7 @@ const OurServices = () => {
             <div className="absolute inset-0 bg-black opacity-80"></div>
             <div className="relative z-10 text-center text-white">
               <h3 className="text-2xl font-semibold mb-2">
-                <span className="relative inline-block px-4 py-2 border-4 border-gray-500 transition-all duration-300 group-hover:border-8 group-hover:px-8 group-hover:py-8 group-hover:w-[250px] group-hover:h-[250px] group-hover:absolute group-hover:top-1/2 group-hover:left-1/2 group-hover:transform group-hover:-translate-x-1/2 group-hover:-translate-y-1/2">
+                <span className="relative inline-block px-4 py-2 border-4 border-gray-300 transition-all duration-300 group-hover:border-8 group-hover:px-8 group-hover:py-8 group-hover:w-[250px] group-hover:h-[250px] group-hover:absolute group-hover:top-1/2 group-hover:left-1/2 group-hover:transform group-hover:-translate-x-1/2 group-hover:-translate-y-1/2">
                   Property Leasing
                 </span>
               </h3>
@@ -39,10 +39,10 @@ const OurServices = () => {
           <div className="service relative bg-cover bg-center rounded-lg p-8 h-[350px] flex items-center justify-center transform transition duration-300 group"
             style={{ backgroundImage: 'url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAxlMl9dj_hxpqpPN32MtLQV6cW_LNfs8dBw&s)' }} // Replace with your actual image
           >
-            <div className="absolute inset-0 bg-white opacity-50"></div>
-            <div className="relative z-10 text-center text-black">
+            <div className="absolute inset-0 bg-red-900 opacity-80"></div>
+            <div className="relative z-10 text-center text-white">
               <h3 className="text-2xl font-semibold mb-2">
-                <span className="relative inline-block px-4 py-2 border-4 border-gray-800 transition-all duration-300 group-hover:border-8 group-hover:px-8 group-hover:py-8 group-hover:w-[250px] group-hover:h-[250px] group-hover:absolute group-hover:top-1/2 group-hover:left-1/2 group-hover:transform group-hover:-translate-x-1/2 group-hover:-translate-y-1/2">
+                <span className="relative inline-block px-4 py-2 border-4 border-gray-300 transition-all duration-300 group-hover:border-8 group-hover:px-8 group-hover:py-8 group-hover:w-[250px] group-hover:h-[250px] group-hover:absolute group-hover:top-1/2 group-hover:left-1/2 group-hover:transform group-hover:-translate-x-1/2 group-hover:-translate-y-1/2">
                   Document Management
                 </span>
               </h3>
@@ -56,7 +56,7 @@ const OurServices = () => {
             <div className="absolute inset-0 bg-black opacity-80"></div>
             <div className="relative z-10 text-center text-white">
               <h3 className="text-2xl font-semibold mb-2">
-                <span className="relative inline-block px-4 py-2 border-4 border-gray-500 transition-all duration-300 group-hover:border-8 group-hover:px-8 group-hover:py-8 group-hover:w-[250px] group-hover:h-[250px] group-hover:absolute group-hover:top-1/2 group-hover:left-1/2 group-hover:transform group-hover:-translate-x-1/2 group-hover:-translate-y-1/2">
+                <span className="relative inline-block px-4 py-2 border-4 border-gray-300 transition-all duration-300 group-hover:border-8 group-hover:px-8 group-hover:py-8 group-hover:w-[250px] group-hover:h-[250px] group-hover:absolute group-hover:top-1/2 group-hover:left-1/2 group-hover:transform group-hover:-translate-x-1/2 group-hover:-translate-y-1/2">
                   Security Solutions
                 </span>
               </h3>
@@ -67,10 +67,10 @@ const OurServices = () => {
           <div className="service relative bg-cover bg-center rounded-lg p-8 h-[350px] flex items-center justify-center transform transition duration-300 group"
             style={{ backgroundImage: 'url(https://constrofacilitator.com/wp-content/uploads/2023/06/home-inspection-jpg.webp)' }} // Replace with your actual image
           >
-            <div className="absolute inset-0 bg-white opacity-50"></div>
-            <div className="relative z-10 text-center text-black">
+            <div className="absolute inset-0 bg-red-900 opacity-80"></div>
+            <div className="relative z-10 text-center text-white">
               <h3 className="text-2xl font-semibold mb-2">
-                <span className="relative inline-block px-4 py-2 border-4 border-gray-800 transition-all duration-300 group-hover:border-8 group-hover:px-8 group-hover:py-8 group-hover:w-[250px] group-hover:h-[250px] group-hover:absolute group-hover:top-1/2 group-hover:left-1/2 group-hover:transform group-hover:-translate-x-1/2 group-hover:-translate-y-1/2">
+                <span className="relative inline-block px-4 py-2 border-4 border-gray-300 transition-all duration-300 group-hover:border-8 group-hover:px-8 group-hover:py-8 group-hover:w-[250px] group-hover:h-[250px] group-hover:absolute group-hover:top-1/2 group-hover:left-1/2 group-hover:transform group-hover:-translate-x-1/2 group-hover:-translate-y-1/2">
                   Home Inspection
                 </span>
               </h3>
@@ -84,7 +84,7 @@ const OurServices = () => {
             <div className="absolute inset-0 bg-black opacity-80"></div>
             <div className="relative z-10 text-center text-white">
               <h3 className="text-2xl font-semibold mb-2">
-                <span className="relative inline-block px-4 py-2 border-4 border-gray-500 transition-all duration-300 group-hover:border-8 group-hover:px-8 group-hover:py-8 group-hover:w-[250px] group-hover:h-[250px] group-hover:absolute group-hover:top-1/2 group-hover:left-1/2 group-hover:transform group-hover:-translate-x-1/2 group-hover:-translate-y-1/2">
+                <span className="relative inline-block px-4 py-2 border-4 border-gray-300 transition-all duration-300 group-hover:border-8 group-hover:px-8 group-hover:py-8 group-hover:w-[250px] group-hover:h-[250px] group-hover:absolute group-hover:top-1/2 group-hover:left-1/2 group-hover:transform group-hover:-translate-x-1/2 group-hover:-translate-y-1/2">
                   Consulting Services
                 </span>
               </h3>
