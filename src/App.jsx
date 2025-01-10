@@ -1,5 +1,5 @@
-import React from "react";
-import { Route, Routes } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Contact from "./pages/contact";
 import Emi from "./pages/emi";
 import Home from "./pages/Home";
@@ -8,6 +8,13 @@ import Footer from "./components/Footer";
 import StampDutyCalculator from "./pages/stamp";
 import Krisumi from "./pages/Krisumi";
 export default function App() {
+  
+  const location = useLocation();
+  // Scroll to the top whenever the route changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
   return (
     <div>
       <Header /> 
@@ -22,3 +29,4 @@ export default function App() {
     </div>
   );
 }
+
