@@ -99,29 +99,33 @@ const PropertyDetails = ({
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8 pl-20 pr-20">
         {/* Property Details and Price Section */}
         <div>
-          <h2 className="text-3xl font-bold text-center md:text-5xl ">{details}</h2>
-          <p className="mt-5 md:text-[20px] text-justify ">
-            <span className="text-3xl font-semibold md:text-[42px]">
-              {description.trim()[0].toUpperCase()}
-            </span>
-            {description.trim().slice(1)}
-          </p>
-          <div className="mt-6">
-            <h3 className="text-xl font-semibold md:text-2xl">Price:</h3>
-            <p className="text-lg text-gray-900">{price}</p>
-          </div>
-        </div>
+  <h2 className="text-5xl font-bold text-left md:text-6xl">{details}</h2>
+  <p className="mt-5 md:text-[20px] text-justify flex">
+    {/* Styled first letter */}
+    <span className="text-3xl font-semibold md:text-[42px] leading-none pr-2">
+      {description.trim()[0].toUpperCase()}
+    </span>
+    {/* Rest of the description */}
+    <span className="leading-tight">
+      {description.trim().slice(1)}
+    </span>
+  </p>
+  <div className="mt-6">
+    <h3 className="text-xl font-semibold md:text-2xl">Price:</h3>
+    <p className="text-lg text-gray-900">{price}</p>
+  </div>
+</div>
 
         {/* Buttons and Share Section */}
         <div>
           <div className="flex flex-col gap-4 md:mt-20 md:mx-20 ">
-            <button className="px-6 py-3 bg-transparent border-2 border-black text-black font-semibold rounded-lg hover:bg-gray-900 transition hover:text-white">
+            <button className="px-6 py-3 bg-gray-900 border-2  text-white font-semibold rounded-lg hover:bg-white transition hover:text-black hover:border-black">
               Request Details
             </button>
-            <button className="px-6 py-3 bg-transparent border-2 border-black text-black font-semibold rounded-lg hover:bg-gray-900 transition hover:text-white">
+            <button className="px-6 py-3 bg-gray-900 border-2  text-white font-semibold rounded-lg hover:bg-white transition hover:text-black hover:border-black">
               Schedule a Showing
             </button>
-            <button className="px-6 py-3 bg-transparent border-2 border-black text-black font-semibold rounded-lg hover:bg-gray-900 transition hover:text-white">
+            <button className="px-6 py-3 bg-gray-900 border-2  text-white font-semibold rounded-lg hover:bg-white transition hover:text-black hover:border-black">
               View More Listings
             </button>
           </div>
@@ -206,7 +210,7 @@ const PropertyDetails = ({
       </div>
       <div className="w-full bg-gray-800 text-white py-8 px-4">
         <div className="max-w-4xl mx-auto">
-          <h3 className="text-lg font-semibold text-center">Interested in this?</h3>
+          <h3 className="text-lg font-semibold text-center">Interested in {details}</h3>
           <form onSubmit={onFormSubmit} className="mt-4">
             <input
               type="text"

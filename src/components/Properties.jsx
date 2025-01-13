@@ -15,14 +15,14 @@ const PropertiesPage = () => {
       {/* First Row: 1st Column "01 - Featured Listing" with two images next to it */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
         <div >
-          <p className="text-3xl font-bold text-left">01 -</p>
-          <p className="text-4xl font-bold leading-none text-left md:text-6xl">FEATURED</p>
-          <p className="text-md text-red-300 mt-2 text-center">LISTING</p>
+          <p className="text-6xl font-bold leading-none text-left md:text-8xl">FEATURED</p>
+          <p className="text-4xl text-center font-semibold text-red-300 mt-2 md:text-right md:text-4xl">LISTING</p>
           {/* View All Properties button below */}
-          <button className="mt-4 px-6 py-3 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-red-600 transition flex items-center space-x-2">
-            <Plus size={20} />
-            <span>View All Properties</span>
-          </button>
+          <button className="mt-4 px-6 py-3 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-red-900 transition flex items-center space-x-2 ml-auto">
+      <span>View All Properties</span>
+      <Plus size={20} />
+    </button>
+
         </div>
 
         {/* Two images in the next two columns */}
@@ -38,7 +38,7 @@ const PropertiesPage = () => {
               className="w-full h-auto object-cover rounded-md transition-transform duration-300 group-hover:scale-105"
             />
             <div className="absolute inset-x-0 bottom-0 bg-black bg-opacity-50 text-white p-4 flex justify-between items-center group-hover:opacity-100 opacity-0 transition-all">
-              <span className="w-7/12">Krisumi Properties</span>
+              <span className="w-7/12">KRISUMI PROPERTIES</span>
               <button className="bg-red-900 px-4 py-2 rounded-md">View Details</button>
             </div>
           </div>
@@ -150,13 +150,13 @@ const PropertiesPage = () => {
         </div>
 
      <div className="w-full flex flex-col justify-center space-y-4 h-full">
-       <button className="px-6 py-3 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white  transition hover:text-red-600">
+       <button className="px-6 py-3 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-red-900 transition hover:text-white hover:border-red-900">
           Interactive Map
        </button>
-       <button className="px-6 py-3 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white  transition hover:text-red-600">
+       <button className="px-6 py-3 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-red-900  transition hover:text-white hover:border-red-900">
           Sell A Home
        </button>
-       <button className="px-6 py-3 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white  transition hover:text-red-600">
+       <button className="px-6 py-3 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-red-900 transition hover:text-white hover:border-red-900">
           Search The MLS
        </button>
      </div>
