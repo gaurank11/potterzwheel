@@ -15,10 +15,10 @@ const PropertiesPage = () => {
       {/* First Row: 1st Column "01 - Featured Listing" with two images next to it */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
         <div >
-          <p className="text-6xl font-bold leading-none text-left md:text-8xl">FEATURED</p>
-          <p className="text-4xl text-center font-semibold text-red-300 mt-2 md:text-right md:text-4xl">LISTING</p>
+          <p className="text-6xl font-bold leading-none text-left md:mx-6 md:text-[80px]">FEATURED</p>
+          <p className="text-4xl font-semibold text-red-300 mt-2 text-right md:text-[45px]">LISTING</p>
           {/* View All Properties button below */}
-          <button className="mt-4 px-6 py-3 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-red-900 transition flex items-center space-x-2 ml-auto">
+          <button className="mt-8 px-6 py-3 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-red-900 transition flex items-center space-x-2 ml-auto text-xl md:text-2xl">
       <span>View All Properties</span>
       <Plus size={20} />
     </button>
@@ -149,17 +149,29 @@ const PropertiesPage = () => {
           </div>
         </div>
 
-     <div className="w-full flex flex-col justify-center space-y-4 h-full">
-       <button className="px-6 py-3 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-red-900 transition hover:text-white hover:border-red-900">
-          Interactive Map
-       </button>
-       <button className="px-6 py-3 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-red-900  transition hover:text-white hover:border-red-900">
-          Sell A Home
-       </button>
-       <button className="px-6 py-3 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-red-900 transition hover:text-white hover:border-red-900">
-          Search The MLS
-       </button>
-     </div>
+  <div className="w-full flex flex-col justify-center items-center space-y-6 h-full text-xl md:text-2xl">
+  <div className="relative flex items-center w-3/4">
+    <div className="h-[2px] w-12 bg-white absolute left-[-50px]"></div>
+    <button className="w-full px-6 py-3 bg-transparent border-2 border-white text-white font-semibold hover:bg-red-900 transition duration-300">
+      Interactive Map
+    </button>
+  </div>
+  <div className="relative flex items-center w-3/4">
+    <div className="h-[2px] w-12 bg-white absolute left-[-50px]"></div>
+    <button className="w-full px-6 py-3 bg-transparent border-2 border-white text-white font-semibold hover:bg-red-900 transition duration-300">
+      Sell A Home
+    </button>
+  </div>
+  <div className="relative flex items-center w-3/4">
+    <div className="h-[2px] w-12 bg-white absolute left-[-50px]"></div>
+    <button className="w-full px-6 py-3 bg-transparent border-2 border-white text-white font-semibold hover:bg-red-900 transition duration-300">
+      Search The MLS
+    </button>
+  </div>
+</div>
+
+
+
 
       </div>
     </div>

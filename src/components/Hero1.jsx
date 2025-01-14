@@ -7,14 +7,13 @@ export default function HeroSection() {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 1000, // Smooth transition speed
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 1500,
+    autoplaySpeed: 3000,
     arrows: false,
     fade: true,
-
   };
 
   const images = [
@@ -31,44 +30,80 @@ export default function HeroSection() {
     "Discover amazing products!",
     "Create unforgettable memories!",
     "Join our journey today!",
-    "Join our journey today!",
-    "Create unforgettable memories!",
-    
+    "Find your dream adventure!",
+    "Unleash your potential!",
   ];
 
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <div className="relative w-full h-screen overflow-hidden bg-black">
       {/* Slider */}
       <Slider {...settings} className="w-full h-screen">
         {images.map((image, index) => (
           <div
             key={index}
-            className="relative w-full h-screen bg-black flex items-center justify-center"
+            className="relative w-full h-screen flex items-center justify-center"
           >
-            {/* Image */}
+            {/* Background Image */}
             <img
               src={image}
               alt={`Slide ${index}`}
-              className="w-full h-full object-cover bg-black"
+              className="absolute top-0 left-0 w-full h-full object-cover"
             />
 
             {/* Horizontal Line */}
             <div className="absolute top-1/2 left-0 w-full h-[2px] bg-white opacity-50 transform -translate-y-1/2"></div>
 
-            {/* Blur Box with Text */}
+            {/* Text Box */}
             <div
-              className="absolute top-1/2 left-10 transform -translate-y-1/2 bg-black/50 backdrop-blur-md text-white text-center px-6 py-4 rounded-lg"
+              className="absolute top-1/2 w-full transform -translate-y-1/2 flex items-center justify-center px-4"
               style={{
-                transition: "transform 0.5s ease-in-out",
-                transform: `translateX(${index * 50}px)`,
+                height: "20%",
               }}
             >
-              <p className="text-lg md:text-2xl font-semibold">{texts[index]}</p>
+              <div
+                className="relative text-white text-center px-4 md:px-6 py-2 md:py-4 rounded-lg bg-black/50 backdrop-blur-md animate-slide-fullvw"
+                style={{
+                  width: "fit-content",
+                }}
+              >
+                <p className="text-base sm:text-lg md:text-2xl font-semibold">
+                  {texts[index]}
+                </p>
+              </div>
             </div>
-
           </div>
         ))}
       </Slider>
+
+      {/* Animation Styles */}
+      <style jsx>{`
+        @keyframes slide-fullvw {
+          0% {
+            transform: translateX(-100vw);
+            opacity: 0;
+          }
+          50% {
+            opacity: 0.5;
+          }
+          100% {
+            transform: translateX(0);
+            opacity: 1;
+          }
+        }
+        .animate-slide-fullvw {
+          animation: slide-fullvw 3s ease-in-out forwards;
+        }
+
+        /* Mobile-Specific Adjustments */
+        @media (max-width: 640px) {
+          .absolute {
+            padding: 10px 20px;
+          }
+          .text-base {
+            font-size: 0.9rem; /* Smaller text on mobile */
+          }
+        }
+      `}</style>
     </div>
   );
 }

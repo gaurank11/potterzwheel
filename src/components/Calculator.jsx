@@ -73,9 +73,9 @@ const EmiCalculator = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-400 via-blue-500 to-purple-500 py-10 px-4">
+    <div className="min-h-screen bg-white py-10 px-4 mt-10">
       {/* Main Content */}
-      <h1 className="text-4xl font-extrabold text-white mb-6 text-center">
+      <h1 className="text-4xl font-extrabold text-gray-900 mb-6 text-center">
         EMI Calculator
       </h1>
       <main className="flex-grow p-3 ">

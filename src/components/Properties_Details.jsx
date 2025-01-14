@@ -46,8 +46,8 @@ const PropertyDetails = ({
       {/* Popup Form */}
       {showPopup && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
-          <div className="bg-white p-5 rounded-lg w-full max-w-md text-center">
-            <h3 className="text-lg font-semibold">Interested in this?</h3>
+          <div className="bg-gray-900 p-5 rounded-lg w-full max-w-md text-center">
+            <h3 className="text-lg font-semibold text-white md:text-2xl">Interested in {details} ?</h3>
             <form onSubmit={onFormSubmit} className="mt-4">
               <input
                 type="text"
@@ -84,7 +84,7 @@ const PropertyDetails = ({
       )}
 
       {/* Images Section (Grid Layout) */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-0">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-0 ">
         {images.map((image, index) => (
           <div key={index} className="flex justify-center items-center">
             <img
@@ -102,7 +102,14 @@ const PropertyDetails = ({
   <h2 className="text-5xl font-bold text-left md:text-6xl">{details}</h2>
   <p className="mt-5 md:text-[20px] text-justify flex">
     {/* Styled first letter */}
-    <span className="text-3xl font-semibold md:text-[42px] leading-none pr-2">
+    <span
+      className="text-3xl font-semibold md:text-[42px] leading-none pr-2"
+      style={{
+        float: 'left',
+        lineHeight: '1',
+        marginRight: '8px',
+      }}
+    >
       {description.trim()[0].toUpperCase()}
     </span>
     {/* Rest of the description */}
@@ -115,17 +122,16 @@ const PropertyDetails = ({
     <p className="text-lg text-gray-900">{price}</p>
   </div>
 </div>
+<div className="ml-20">
+ <div className="flex flex-col gap-4 md:mt-20 md:mx-16 md:text-2xl">
 
-        {/* Buttons and Share Section */}
-        <div>
-          <div className="flex flex-col gap-4 md:mt-20 md:mx-20 ">
-            <button className="px-6 py-3 bg-gray-900 border-2  text-white font-semibold rounded-lg hover:bg-white transition hover:text-black hover:border-black">
+            <button className="px-6 py-3 bg-gray-900 border-2  text-white font-semibold  hover:bg-white transition hover:text-black hover:border-black">
               Request Details
             </button>
-            <button className="px-6 py-3 bg-gray-900 border-2  text-white font-semibold rounded-lg hover:bg-white transition hover:text-black hover:border-black">
+            <button className="px-6 py-3 bg-gray-900 border-2  text-white font-semibold  hover:bg-white transition hover:text-black hover:border-black">
               Schedule a Showing
             </button>
-            <button className="px-6 py-3 bg-gray-900 border-2  text-white font-semibold rounded-lg hover:bg-white transition hover:text-black hover:border-black">
+            <button className="px-6 py-3 bg-gray-900 border-2  text-white font-semibold  hover:bg-white transition hover:text-black hover:border-black">
               View More Listings
             </button>
           </div>
@@ -156,67 +162,68 @@ const PropertyDetails = ({
       </div>
 
       {/* Project Location Section */}
-      <div className="my-8 mt-5">
-        <h2 className="text-3xl font-bold text-center md:text-5xl">
-          Project Location
-        </h2>
-        <p className="text-center p-6 text-md md:text-[20px]">{locationDescription}</p>
-        <div className="text-center mt-4">
-          <img
-            src={mapImage}
-            alt="Map location"
-            className="w-full h-auto mb-3"
-          />
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center mt-4">
-            {location.map((loc, index) => (
-              <div
-                key={index}
-                className="p-6 border border-gray-300 rounded-md w-full flex items-center gap-4"
-              >
-                <img src={loc.icon} alt={loc.name} className="w-16 h-16" />
-                <div className="text-left">
-                  <p className="font-medium">{loc.name}</p>
-                  <p className="text-sm">{loc.description}</p>
-                </div>
-              </div>
-            ))}
+<div className="my-8 mt-16">
+  <h2 className="text-3xl font-bold text-center md:text-5xl">
+    LOCATION
+  </h2>
+  <p className="text-center p-6 text-md md:text-[20px]">{locationDescription}</p>
+  <div className="text-center mt-4">
+    <img
+      src={mapImage}
+      alt="Map location"
+      className="w-full h-auto mb-3"
+    />
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center mt-4">
+      {location.map((loc, index) => (
+        <div
+          key={index}
+          className="p-6 border border-gray-300 rounded-md w-full flex items-center gap-4"
+        >
+          <img src={loc.icon} alt={loc.name} className="w-16 h-16" />
+          <div className="text-left">
+            <p className="font-medium">{loc.name}</p>
+            <p className="text-sm">{loc.description}</p>
           </div>
-          <button
-            className="mt-4 px-4 py-2 bg-gray-900 text-white rounded-md"
-            onClick={() => handleOpenInMap(mapUrl)}
-          >
-            Open in Map
-          </button>
         </div>
-      </div>
+      ))}
+    </div>
+    <button
+      className="mt-4 px-4 py-2 bg-gray-900 text-white rounded-md"
+      onClick={() => handleOpenInMap(mapUrl)}
+    >
+      Open in Map
+    </button>
+  </div>
+</div>
 
-      {/* Amenities Section */}
-      <div className="text-center my-8 mt-10">
-        <h2 className="text-3xl font-bold md:text-5xl">Project Amenities</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center mt-10">
-          {amenities.map((amenity, index) => (
-            <div
-              key={index}
-              className="p-6 border border-gray-300 rounded-md w-full flex items-center gap-4"
-            >
-              <img src={amenity.icon} alt={amenity.name} className="w-16 h-16" />
-              <div className="text-left">
-                <p className="font-medium">{amenity.name}</p>
-                <p className="text-sm">{amenity.description}</p>
-              </div>
-            </div>
-          ))}
+{/* Amenities Section */}
+<div className="text-center my-8 mt-16 ml-10">
+  <h2 className="text-3xl font-bold md:text-5xl text-center">AMENITIES</h2>
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center mt-10">
+    {amenities.map((amenity, index) => (
+      <div
+        key={index}
+        className="p-6 border border-gray-300 rounded-md w-full flex items-center gap-4"
+      >
+        <img src={amenity.icon} alt={amenity.name} className="w-16 h-16" />
+        <div className="text-left">
+          <p className="font-medium">{amenity.name}</p>
+          <p className="text-sm">{amenity.description}</p>
         </div>
       </div>
+    ))}
+  </div>
+</div>
+
       <div className="w-full bg-gray-800 text-white py-8 px-4">
         <div className="max-w-4xl mx-auto">
-          <h3 className="text-lg font-semibold text-center">Interested in {details}</h3>
+          <h3 className="text-lg md:text-3xl font-semibold text-center">Interested in {details} ?</h3>
           <form onSubmit={onFormSubmit} className="mt-4">
             <input
               type="text"
               placeholder="Name"
               required
-              className="block w-full md:w-3/4 mx-auto p-2 mb-3 border rounded-md"
+              className="block w-full md:w-3/4 mx-auto p-2 mb-3 border rounded-md "
             />
             <input
               type="email"

@@ -34,8 +34,8 @@ const StampDutyCalculator = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-400 via-blue-500 to-purple-500 flex flex-col items-center py-10 px-4">
-      <h1 className="text-4xl font-extrabold text-white mb-6 text-center">
+    <div className="min-h-screen bg-white flex flex-col items-center py-10 px-4 mt-10">
+      <h1 className="text-4xl font-extrabold text-gray-900 mb-6 text-center">
         Stamp Duty Calculator
       </h1>
 
