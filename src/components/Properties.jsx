@@ -18,7 +18,7 @@ const PropertiesPage = () => {
           <p className="text-6xl font-bold leading-none text-left md:mx-6 md:text-[80px]">FEATURED</p>
           <p className="text-4xl font-semibold text-red-300 mt-2 text-right md:text-[45px]">LISTING</p>
           {/* View All Properties button below */}
-          <button className="mt-8 px-6 py-3 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-red-900 transition flex items-center space-x-2 ml-auto text-xl md:text-2xl">
+          <button className="mt-6 px-6 py-3 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-red-900 transition flex items-center space-x-2 ml-auto md:text-2xl">
       <span>View All Properties</span>
       <Plus size={20} />
     </button>
