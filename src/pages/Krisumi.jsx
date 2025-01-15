@@ -47,10 +47,7 @@ const Krisumi = () => {
     { name: 'Adjacent to Gurgram’s Newest Business Centre', icon: 'https://krisumi.com/project/waterside-residences/images/icon/location-icon/adjacent-to-global.svg' },
     { name: 'Unhindered Connectivity to IGI Airport', icon: 'https://krisumi.com/project/waterside-residences/images/icon/location-icon/Near-IGI-Airport.svg' },
   ];
-  const locationDescription = `
-    Nestled in sector 36-A, Waterside Residences on Dwarka Expressway 
-    offers unmatched connectivity to Delhi and other sectors of Gurugram.
-  `;
+
 
   const handleFormSubmit = (event) => {
     event.preventDefault();

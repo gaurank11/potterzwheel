@@ -100,28 +100,46 @@ const PropertyDetails = ({
         {/* Property Details and Price Section */}
         <div>
   <h2 className="text-5xl font-bold text-left md:text-6xl">{details}</h2>
-  <p className="mt-5 md:text-[20px] text-justify flex">
-    {/* Styled first letter */}
+  <p className="mt-5 md:text-[20px] text-justify">
+    {/* Large styled first letter for desktop */}
     <span
-      className="text-3xl font-semibold md:text-[42px] leading-none pr-2"
+      className="text-6xl md:text-[70px] font-semibold leading-none md:float-left md:mr-3 md:mt-1"
       style={{
-        float: 'left',
-        lineHeight: '1',
-        marginRight: '8px',
+        lineHeight: '1.1', // Ensures proper vertical alignment
       }}
     >
       {description.trim()[0].toUpperCase()}
     </span>
-    {/* Rest of the description */}
-    <span className="leading-tight">
-      {description.trim().slice(1)}
+    {/* Remaining description */}
+    <span className="block">
+      {description
+        .trim()
+        .slice(1)
+        .split('\n')
+        .map((line, index) => (
+          <span
+            key={index}
+            className="block"
+            style={{
+              display: 'block', // Keeps each line on a new line
+              marginLeft: '1.5em', // Indentation for all but first line
+              marginTop: '0.3em', // Adds space between the lines
+            }}
+          >
+            {line}
+          </span>
+        ))}
     </span>
   </p>
+
   <div className="mt-6">
     <h3 className="text-xl font-semibold md:text-2xl">Price:</h3>
     <p className="text-lg text-gray-900">{price}</p>
   </div>
 </div>
+
+
+
 <div className="ml-20">
  <div className="flex flex-col gap-4 md:mt-20 md:mx-16 md:text-2xl">
 
