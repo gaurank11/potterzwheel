@@ -66,7 +66,7 @@ const Krisumi = () => {
       mapUrl={mapUrl} 
       onFormSubmit={handleFormSubmit}
       amenities={amenities}
-      locationDescription={locationDescription}
+    
       location = {location}
       handleOpenInMap={handleOpenInMap}
       details = {details}
