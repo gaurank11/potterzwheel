@@ -7,6 +7,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import StampDutyCalculator from "./pages/stamp";
 import Krisumi from "./pages/Krisumi";
+import Mvn from "./pages/Mvn";
 export default function App() {
   
   const location = useLocation();
@@ -24,6 +25,7 @@ export default function App() {
         <Route path="/resources/emi" element={<Emi />} />
         <Route path="/resources/stamp_duty" element = {<StampDutyCalculator />} />
         <Route path="/Krisumi" element={<Krisumi />} />
+        <Route path="/mvn" element={<Mvn />} />
       </Routes>
       <Footer /> 
     </div>

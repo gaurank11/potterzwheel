@@ -96,48 +96,64 @@ const PropertyDetails = ({
         ))}
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8 pl-20 pr-20">
+      <div className="hidden lg:grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8 px-20">
         {/* Property Details and Price Section */}
         <div>
-  <h2 className="text-5xl font-bold text-left md:text-6xl">{details}</h2>
-  <p className="mt-5 md:text-[20px] text-justify">
-    {/* Large styled first letter for desktop */}
-    <span
-      className="text-6xl md:text-[70px] font-semibold leading-none md:float-left md:mr-3 md:mt-1"
-      style={{
-        lineHeight: '1.1', // Ensures proper vertical alignment
-      }}
-    >
-      {description.trim()[0].toUpperCase()}
-    </span>
-    {/* Remaining description */}
-    <span className="block">
-      {description
-        .trim()
-        .slice(1)
-        .split('\n')
-        .map((line, index) => (
-          <span
-            key={index}
-            className="block"
-            style={{
-              display: 'block', // Keeps each line on a new line
-              marginLeft: '1.5em', // Indentation for all but first line
-              marginTop: '0.3em', // Adds space between the lines
-            }}
-          >
-            {line}
-          </span>
-        ))}
-    </span>
-  </p>
+          <h2 className="text-5xl font-bold text-left lg:text-6xl">{details}</h2>
 
-  <div className="mt-6">
-    <h3 className="text-xl font-semibold md:text-2xl">Price:</h3>
-    <p className="text-lg text-gray-900">{price}</p>
-  </div>
-</div>
+          <p className="mt-5 text-justify text-[16px] lg:text-[20px]">
+            {/* Large styled first letter for desktop */}
+            <span
+              className="text-6xl lg:text-[70px] font-semibold leading-none lg:float-left lg:mr-4 lg:mt-1"
+              style={{ lineHeight: '1.1' }}
+            >
+              {description.trim()[0].toUpperCase()}
+            </span>
+            {/* Remaining description */}
+            <span className="block">
+              {description
+                .trim()
+                .slice(1)
+                .split('\n')
+                .map((line, index) => (
+                  <span
+                    key={index}
+                    className="block"
+                    style={{
+                      display: 'block',
+                      marginLeft: index === 0 ? 0 : '1.5em',
+                      marginTop: '0.3em',
+                    }}
+                  >
+                    {line}
+                  </span>
+                ))}
+            </span>
+          </p>
 
+          <div className="mt-6">
+            <h3 className="text-lg font-semibold lg:text-xl">Price:</h3>
+            <p className="text-base text-gray-900 lg:text-lg">{price}</p>
+          </div>
+        </div>
+
+  
+
+      {/* Mobile View */}
+      <div className="block lg:hidden mt-6 px-6">
+        <h2 className="text-3xl font-bold text-left">{details}</h2>
+
+        <p className="mt-4 text-justify text-[14px]">
+          {description}
+        </p>
+
+        <div className="mt-4">
+          <h3 className="text-lg font-semibold">Price:</h3>
+          <p className="text-base text-gray-900">{price}</p>
+        </div>
+      </div>
+
+   
 
 
 <div className="ml-20">
@@ -189,7 +205,7 @@ const PropertyDetails = ({
     <img
       src={mapImage}
       alt="Map location"
-      className="w-full h-auto mb-3"
+      className="w-full h-auto mb-3 bg-gray-900"
     />
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center mt-4">
       {location.map((loc, index) => (
