@@ -128,7 +128,7 @@ const PropertyDetails = ({
 <div className="block lg:hidden mt-6 px-6">
   <h2 className="text-3xl font-bold text-center">{details}</h2>
 
-  <p className="mt-6 text-justify text-[14px]">
+  <p className="mt-6 text-[14px]">
     {/* Styled first letter */}
     <span className="text-4xl font-semibold leading-none float-left mr-3">
       {description.trim()[0].toUpperCase()}
