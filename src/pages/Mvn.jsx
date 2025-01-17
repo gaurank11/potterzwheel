@@ -25,12 +25,12 @@ There are dedicated floors thoughtfully curated to focus on a specific category,
   const mapUrl = 'https://www.google.com/maps/place/Krisumi+Sales+Lounge/@28.4192531,76.9649014,17z/data=!3m1!4b1!4m6!3m5!1s0x390d3d63b59907ff:0x92efb89d2926d143!8m2!3d28.4192485!4d76.9697723!16s%2Fg%2F11f57wszxq?entry=ttu&g_ep=EgoyMDI1MDEwMS4wIKXMDSoASAFQAw%3D%3D';
 
   const amenities = [
-    { name: 'Round the Clock Security', icon: '/Amenities/a1.svg' },
-    { name: '24 Hours Electricity and Waterm', icon: '/Amenities/a2.svg' },
-    { name: '100% Power Back-up', icon: '/Amenities/a3.svg' },
-    { name: 'Open & Covered Parking Spaces', icon: '/Amenities/a5.svg' },
-    { name: 'All the Lobbies are Air-conditioned', icon: '/Amenities/a6.svg' },
-    { name: 'Swimming Pools', icon: '/Amenities/a8.svg' },
+    { name: 'Gurugram’s largest centrally air-conditioned shopping destination', icon: 'https://mvnmall.in/images/icons/shopping.svg' },
+    { name: 'Located at the first and only DROP of the elevated Dwarka Expressway At 22 KM stone', icon: 'https://mvnmall.in/images/icons/expressway.svg' },
+    { name: 'At Downtown New Gurugram ensuring higher footfalls & excellent connectivity', icon: 'https://mvnmall.in/images/icons/connectivity.svg' },
+    { name: 'Seamless entry & exit points', icon: 'https://mvnmall.in/images/icons/point.svg' },
+    { name: 'All the Lobbies are Air-conditionedExtremely close to NCR’s  major landmarks', icon: 'https://mvnmall.in/images/icons/landmark.svg' },
+    { name: 'Green spaces, and serene water bodies', icon: 'https://mvnmall.in/images/icons/green-space.svg' },
 
 
    
@@ -39,9 +39,9 @@ There are dedicated floors thoughtfully curated to focus on a specific category,
   const location =[
     { name: '5.4 Kms Drive to NH-48', icon: 'https://mvnmall.in/images/icons/highway.svg' },
     { name: '29.7 Kms from IGI Airport', icon: 'https://mvnmall.in/images/icons/airport.svg' },
-    { name: '10.5 Kms from Gurgaon’s railway station', icon: 'https://mvnmall.in/images/icons/cyber-city.svg' },
-    { name: '17.4 Kms from DLF City Center', icon: 'https://mvnmall.in/images/icons/railway-station.svg' },
-    { name: 'Adjacent to Gurgram’s Newest Business Centre', icon: 'https://mvnmall.in/images/icons/city-center.svg' },
+    { name: '20 Kms from Dlf Cyber City', icon: 'https://mvnmall.in/images/icons/cyber-city.svg' },
+    { name: '10.5 Kms from Gurgaon’s railway station', icon: 'https://mvnmall.in/images/icons/railway-station.svg' },
+    { name: '17.4 Kms from DLF City Center', icon: 'https://mvnmall.in/images/icons/city-center.svg' },
 
   ];
 

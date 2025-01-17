@@ -96,67 +96,65 @@ const PropertyDetails = ({
         ))}
       </div>
 
-      <div className="hidden lg:grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8 px-20">
-        {/* Property Details and Price Section */}
-        <div>
-          <h2 className="text-5xl font-bold text-left lg:text-6xl">{details}</h2>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8 px-20 ">
+ 
+  {/* Desktop & Laptop View */}
+  <div className="hidden lg:block">
+  <h2 className="text-6xl font-bold text-center md:text-left lg:text-5xl ">{details}</h2>
 
-          <p className="mt-5 text-justify text-[16px] lg:text-[20px]">
-            {/* Large styled first letter for desktop */}
-            <span
-              className="text-6xl lg:text-[70px] font-semibold leading-none lg:float-left lg:mr-4 lg:mt-1"
-              style={{ lineHeight: '1.1' }}
-            >
-              {description.trim()[0].toUpperCase()}
-            </span>
-            {/* Remaining description */}
-            <span className="block">
-              {description
-                .trim()
-                .slice(1)
-                .split('\n')
-                .map((line, index) => (
-                  <span
-                    key={index}
-                    className="block"
-                    style={{
-                      display: 'block',
-                      marginLeft: index === 0 ? 0 : '1.5em',
-                      marginTop: '0.3em',
-                    }}
-                  >
-                    {line}
-                  </span>
-                ))}
-            </span>
-          </p>
+  <p className="mt-5 text-justify text-[16px] lg:text-[20px] leading-relaxed">
+    {/* Styled first letter */}
+    <span className="text-6xl lg:text-[90px] font-semibold leading-none lg:float-left lg:mr-4 lg:mt-1">
+      {description.trim()[0].toUpperCase()}
+    </span>
+    <span>
+      {description
+        .trim()
+        .split(' ')
+        .slice(0, 3)
+        .join(' ')
+        .slice(1)} {/* Exclude the first letter */}
+    </span>
+    {/* Remaining description continues seamlessly */}
+    {description.trim().split(' ').length > 3 && (
+      <span className="ml-1">
+        {description.trim().split(' ').slice(3).join(' ')}
+      </span>
+    )}
+  </p>
+</div>
 
-          <div className="mt-6">
-            <h3 className="text-lg font-semibold lg:text-xl">Price:</h3>
-            <p className="text-base text-gray-900 lg:text-lg">{price}</p>
-          </div>
-        </div>
+{/* Mobile View */}
+<div className="block lg:hidden mt-6 px-6">
+  <h2 className="text-3xl font-bold text-center">{details}</h2>
 
-  
+  <p className="mt-6 text-justify text-[14px]">
+    {/* Styled first letter */}
+    <span className="text-4xl font-semibold leading-none float-left mr-3">
+      {description.trim()[0].toUpperCase()}
+    </span>
+    <span>
+      {description
+        .trim()
+        .split(' ')
+        .slice(0, 3)
+        .join(' ')
+        .slice(1)} {/* Exclude the first letter */}
+    </span>
+    {/* Remaining description continues seamlessly */}
+    {description.trim().split(' ').length > 3 && (
+      <span className="ml-1">
+        {description.trim().split(' ').slice(3).join(' ')}
+      </span>
+    )}
+  </p>
+</div>
 
-      {/* Mobile View */}
-      <div className="block lg:hidden mt-6 px-6">
-        <h2 className="text-3xl font-bold text-left">{details}</h2>
-
-        <p className="mt-4 text-justify text-[14px]">
-          {description}
-        </p>
-
-        <div className="mt-4">
-          <h3 className="text-lg font-semibold">Price:</h3>
-          <p className="text-base text-gray-900">{price}</p>
-        </div>
-      </div>
 
    
 
 
-<div className="ml-20">
+<div className="ml-20 flex flex-col ">
  <div className="flex flex-col gap-4 md:mt-20 md:mx-16 md:text-2xl">
 
             <button className="px-6 py-3 bg-gray-900 border-2  text-white font-semibold  hover:bg-white transition hover:text-black hover:border-black">
@@ -249,33 +247,66 @@ const PropertyDetails = ({
   </div>
 </div>
 
-      <div className="w-full bg-gray-800 text-white py-8 px-4">
-        <div className="max-w-4xl mx-auto">
-          <h3 className="text-lg md:text-3xl font-semibold text-center">Interested in {details} ?</h3>
-          <form onSubmit={onFormSubmit} className="mt-4">
-            <input
-              type="text"
-              placeholder="Name"
-              required
-              className="block w-full md:w-3/4 mx-auto p-2 mb-3 border rounded-md "
-            />
-            <input
-              type="email"
-              placeholder="Email"
-              required
-              className="block w-full md:w-3/4 mx-auto p-2 mb-3 border rounded-md"
-            />
-            <textarea
-              placeholder="Message"
-              rows="4"
-              className="block w-full md:w-3/4 mx-auto p-2 mb-3 border rounded-md"
-            ></textarea>
-            <button type="submit" className="px-4 py-2 bg-red-900 text-white rounded-md block mx-auto">
-              Submit
-            </button>
-          </form>
-        </div>
-        </div>
+<div className="w-full bg-gradient-to-r from-gray-700 via-gray-800 to-gray-900 text-white py-12 px-4">
+  <div className="max-w-3xl mx-auto">
+    <h3 className="text-lg md:text-3xl font-bold text-center relative mb-6">
+      Interested in <span className="text-blue-400">{details}</span> ?
+    </h3>
+    <form onSubmit={onFormSubmit} className="space-y-5">
+      {/* Hidden Input for Property */}
+      <input
+        type="text"
+        value={details}
+        readOnly
+        className="hidden"
+        name="property"
+      />
+
+      <input
+        type="text"
+        placeholder="Name"
+        required
+        className="block w-full md:w-4/5 mx-auto p-3 text-gray-800 rounded-md border focus:outline-none focus:ring-2 focus:ring-blue-400"
+        autoComplete="name"
+      />
+      <input
+        type="email"
+        placeholder="Email"
+        required
+        className="block w-full md:w-4/5 mx-auto p-3 text-gray-800 rounded-md border focus:outline-none focus:ring-2 focus:ring-blue-400"
+        autoComplete="email"
+      />
+      <input
+        type="tel"
+        placeholder="Phone Number"
+        required
+        className="block w-full md:w-4/5 mx-auto p-3 text-gray-800 rounded-md border focus:outline-none focus:ring-2 focus:ring-blue-400"
+        autoComplete="tel"
+      />
+      <input
+       type="text"
+       value={details}
+       readOnly
+       name="property"
+       className = "block w-full md:w-4/5 mx-auto p-3 text-gray-800 rounded-md border focus:outline-none focus:ring-2 focus:ring-blue-400"
+     />
+      <textarea
+        placeholder="Message"
+        rows="4"
+        className="block w-full md:w-4/5 mx-auto p-3 text-gray-800 rounded-md border focus:outline-none focus:ring-2 focus:ring-blue-400"
+        autoComplete="on"
+      ></textarea>
+      <button
+        type="submit"
+        className="px-6 py-3 bg-blue-500 text-white rounded-md block mx-auto text-lg font-semibold hover:bg-blue-600 shadow-md transform transition-transform duration-200 hover:scale-105"
+      >
+        Submit
+      </button>
+    </form>
+  </div>
+</div>
+
+
     </div>
   );
 };
