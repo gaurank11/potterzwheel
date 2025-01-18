@@ -16,7 +16,7 @@ export default function App() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
-  const businessPhoneNumber = "1234567890"; 
+  const businessPhoneNumber = "+919811092501"; 
 
   return (
     <div>
