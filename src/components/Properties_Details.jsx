@@ -125,7 +125,7 @@ const PropertyDetails = ({
 </div>
 
 {/* Mobile View */}
-<div className="block lg:hidden mt-6 px-6">
+<div className="block lg:hidden mt-6">
   <h2 className="text-3xl font-bold text-center">{details}</h2>
 
   <p className="mt-6 text-[14px]">
