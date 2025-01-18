@@ -51,7 +51,7 @@ export default function HeroSection() {
             />
 
             {/* Horizontal Line */}
-            <div className="absolute top-1/2 left-0 w-full h-[2px] bg-white opacity-50 transform -translate-y-1/2"></div>
+            <div className="absolute top-1/2 left-0 w-full h-[2px] bg-white opacity-50 transform -translate-y-1/2 m-0 p-0"></div>
 
             {/* Text Box */}
             <div
@@ -97,10 +97,16 @@ export default function HeroSection() {
         /* Mobile-Specific Adjustments */
         @media (max-width: 640px) {
           .absolute {
-            padding: 10px 20px;
+            padding: 0 !important; /* Ensure no extra padding */
           }
           .text-base {
             font-size: 0.9rem; /* Smaller text on mobile */
+          }
+
+          /* Fixing horizontal line width on mobile */
+          .absolute {
+            width: 100% !important; /* Ensure line takes full width */
+            left: 0 !important; /* Make sure it's aligned from the left */
           }
         }
       `}</style>
