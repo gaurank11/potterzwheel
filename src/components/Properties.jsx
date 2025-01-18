@@ -149,19 +149,19 @@ const PropertiesPage = () => {
 
   <div className="w-full flex flex-col justify-center items-center space-y-6 h-full text-xl md:text-2xl">
   <div className="relative flex items-center w-3/4">
-    <div className="h-[2px] w-12 bg-white absolute left-[-50px]"></div>
+    <div className="h-[2px] w-12 bg-white  left-[-50px]"></div>
     <button className="w-full px-6 py-3 bg-transparent border-2 border-white text-white font-semibold hover:bg-red-900 transition duration-300">
       Interactive Map
     </button>
   </div>
   <div className="relative flex items-center w-3/4">
-    <div className="h-[2px] w-12 bg-white absolute left-[-50px]"></div>
+    <div className="h-[2px] w-12 bg-white  left-[-50px]"></div>
     <button className="w-full px-6 py-3 bg-transparent border-2 border-white text-white font-semibold hover:bg-red-900 transition duration-300">
       Sell A Home
     </button>
   </div>
   <div className="relative flex items-center w-3/4">
-    <div className="h-[2px] w-12 bg-white absolute left-[-50px]"></div>
+    <div className="h-[2px] w-12 bg-white  left-[-50px]"></div>
     <button className="w-full px-6 py-3 bg-transparent border-2 border-white text-white font-semibold hover:bg-red-900 transition duration-300">
       Search The MLS
     </button>

@@ -336,7 +336,7 @@ import emailjs from "emailjs-com";
 
 {/* Mobile View */}
 <div className="block lg:hidden mt-6">
-  <h2 className="text-[32px] font-bold text-left">{details}</h2>
+  <h2 className="text-[30px] font-bold text-left">{details}</h2>
 
   <p className="mt-6 text-[14px] text-justify">
     {/* Styled first letter */}
