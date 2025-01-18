@@ -130,7 +130,7 @@ const PropertyDetails = ({
 
   <p className="mt-6 text-[14px]">
     {/* Styled first letter */}
-    <span className="text-4xl font-semibold leading-none float-left mr-3">
+    <span className="text-5xl font-semibold leading-none float-left mr-3">
       {description.trim()[0].toUpperCase()}
     </span>
     <span>
@@ -154,7 +154,7 @@ const PropertyDetails = ({
    
 
 
-<div className="ml-20 flex flex-col ">
+<div className=" flex flex-col sm:items-center ">
  <div className="flex flex-col gap-4 md:mt-20 md:mx-16 md:text-2xl">
 
             <button className="px-6 py-3 bg-gray-900 border-2  text-white font-semibold  hover:bg-white transition hover:text-black hover:border-black">
@@ -220,7 +220,7 @@ const PropertyDetails = ({
       ))}
     </div>
     <button
-      className="mt-4 px-4 py-2 bg-gray-900 text-white rounded-md"
+      className="mt-4 px-4 py-2 bg-gray-900 text-white rounded-md text-center"
       onClick={() => handleOpenInMap(mapUrl)}
     >
       Open in Map
@@ -229,9 +229,9 @@ const PropertyDetails = ({
 </div>
 
 {/* Amenities Section */}
-<div className="text-center my-8 mt-16 ml-10">
+<div className="my-8 mt-16">
   <h2 className="text-3xl font-bold md:text-5xl text-center">AMENITIES</h2>
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center mt-10">
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center mt-4">
     {amenities.map((amenity, index) => (
       <div
         key={index}
