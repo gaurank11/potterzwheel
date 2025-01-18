@@ -11,6 +11,8 @@ const Krisumi = () => {
     '/Krisumi6.png',
   ];
 
+
+  const brochureUrl = "/Waterside-Residences-Brochure.pdf"; 
   const details = "Waterside Residences";
 
   const description = `
@@ -66,7 +68,7 @@ const Krisumi = () => {
       mapUrl={mapUrl} 
       onFormSubmit={handleFormSubmit}
       amenities={amenities}
-    
+      pdfUrl ={brochureUrl}
       location = {location}
       handleOpenInMap={handleOpenInMap}
       details = {details}

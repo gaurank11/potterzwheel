@@ -10,6 +10,7 @@ const Mvn = () => {
     '/mvn/m3.jpg',
     '/mvn/m6.png',
   ];
+  const brochureUrl = "/mvn/mvn_mall_brochure.pdf"; 
 
   const details = "MVN MALL";
 
@@ -63,7 +64,7 @@ There are dedicated floors thoughtfully curated to focus on a specific category,
       mapUrl={mapUrl} 
       onFormSubmit={handleFormSubmit}
       amenities={amenities}
-    
+      pdfUrl ={brochureUrl}
       location = {location}
       handleOpenInMap={handleOpenInMap}
       details = {details}
