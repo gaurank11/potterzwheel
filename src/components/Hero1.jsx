@@ -66,7 +66,7 @@ export default function HeroSection() {
                   width: "fit-content",
                 }}
               >
-                <p className="text-base sm:text-lg md:text-2xl font-semibold">
+                <p className="text-2xl sm:text-2xl md:text-5xl font-semibold">
                   {texts[index]}
                 </p>
               </div>
