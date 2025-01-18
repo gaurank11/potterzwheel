@@ -154,7 +154,7 @@ const PropertyDetails = ({
    
 
 
-<div className=" flex flex-col sm:items-center ">
+<div className=" flex flex-col  ">
  <div className="flex flex-col gap-4 md:mt-20 md:mx-16 md:text-2xl">
 
             <button className="px-6 py-3 bg-gray-900 border-2  text-white font-semibold  hover:bg-white transition hover:text-black hover:border-black">
