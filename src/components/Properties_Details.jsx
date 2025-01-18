@@ -128,7 +128,7 @@ const PropertyDetails = ({
 <div className="block lg:hidden mt-6">
   <h2 className="text-3xl font-bold text-center">{details}</h2>
 
-  <p className="mt-6 text-[14px]">
+  <p className="mt-6 text-[12px] text-justify">
     {/* Styled first letter */}
     <span className="text-5xl font-semibold leading-none float-left mr-3">
       {description.trim()[0].toUpperCase()}
@@ -220,7 +220,7 @@ const PropertyDetails = ({
       ))}
     </div>
     <button
-      className="mt-4 px-4 py-2 bg-gray-900 text-white rounded-md text-center"
+      className="mt-4 px-4 py-2 bg-gray-900 text-white rounded-md text-center items-center"
       onClick={() => handleOpenInMap(mapUrl)}
     >
       Open in Map
