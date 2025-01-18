@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import StampDutyCalculator from "./pages/stamp";
 import Krisumi from "./pages/Krisumi";
 import Mvn from "./pages/Mvn";
+import WhatsAppFloatingIcon from "./components/WhatsAppFloatingIcon";
 export default function App() {
   
   const location = useLocation();
@@ -15,6 +16,7 @@ export default function App() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
+  const businessPhoneNumber = "1234567890"; 
 
   return (
     <div>
@@ -27,6 +29,7 @@ export default function App() {
         <Route path="/Krisumi" element={<Krisumi />} />
         <Route path="/mvn" element={<Mvn />} />
       </Routes>
+      <WhatsAppFloatingIcon phoneNumber={businessPhoneNumber} />
       <Footer /> 
     </div>
   );

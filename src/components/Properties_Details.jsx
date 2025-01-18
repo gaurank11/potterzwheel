@@ -306,7 +306,7 @@ import emailjs from "emailjs-com";
         ))}
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8 px-20 ">
+  <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8 md:px-20 px-8 ">
  
   {/* Desktop & Laptop View */}
   <div className="hidden lg:block">
@@ -336,11 +336,11 @@ import emailjs from "emailjs-com";
 
 {/* Mobile View */}
 <div className="block lg:hidden mt-6">
-  <h2 className="text-3xl font-bold text-center">{details}</h2>
+  <h2 className="text-[32px] font-bold text-left">{details}</h2>
 
-  <p className="mt-6 text-[12px] text-justify">
+  <p className="mt-6 text-[14px] text-justify">
     {/* Styled first letter */}
-    <span className="text-5xl font-semibold leading-none float-left mr-3">
+    <span className="text-4xl font-semibold leading-none float-left mr-3">
       {description.trim()[0].toUpperCase()}
     </span>
     <span>
@@ -535,7 +535,7 @@ import emailjs from "emailjs-com";
     {/* Floating Download Brochure Button (Chat-like Icon) */}
     {pdfUrl && (
         <a href={pdfUrl} target="_blank" rel="noopener noreferrer">
-          <div className="fixed bottom-8 right-8 bg-gray-800 text-white rounded-full p-4 shadow-lg hover:bg-gray-900 transition duration-200">
+          <div className="fixed bottom-24 right-8 bg-gray-800 text-white rounded-full p-4 shadow-lg hover:bg-gray-900 transition duration-200">
             <span className="text-md md:text-2xl">📄   Download Brochure</span> {/* You can use an icon here */}
           </div>
         </a>
