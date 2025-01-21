@@ -66,7 +66,7 @@ export default function HeroSection() {
                   width: "fit-content",
                 }}
               >
-                <p className="text-2xl sm:text-2xl md:text-5xl font-semibold">
+                <p className="text-base sm:text-lg md:text-2xl font-semibold">
                   {texts[index]}
                 </p>
               </div>
@@ -90,6 +90,7 @@ export default function HeroSection() {
             opacity: 1;
           }
         }
+
         .animate-slide-fullvw {
           animation: slide-fullvw 3s ease-in-out forwards;
         }
@@ -97,16 +98,27 @@ export default function HeroSection() {
         /* Mobile-Specific Adjustments */
         @media (max-width: 640px) {
           .absolute {
-            padding: 0 !important; /* Ensure no extra padding */
+            padding: 10px 20px;
           }
+
+          /* Make the image full width and height on mobile */
+          .slick-slide img {
+            width: 100% !important;
+            height: 100% !important;
+          }
+
           .text-base {
             font-size: 0.9rem; /* Smaller text on mobile */
           }
 
-          /* Fixing horizontal line width on mobile */
-          .absolute {
-            width: 100% !important; /* Ensure line takes full width */
-            left: 0 !important; /* Make sure it's aligned from the left */
+          /* Adjust the horizontal line to be slimmer on mobile */
+          .slick-slide .absolute.top-1\/2.left-0.w-full {
+            height: 1px !important; /* Slimmer line on mobile */
+          }
+
+          /* Adjust the text box padding for mobile */
+          .text-center {
+            padding: 10px 15px;
           }
         }
       `}</style>

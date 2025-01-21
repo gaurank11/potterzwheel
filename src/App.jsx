@@ -9,6 +9,7 @@ import StampDutyCalculator from "./pages/stamp";
 import Krisumi from "./pages/Krisumi";
 import Mvn from "./pages/Mvn";
 import WhatsAppFloatingIcon from "./components/WhatsAppFloatingIcon";
+import Trevoc from "./pages/Trevoc";
 export default function App() {
   
   const location = useLocation();
@@ -28,6 +29,7 @@ export default function App() {
         <Route path="/resources/stamp_duty" element = {<StampDutyCalculator />} />
         <Route path="/Krisumi" element={<Krisumi />} />
         <Route path="/mvn" element={<Mvn />} />
+        <Route path="/trevoc" element={<Trevoc/>} />
       </Routes>
       <WhatsAppFloatingIcon phoneNumber={businessPhoneNumber} />
       <Footer /> 

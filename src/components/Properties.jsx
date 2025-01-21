@@ -52,7 +52,7 @@ const PropertiesPage = () => {
               className="w-full h-auto object-cover rounded-md transition-transform duration-300 group-hover:scale-105"
             />
             <div className="absolute inset-x-0 bottom-0 bg-black bg-opacity-50 text-white p-4 flex justify-between items-center group-hover:opacity-100 opacity-0 transition-all">
-              <span className="w-7/12">MVN MALL</span>
+              <span className="w-7/12">MVN PROPERTIES</span>
               <button className="bg-red-900 px-4 py-2 rounded-md">View Details</button>
             </div>
           </div>
@@ -64,15 +64,15 @@ const PropertiesPage = () => {
         <div className="w-full">
           <div
             className="relative group cursor-pointer"
-            onClick={() => navigate('/Krisumi')}
+            onClick={() => navigate('/trevoc')}
           >
             <img
-              src="https://i.ytimg.com/vi/KDMUddVZqwo/hq720.jpg?sqp=-oaymwEXCK4FEIIDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLDPZi1_Rx9EyY9j7NW8vN5FSeEv5g"
+              src="/trevoc/t_home.png"
               alt="Outdoor Pool"
               className="w-full h-auto object-cover rounded-md transition-transform duration-300 group-hover:scale-105"
             />
             <div className="absolute inset-x-0 bottom-0 bg-black bg-opacity-50 text-white p-4 flex justify-between items-center group-hover:opacity-100 opacity-0 transition-all">
-              <span className="w-7/12">Property Name</span>
+              <span className="w-7/12">TREVOC PROPERTIES</span>
               <button className="bg-red-900 px-4 py-2 rounded-md">View Details</button>
             </div>
           </div>
