@@ -198,6 +198,27 @@ import emailjs from "emailjs-com";
           required
           className="block w-4/5 mx-auto p-2 mb-3 border rounded-md"
         ></textarea>
+ 
+ <div className="flex items-start w-4/5 mx-auto">
+    <input
+      id="terms"
+      name="terms"
+      type="checkbox"
+      className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-2 focus:ring-blue-500 mt-1"
+      required
+    />
+    <label htmlFor="terms" className="ml-2 text-sm md:text-[18px] text-gray-200">
+      I agree to the{' '}
+      <a href="/termsandconditions" target="_blank" className="text-blue-600 hover:underline">
+        Terms and Conditions
+      </a>{' '}
+      and{' '}
+      <a href="/privacy-policy" target="_blank" className="text-blue-600 hover:underline">
+        Privacy Policy
+      </a>.
+    </label>
+  </div>
+        
         <button
           type="submit"
           className="px-4 py-2 bg-blue-600 text-white rounded-md"
@@ -274,6 +295,27 @@ import emailjs from "emailjs-com";
                 required
                 className="block w-4/5 mx-auto p-3 mb-4 border rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400"
               />
+
+<div className="flex items-start w-4/5 mx-auto">
+    <input
+      id="terms"
+      name="terms"
+      type="checkbox"
+      className="h-4 w-4 text-yellow-600 border-gray-300 rounded focus:ring-2 focus:ring-yellow-500 mt-1"
+      required
+    />
+    <label htmlFor="terms" className="ml-2 text-sm text-gray-200">
+      I agree to the{' '}
+      <a href="/termsandconditions" target="_blank" className="text-yellow-600 hover:underline">
+        Terms and Conditions
+      </a>{' '}
+      and{' '}
+      <a href="/privacy-policy" target="_blank" className="text-yellow-600 hover:underline">
+        Privacy Policy
+      </a>.
+    </label>
+  </div>
+              
               <button
                 type="submit"
                 className="px-6 py-3 bg-yellow-600 text-white rounded-md hover:bg-yellow-700 transition"
@@ -521,6 +563,26 @@ import emailjs from "emailjs-com";
             className="block w-full md:w-4/5 mx-auto p-3 text-gray-800 rounded-md border focus:outline-none focus:ring-2 focus:ring-blue-400"
             autoComplete="on"
           ></textarea>
+
+<div className="flex items-start w-full sm:w-4/5 mx-auto">
+    <input
+      id="terms"
+      name="terms"
+      type="checkbox"
+      className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-2 focus:ring-blue-500 mt-1"
+      required
+    />
+    <label htmlFor="terms" className="ml-2 text-sm md:text-[18px] text-gray-200">
+      I agree to the{' '}
+      <a href="/termsandconditions" target="_blank" className="text-blue-600 hover:underline">
+        Terms and Conditions
+      </a>{' '}
+      and{' '}
+      <a href="/privacy-policy" target="_blank" className="text-blue-600 hover:underline">
+        Privacy Policy
+      </a>.
+    </label>
+  </div>
           <button
             type="submit"
             className="px-6 py-3 bg-blue-500 text-white rounded-md block mx-auto text-lg font-semibold hover:bg-blue-600 shadow-md transform transition-transform duration-200 hover:scale-105"

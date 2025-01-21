@@ -25,24 +25,25 @@ const Trevoc = () => {
   const mapUrl = 'https://www.google.com/maps/place/Krisumi+Sales+Lounge/@28.4192531,76.9649014,17z/data=!3m1!4b1!4m6!3m5!1s0x390d3d63b59907ff:0x92efb89d2926d143!8m2!3d28.4192485!4d76.9697723!16s%2Fg%2F11f57wszxq?entry=ttu&g_ep=EgoyMDI1MDEwMS4wIKXMDSoASAFQAw%3D%3D';
 
   const amenities = [
-    { name: 'Round the Clock Security', icon: '/Amenities/a1.svg' },
-    { name: '24 Hours Electricity and Waterm', icon: '/Amenities/a2.svg' },
-    { name: '100% Power Back-up', icon: '/Amenities/a3.svg' },
-    { name: 'Open & Covered Parking Spaces', icon: '/Amenities/a5.svg' },
-    { name: 'All the Lobbies are Air-conditioned', icon: '/Amenities/a6.svg' },
-    { name: 'Swimming Pools', icon: '/Amenities/a8.svg' },
+    { name: 'Top Security', icon: 'https://www.svgrepo.com/show/466390/surveillance-camera.svg' },
+    { name: 'Ample Parking', icon: 'https://www.svgrepo.com/show/210907/parking-car.svg' },
+    { name: 'Smart Automation', icon: 'https://www.svgrepo.com/show/469824/smart-home.svg' },
+    { name: 'Concierge Services', icon: 'https://www.svgrepo.com/show/56194/concierge.svg' },
+    { name: 'Infinity Pools', icon: 'https://www.svgrepo.com/show/475480/swimming.svg' },
+    { name: 'Gym', icon: 'https://www.svgrepo.com/show/193640/treadmill-gym.svg' },
 
 
    
   ];
 
   const location =[
-    { name: '2 Widest Roads in Gurugram’s NPR and CPR', icon: 'https://krisumi.com/project/waterside-residences/images/icon/location-icon/the-confluence-SPR-CPR.svg' },
-    { name: '3 Minute Drive to NH-48', icon: 'https://krisumi.com/project/waterside-residences/images/icon/location-icon/Connected-to-NH-48.svg' },
-    { name: 'Planned Mass Rapid Transit System along NPR and CPR', icon: 'https://krisumi.com/project/waterside-residences/images/icon/location-icon/planned-mass-rapid.svg' },
-    { name: 'Encircled by 220 acres of Green Zone and a 50-metre Green Belt', icon: 'https://krisumi.com/project/waterside-residences/images/icon/location-icon/surrounded-by-220.svg' },
-    { name: 'Adjacent to Gurgram’s Newest Business Centre', icon: 'https://krisumi.com/project/waterside-residences/images/icon/location-icon/adjacent-to-global.svg' },
-    { name: 'Unhindered Connectivity to IGI Airport', icon: 'https://krisumi.com/project/waterside-residences/images/icon/location-icon/Near-IGI-Airport.svg' },
+    { name: '25 mins to IGI Airport', icon: 'https://www.svgrepo.com/show/490515/airport-departure.svg' },
+    { name: '8 mins to Corporate Hubs', icon: 'https://www.svgrepo.com/show/403900/office-building.svg' },
+    { name: '2 mins to Sector 56 Metro Station', icon: 'https://www.svgrepo.com/show/490847/metro.svg' },
+    { name: '2 mins to Grand Hyatt', icon: 'https://www.svgrepo.com/show/490127/hotel-building.svg' },
+    { name: '5 mins to DLF Camellias', icon: 'https://www.svgrepo.com/show/456974/real-estate-building.svg' },
+    { name: '5 mins to One Horizon Center', icon: 'https://www.svgrepo.com/show/70483/office-block.svg' },
+    
   ];
 
 

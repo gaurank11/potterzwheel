@@ -26,12 +26,12 @@ export default function HeroSection() {
   ];
 
   const texts = [
-    "Welcome to our platform!",
-    "Discover amazing products!",
-    "Create unforgettable memories!",
-    "Join our journey today!",
-    "Find your dream adventure!",
-    "Unleash your potential!",
+    "Building homes, shaping futures",
+    "Spinning the wheel of opportunities",
+    "Let us wheel you into your next big address",
+    "Turning bricks into bliss",
+    "Real estate? We’re wheely good at it",
+    "Wheeling and dealing, but always feeling",
   ];
 
   return (

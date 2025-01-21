@@ -255,6 +255,25 @@ const Content = () => {
                 required
               />
             </div>
+            <div className="flex items-start">
+    <input
+      id="terms"
+      name="terms"
+      type="checkbox"
+      className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-2 focus:ring-blue-500"
+      required
+    />
+    <label htmlFor="terms" className="ml-2 text-sm text-gray-700">
+      I agree to the{' '}
+      <a href="/termsandconditions" target="_blank" className="text-blue-600 hover:underline">
+        Terms and Conditions
+      </a>{' '}
+      and{' '}
+      <a href="/privacy-policy"  target="_blank" className="text-blue-600 hover:underline">
+        Privacy Policy
+      </a>.
+    </label>
+  </div>
 
             {/* Submit Button */}
             <button
