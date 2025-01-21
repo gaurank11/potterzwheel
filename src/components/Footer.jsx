@@ -1,5 +1,6 @@
 import React from 'react';
 import { InstagramIcon, FacebookIcon, XIcon, LinkedinIcon } from 'lucide-react';
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -48,8 +49,10 @@ const Footer = () => {
             <ul className="space-y-4 text-lg font-dm-sans">
               <li><a href="/about" className="hover:underline">About Us</a></li>
               <li><a href="/services" className="hover:underline">Our Services</a></li>
-              <li><a href="/contact" className="hover:underline">Contact Us</a></li>
-              <li><a href="/faq" className="hover:underline">FAQ</a></li>
+              <li><Link to ="/contact" className="hover:underline">Contact Us</Link></li>
+              <li><Link to ="/privacy-policy" className="hover:underline">Privacy Policy</Link></li>
+              <li><Link to ="/Disclaimer" className="hover:underline">Disclaimer</Link></li>
+              <li><Link to ="/termsandconditions" className="hover:underline">Terms & Condition</Link></li>
             </ul>
           </div>
 

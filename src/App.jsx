@@ -10,6 +10,9 @@ import Krisumi from "./pages/Krisumi";
 import Mvn from "./pages/Mvn";
 import WhatsAppFloatingIcon from "./components/WhatsAppFloatingIcon";
 import Trevoc from "./pages/Trevoc";
+import PrivacyPolicy from "./pages/Privacy";
+import Disclaimer from "./pages/Disclaimer";
+import TermsAndConditions from "./pages/Terms";
 export default function App() {
   
   const location = useLocation();
@@ -30,6 +33,10 @@ export default function App() {
         <Route path="/Krisumi" element={<Krisumi />} />
         <Route path="/mvn" element={<Mvn />} />
         <Route path="/trevoc" element={<Trevoc/>} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy/>} />
+        <Route path="/Disclaimer" element={<Disclaimer/>} />
+        <Route path="/termsandconditions" element={<TermsAndConditions/>} />
+       
       </Routes>
       <WhatsAppFloatingIcon phoneNumber={businessPhoneNumber} />
       <Footer /> 
