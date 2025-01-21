@@ -25,12 +25,12 @@ const Trevoc = () => {
   const mapUrl = 'https://www.google.com/maps/place/Krisumi+Sales+Lounge/@28.4192531,76.9649014,17z/data=!3m1!4b1!4m6!3m5!1s0x390d3d63b59907ff:0x92efb89d2926d143!8m2!3d28.4192485!4d76.9697723!16s%2Fg%2F11f57wszxq?entry=ttu&g_ep=EgoyMDI1MDEwMS4wIKXMDSoASAFQAw%3D%3D';
 
   const amenities = [
-    { name: 'Top Security', icon: 'https://www.svgrepo.com/show/466390/surveillance-camera.svg' },
-    { name: 'Ample Parking', icon: 'https://www.svgrepo.com/show/210907/parking-car.svg' },
-    { name: 'Smart Automation', icon: 'https://www.svgrepo.com/show/469824/smart-home.svg' },
-    { name: 'Concierge Services', icon: 'https://www.svgrepo.com/show/56194/concierge.svg' },
-    { name: 'Infinity Pools', icon: 'https://www.svgrepo.com/show/475480/swimming.svg' },
-    { name: 'Gym', icon: 'https://www.svgrepo.com/show/193640/treadmill-gym.svg' },
+    { name: 'Top Security', icon: 'https://www.svgrepo.com/show/383733/security-protection-camera-cctv-video-crime-cyber.svg' },
+    { name: 'Ample Parking', icon: 'https://www.svgrepo.com/show/208856/parking-car.svg' },
+    { name: 'Smart Automation', icon: 'https://www.svgrepo.com/show/519296/smart-life.svg' },
+    { name: 'Concierge Services', icon: 'https://www.svgrepo.com/show/455905/hotel-concierge.svg' },
+    { name: 'Infinity Pools', icon: 'https://www.svgrepo.com/show/359888/swimming.svg' },
+    { name: 'Gym', icon: 'https://www.svgrepo.com/show/383987/gym-workout.svg' },
 
 
    

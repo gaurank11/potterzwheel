@@ -105,13 +105,14 @@ export default function HeroSection() {
           .slick-slide img {
             width: 100% !important;
             height: 100% !important;
+            object-fit: cover; /* Ensure the image fully covers the screen */
           }
 
           .text-base {
             font-size: 0.9rem; /* Smaller text on mobile */
           }
 
-          /* Adjust the horizontal line to be slimmer on mobile */
+          /* Adjust the horizontal line to be thinner on mobile */
           .slick-slide .absolute.top-1\/2.left-0.w-full {
             height: 1px !important; /* Slimmer line on mobile */
           }
