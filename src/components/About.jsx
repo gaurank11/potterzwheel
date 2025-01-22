@@ -5,9 +5,7 @@ const AboutUs = () => {
     <section className="bg-gray-50 py-16 px-6 lg:px-16">
       <div className="max-w-7xl mx-auto text-center">
         <h1 className="text-4xl font-bold text-gray-900 mb-12 md:text-6xl">About Us</h1>
-        <p className="text-xl md:text-2xl text-gray-600 mb-16">
-          At Potterzwheel Realty, we’re transforming the real estate experience. Our goal is to deliver seamless, transparent journeys for our clients—whether buying, selling, or leasing properties. We focus on maximizing returns while ensuring a hassle-free, customer-centric service.
-        </p>
+        
 
         <div className="founders grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Founder 1 */}

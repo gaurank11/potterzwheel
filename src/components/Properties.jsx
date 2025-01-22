@@ -11,7 +11,7 @@ const PropertiesPage = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
         <div>
           <p className="text-6xl font-bold text-right md:text-[81px]">FEATURED</p>
-          <p className="text-4xl font-semibold text-red-300 mt-2 text-right md:text-[45px]">LISTING</p>
+          <p className="text-4xl font-bold text-red-900 mt-2 text-right md:text-[45px]">LISTING</p>
           {/* View All Properties button */}
           <button
       className="mt-6 px-6 py-3 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-red-900 transition flex items-center space-x-2 ml-auto md:text-2xl"

@@ -98,7 +98,7 @@ const EmiCalculator = () => {
                   type="number"
                   value={principal}
                   onChange={(e) => setPrincipal(e.target.value)}
-                  className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-red-900"
                   placeholder="Enter loan amount"
                   required
                 />
@@ -146,7 +146,7 @@ const EmiCalculator = () => {
               <select
                 value={selectedBank}
                 onChange={(e) => setSelectedBank(e.target.value)}
-                className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-red-900"
               >
                 <option value="">-- Select a Bank --</option>
                 {banks.map((bank) => (
@@ -162,7 +162,7 @@ const EmiCalculator = () => {
               <button
                 type="button"
                 onClick={() => setShowPrePayment(!showPrePayment)}
-                className="flex items-center gap-2 text-blue-500 hover:text-blue-600"
+                className="flex items-center gap-2 text-red-800 hover:text-red-900"
               >
                 <PlusCircle className="text-lg" />
                 Add Pre-Payment (Optional)
@@ -177,7 +177,7 @@ const EmiCalculator = () => {
                       type="number"
                       value={prePayment}
                       onChange={(e) => updatePrePayment(index, e.target.value)}
-                      className="flex-grow p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="flex-grow p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-red-900"
                       placeholder={`Pre-Payment ${index + 1}`}
                     />
                   </div>
@@ -185,7 +185,7 @@ const EmiCalculator = () => {
                 <button
                   type="button"
                   onClick={addPrePayment}
-                  className="p-2 bg-green-500 text-white rounded-md hover:bg-green-600"
+                  className="p-2 bg-red-900 text-white rounded-md hover:bg-red-700"
                 >
                   Add More
                 </button>
@@ -195,7 +195,7 @@ const EmiCalculator = () => {
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-full py-3 bg-blue-500 text-white font-bold rounded-md hover:bg-blue-600 transition-all"
+              className="w-full py-3 bg-red-900 text-white font-bold rounded-md hover:bg-red-700 transition-all"
             >
               Calculate EMI
             </button>

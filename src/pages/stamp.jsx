@@ -47,7 +47,7 @@ const StampDutyCalculator = () => {
             <select
               value={state}
               onChange={(e) => setState(e.target.value)}
-              className="w-full border p-3 rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none"
+              className="w-full border p-3 rounded-lg focus:ring-2 focus:ring-red-900 focus:outline-none"
             >
               <option value="">-- Select State --</option>
               <option value="Delhi">Delhi</option>
@@ -62,7 +62,7 @@ const StampDutyCalculator = () => {
             <select
               value={gender}
               onChange={(e) => setGender(e.target.value)}
-              className="w-full border p-3 rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none"
+              className="w-full border p-3 rounded-lg focus:ring-2 focus:ring-red-900 focus:outline-none"
             >
               <option value="">-- Select Gender --</option>
               <option value="male">Male</option>
@@ -78,14 +78,14 @@ const StampDutyCalculator = () => {
               type="number"
               value={propertyValue}
               onChange={(e) => setPropertyValue(e.target.value)}
-              className="w-full border p-3 rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none"
+              className="w-full border p-3 rounded-lg focus:ring-2 focus:ring-red-900 focus:outline-none"
               placeholder="Enter property value"
             />
           </div>
 
           <button
             onClick={calculateStampDuty}
-            className="w-full py-3 bg-green-600 text-white font-bold rounded-lg hover:bg-green-700 transition duration-300"
+            className="w-full py-3 bg-red-900 text-white font-bold rounded-lg hover:bg-red-700 transition duration-300"
           >
             Calculate Stamp Duty
           </button>
@@ -94,17 +94,17 @@ const StampDutyCalculator = () => {
         {/* Stamp Duty Result */}
         <div className="md:w-1/2 space-y-3 md:space-y-6 items-center flex flex-col justify-center">
           {rate !== null && (
-            <div className="p-6 bg-blue-50 border border-blue-300 rounded-lg text-center md:p-10">
-              <h3 className="text-md font-bold text-blue-600">
+            <div className="p-6 bg-red-50 border border-black rounded-lg text-center md:p-10">
+              <h3 className="text-md font-bold text-red-900">
                 Your stamp duty rate is: {rate}%
               </h3>
             </div>
           )}
 
           {stampDuty !== null && (
-            <div className="p-6 bg-green-50 border border-green-300 rounded-lg text-center md:p-12">
-              <h3 className="text-lg font-bold text-green-600">Stamp Duty</h3>
-              <p className="text-2xl font-semibold text-green-800">₹{stampDuty}</p>
+            <div className="p-6 bg-gray-100 border border-gray-500 rounded-lg text-center md:p-12">
+              <h3 className="text-lg font-bold text-gray-900">Stamp Duty</h3>
+              <p className="text-2xl font-semibold text-gray-900">₹{stampDuty}</p>
             </div>
           )}
         </div>

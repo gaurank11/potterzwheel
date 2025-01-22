@@ -156,7 +156,7 @@ const Content = () => {
                 type="text"
                 value={formData.name}
                 onChange={handleChange}
-                className="w-full border border-gray-300 rounded-md p-3 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                className="w-full border border-gray-300 rounded-md p-3 focus:ring-2 focus:ring-red-900 focus:outline-none"
                 required
               />
             </div>
@@ -175,7 +175,7 @@ const Content = () => {
                 type="email"
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full border border-gray-300 rounded-md p-3 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                className="w-full border border-gray-300 rounded-md p-3 focus:ring-2 focus:ring-red-900 focus:outline-none"
                 required
               />
             </div>
@@ -193,7 +193,7 @@ const Content = () => {
                   name="countryCode"
                   value={formData.countryCode}
                   onChange={handleChange}
-                  className="border border-gray-300 rounded-md p-3 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                  className="border border-gray-300 rounded-md p-3 focus:ring-2 focus:ring-red-900 focus:outline-none"
                   required
                 >
                   <option value="+91">+91 (India)</option>
@@ -206,7 +206,7 @@ const Content = () => {
                   type="text"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="ml-2 w-full border border-gray-300 rounded-md p-3 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                  className="ml-2 w-full border border-gray-300 rounded-md p-3 focus:ring-2 focus:ring-red-900 focus:outline-none"
                   required
                 />
               </div>
@@ -225,7 +225,7 @@ const Content = () => {
                 name="service"
                 value={formData.service}
                 onChange={handleChange}
-                className="w-full border border-gray-300 rounded-md p-3 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                className="w-full border border-gray-300 rounded-md p-3 focus:ring-2 focus:ring-red-900 focus:outline-none"
                 required
               >
                 <option value="">Select a Property Type</option>
@@ -251,7 +251,7 @@ const Content = () => {
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                className="w-full border border-gray-300 rounded-md p-3 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                className="w-full border border-gray-300 rounded-md p-3 focus:ring-2 focus:ring-red-900 focus:outline-none"
                 required
               />
             </div>
@@ -260,7 +260,7 @@ const Content = () => {
       id="terms"
       name="terms"
       type="checkbox"
-      className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-2 focus:ring-blue-500"
+      className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-2 focus:ring-red-900"
       required
     />
     <label htmlFor="terms" className="ml-2 text-sm text-gray-700">
@@ -278,7 +278,7 @@ const Content = () => {
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-full py-3 bg-blue-600 text-white text-lg font-semibold rounded-md hover:bg-blue-700 transition-colors"
+              className="w-full py-3 bg-red-900 text-white text-lg font-semibold rounded-md focus:ring-red-900 transition-colors"
             >
               Send Message
             </button>

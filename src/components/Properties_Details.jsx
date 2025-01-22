@@ -16,6 +16,7 @@ import emailjs from "emailjs-com";
   pdfUrl,
 }) => {
   const [showPopup, setShowPopup] = useState(false);
+  const [showPopup2, setShowPopup2] = useState(false);
   const [showSchedulePopup, setShowSchedulePopup] = useState(false);
 
   useEffect(() => {
@@ -34,6 +35,14 @@ import emailjs from "emailjs-com";
 
   const openPopup = () => {
     setShowPopup(true);
+  };
+
+  const closePopup2 = () => {
+    setShowPopup2(false);
+  };
+
+  const openPopup2 = () => {
+    setShowPopup2(true);
   };
 
 
@@ -88,8 +97,7 @@ import emailjs from "emailjs-com";
       phone: formData.phone,
       message: formData.message,
       property: details,
-      date: formData.date,
-      time: formData.time,
+
     };
 
     emailjs
@@ -129,6 +137,42 @@ import emailjs from "emailjs-com";
         alert("Failed to schedule showing. Please try again.");
         console.error(error);
       });
+  };
+
+  const onForm3Submit = (e) => {
+    e.preventDefault();
+
+    const serviceID = "service_j3bcnsv"; 
+    const templateID = "template_1ehcvh7"; 
+    const userID = "LhmPcW1aSL4Bb2D5V";  
+
+
+    const template3Params = {
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      message: formData.message,
+      property: details,
+    };
+
+    emailjs
+    .send(serviceID, templateID, template3Params, userID)
+    .then((response) => {
+      alert("Message sent successfully!");
+      setFormData({ name: "", email: "", phone: "", message: "" });
+
+      // Close the popup
+      setShowPopup2(false);
+
+      // Automatically open the PDF after form submission
+      setTimeout(() => {
+        window.open(pdfUrl, "_blank");
+      }, 300); // Slight delay for better UX
+    })
+    .catch((error) => {
+      alert("Failed to send the message. Please try again.");
+      console.error(error);
+    });
   };
 
   const handleInputChange = (e) => {
@@ -237,6 +281,106 @@ import emailjs from "emailjs-com";
     </div>
   </div>
 )}
+
+{showPopup2 && (
+  <div className="fixed inset-0 bg-gray-900 bg-opacity-50 flex justify-center items-center">
+    <div className="bg-gradient-to-r from-gray-700 via-gray-800 to-gray-900 p-8 rounded-lg w-full max-w-3xl text-center relative">
+      <h3 className="text-lg font-semibold text-white md:text-2xl">
+      Interested in <span className="text-blue-400">{details}</span> ?
+      </h3>
+      <form onSubmit={onForm3Submit} className="mt-4 space-y-4">
+        {/* Hidden Input for Property */}
+        <input
+          type="text"
+          value={details}
+          readOnly
+          className="hidden"
+          name="property"
+          id="property"
+        />
+        
+        <input
+          type="text"
+          name="name"
+          id="name"
+          value={formData.name}
+          onChange={handleInputChange}
+          placeholder="Name"
+          required
+          className="block w-4/5 mx-auto p-2 mb-3 border rounded-md"
+        />
+        <input
+          type="email"
+          name="email"
+          id="email"
+          value={formData.email}
+          onChange={handleInputChange}
+          placeholder="Email"
+          required
+          className="block w-4/5 mx-auto p-2 mb-3 border rounded-md"
+        />
+
+        <input
+          type="tel"
+          name="phone"
+          id="phone"
+          value={formData.phone}
+          onChange={handleInputChange}
+          placeholder="Phone Number"
+          required
+          className="block w-4/5 mx-auto p-2 mb-3 border rounded-md"
+          autoComplete="tel"
+        />
+        <textarea
+          name="message"
+          id="message"
+          value={formData.message}
+          onChange={handleInputChange}
+          placeholder="Message"
+          rows="4"
+          required
+          className="block w-4/5 mx-auto p-2 mb-3 border rounded-md"
+        ></textarea>
+ 
+ <div className="flex items-start w-4/5 mx-auto">
+    <input
+      id="terms"
+      name="terms"
+      type="checkbox"
+      className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-2 focus:ring-blue-500 mt-1"
+      required
+    />
+    <label htmlFor="terms" className="ml-2 text-sm md:text-[18px] text-gray-200">
+      I agree to the{' '}
+      <a href="/termsandconditions" target="_blank" className="text-blue-600 hover:underline">
+        Terms and Conditions
+      </a>{' '}
+      and{' '}
+      <a href="/privacy-policy" target="_blank" className="text-blue-600 hover:underline">
+        Privacy Policy
+      </a>.
+    </label>
+  </div>
+        
+        <button
+          type="submit"
+          className="px-4 py-2 bg-blue-600 text-white rounded-md"
+        >
+          Submit
+        </button>
+      </form>
+
+      {/* Cross button to close the popup */}
+      <button
+        onClick={closePopup2}
+        className="absolute top-3 right-3 text-white text-3xl"
+      >
+        <FaTimes />
+      </button>
+    </div>
+  </div>
+)}
+
 
 {showSchedulePopup && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
@@ -595,13 +739,20 @@ import emailjs from "emailjs-com";
 
 
     {/* Floating Download Brochure Button (Chat-like Icon) */}
-    {pdfUrl && (
-        <a href={pdfUrl} target="_blank" rel="noopener noreferrer">
-          <div className="fixed bottom-24 right-1 bg-red-800 text-white rounded-full p-4 shadow-lg hover:bg-red-900 transition duration-200">
-            <span className="text-md md:text-2xl">📄   Download Brochure</span> {/* You can use an icon here */}
-          </div>
-        </a>
-      )}
+    <div
+        onClick={openPopup2}
+        className="fixed bottom-24 right-1 bg-red-800 text-white rounded-full p-4 shadow-lg hover:bg-red-900 transition duration-200 cursor-pointer flex items-center justify-center"
+      >
+        <img
+          src="https://www.svgrepo.com/show/527693/download-minimalistic.svg"
+          alt="Download Icon"
+          className="w-6 h-6 md:w-8 md:h-8 mr-2 "
+          style={{
+            filter: "invert(1)",
+          }}
+        />
+        <span className="text-md md:text-2xl">Download Brochure</span>
+      </div>
 
 
     </div>
