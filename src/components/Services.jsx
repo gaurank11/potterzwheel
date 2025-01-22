@@ -4,18 +4,18 @@ import './OurServices.css'; // Import the custom CSS file for animations
 const OurServices = () => {
   // Define a color palette for the overlays
   const overlayColors = [
-    'bg-gray-600', // Property Sales
+    'bg-gray-500', // Property Sales
     'bg-red-800', // Property Leasing
-    'bg-gray-600', // Document
+    'bg-gray-500', // Document
     'bg-red-800', // Security Solutions
-    'bg-gray-600', // Home Inspection
+    'bg-gray-500', // Home Inspection
     'bg-red-800', // Consulting Services
   ];
 
   return (
-    <section className="py-20 px-6 lg:px-16 bg-gray-900">
+    <section className="py-20 px-6 lg:px-16 bg-white">
       <div className="max-w-7xl mx-auto text-center">
-        <h2 className="text-4xl font-bold text-white mb-12 md:text-6xl">Our Services</h2>
+        <h2 className="text-4xl font-bold text-gray-900 mb-12 md:text-6xl">Our Services</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
 
           {/** Service cards */}
@@ -52,7 +52,7 @@ const OurServices = () => {
             >
               {/* Dynamic color overlay */}
               <div
-                className={`absolute inset-0 ${overlayColors[index]} opacity-70 group-hover:opacity-80 transition-opacity duration-300`}
+                className={`absolute inset-0 ${overlayColors[index]} opacity-80  transition-opacity duration-300`}
               ></div>
               <div className="relative z-10 text-center text-white">
                 <h3 className="text-2xl font-bold md:text-[30px]">
