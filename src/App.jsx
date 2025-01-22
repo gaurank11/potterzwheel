@@ -13,6 +13,9 @@ import Trevoc from "./pages/Trevoc";
 import PrivacyPolicy from "./pages/Privacy";
 import Disclaimer from "./pages/Disclaimer";
 import TermsAndConditions from "./pages/Terms";
+import TopProperties from "./components/All_Properties";
+import ResidentialProperties from "./components/Residential";
+import CommercialProperties from "./components/Commercial";
 export default function App() {
   
   const location = useLocation();
@@ -36,7 +39,9 @@ export default function App() {
         <Route path="/privacy-policy" element={<PrivacyPolicy/>} />
         <Route path="/Disclaimer" element={<Disclaimer/>} />
         <Route path="/termsandconditions" element={<TermsAndConditions/>} />
-       
+        <Route path="/properties" element={<TopProperties/>} />
+        <Route path="/properties/residential" element={<ResidentialProperties/>} />
+        <Route path="/properties/commercial" element={<CommercialProperties/>} />
       </Routes>
       <WhatsAppFloatingIcon phoneNumber={businessPhoneNumber} />
       <Footer /> 

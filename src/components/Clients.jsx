@@ -8,8 +8,7 @@ const ClientsPartners = () => {
     { name: 'Company 1', logo: '/Krisumi logo.png' },
     { name: 'Company 2', logo: '/Real-Estate.jpg' },
     { name: 'Company 3', logo: '/MVN_group.png' },
-    { name: 'Company 4', logo: '' },
-    { name: 'Company 5', logo: '' },
+    { name: 'Company 4', logo: 'https://btsbrands.com/wp-content/uploads/2021/08/Real-Estate-Logos-RDE-Capital-Group-1.webp' },
   ];
 
   const settings = {

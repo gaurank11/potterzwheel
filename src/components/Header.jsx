@@ -14,31 +14,21 @@ const Header = () => {
       dropdown: [
         { name: "Residential", link: "/properties/residential" },
         { name: "Commercial", link: "/properties/commercial" },
-        { name: "SCO", link: "/properties/sco" },
-        { name: "Studio Apartments", link: "/properties/studio_apartments" },
-        { name: "Plots", link: "/properties/plots" },
-        { name: "Fractional Ownership", link: "/properties/fractional_ownership" },
       ],
     },
     { name: "Services", link: "/services" },
     {
       name: "Resources",
-      link: "/resources",
       dropdown: [
         { name: "Stamp Duty Calculator", link: "/resources/stamp_duty" },
         { name: "EMI Calculator", link: "/resources/emi" },
-        { name: "Recommendations", link: "/resources/recommendations" },
       ],
     },
     {
-      name: "About",
+      name: "About Us",
       link: "/about",
-      dropdown: [
-        { name: "NRI Corner", link: "/about/nri" },
-        { name: "Investors", link: "/about/investors" },
-      ],
+
     },
-    { name: "Blog", link: "/blog" },
     { name: "Contact Us", link: "/contact" },
   ];
 

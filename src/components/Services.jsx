@@ -2,6 +2,16 @@ import React from 'react';
 import './OurServices.css'; // Import the custom CSS file for animations
 
 const OurServices = () => {
+  // Define a color palette for the overlays
+  const overlayColors = [
+    'bg-gray-600', // Property Sales
+    'bg-red-800', // Property Leasing
+    'bg-gray-600', // Document
+    'bg-red-800', // Security Solutions
+    'bg-gray-600', // Home Inspection
+    'bg-red-800', // Consulting Services
+  ];
+
   return (
     <section className="py-20 px-6 lg:px-16 bg-gray-900">
       <div className="max-w-7xl mx-auto text-center">
@@ -9,7 +19,7 @@ const OurServices = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
 
           {/** Service cards */}
-          {[ 
+          {[
             {
               title: 'Property Sales',
               bgImage: 'https://assets.upstox.com/content/assets/images/news/property-price.webp',
@@ -40,7 +50,10 @@ const OurServices = () => {
               className="relative bg-cover bg-center rounded-lg h-[350px] flex items-center justify-center group overflow-hidden service-card"
               style={{ backgroundImage: `url(${service.bgImage})` }}
             >
-              <div className="absolute inset-0 bg-black opacity-70 group-hover:opacity-80 transition-opacity duration-300"></div>
+              {/* Dynamic color overlay */}
+              <div
+                className={`absolute inset-0 ${overlayColors[index]} opacity-70 group-hover:opacity-80 transition-opacity duration-300`}
+              ></div>
               <div className="relative z-10 text-center text-white">
                 <h3 className="text-2xl font-bold md:text-[30px]">
                   <span className="relative inline-block px-6 py-3">

@@ -22,7 +22,7 @@ const Trevoc = () => {
   const price = ''
 
   const mapImage = '/trevoc/t_map.jpeg';
-  const mapUrl = 'https://www.google.com/maps/place/Krisumi+Sales+Lounge/@28.4192531,76.9649014,17z/data=!3m1!4b1!4m6!3m5!1s0x390d3d63b59907ff:0x92efb89d2926d143!8m2!3d28.4192485!4d76.9697723!16s%2Fg%2F11f57wszxq?entry=ttu&g_ep=EgoyMDI1MDEwMS4wIKXMDSoASAFQAw%3D%3D';
+  const mapUrl = 'https://maps.app.goo.gl/4yUzCjvTzv4JAmBfA';
 
   const amenities = [
     { name: 'Top Security', icon: 'https://www.svgrepo.com/show/383733/security-protection-camera-cctv-video-crime-cyber.svg' },
