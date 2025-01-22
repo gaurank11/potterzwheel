@@ -16,6 +16,7 @@ import TermsAndConditions from "./pages/Terms";
 import TopProperties from "./components/All_Properties";
 import ResidentialProperties from "./components/Residential";
 import CommercialProperties from "./components/Commercial";
+import AboutUsPage from "./pages/Aboutus_Page";
 export default function App() {
   
   const location = useLocation();
@@ -31,6 +32,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<AboutUsPage />} />
         <Route path="/resources/emi" element={<Emi />} />
         <Route path="/resources/stamp_duty" element = {<StampDutyCalculator />} />
         <Route path="/Krisumi" element={<Krisumi />} />
@@ -42,6 +44,7 @@ export default function App() {
         <Route path="/properties" element={<TopProperties/>} />
         <Route path="/properties/residential" element={<ResidentialProperties/>} />
         <Route path="/properties/commercial" element={<CommercialProperties/>} />
+
       </Routes>
       <WhatsAppFloatingIcon phoneNumber={businessPhoneNumber} />
       <Footer /> 
