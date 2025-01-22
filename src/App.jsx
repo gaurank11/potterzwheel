@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Route, Routes, useLocation } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route ,useLocation } from "react-router-dom";
 import Contact from "./pages/contact";
 import Emi from "./pages/emi";
 import Home from "./pages/Home";
@@ -28,6 +28,7 @@ export default function App() {
 
   return (
     <div>
+      <Router>
       <Header /> 
       <Routes>
         <Route path="/" element={<Home />} />
@@ -47,7 +48,8 @@ export default function App() {
 
       </Routes>
       <WhatsAppFloatingIcon phoneNumber={businessPhoneNumber} />
-      <Footer /> 
+      <Footer />
+      </Router> 
     </div>
   );
 }
