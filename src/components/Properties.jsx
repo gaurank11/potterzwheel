@@ -11,7 +11,7 @@ const PropertiesPage = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 ">
         <div className='md:p-5 p-3'>
           <p className="text-6xl font-bold text-right md:text-[81px] text-blue-950">FEATURED</p>
-          <p className="text-4xl font-bold text-blue-950 mt-2 text-right md:text-[45px]">LISTING</p>
+          <p className="text-4xl font-bold text-blue-950 mt-2 text-right md:text-[45px]">LISTINGS</p>
           {/* View All Properties button */}
           <button
             className="mt-6 px-6 py-3 bg-transparent border-2 border-black text-black font-semibold rounded-lg hover:bg-blue-950 hover:text-white transition flex items-center space-x-2 ml-auto md:text-2xl"
@@ -169,21 +169,20 @@ const PropertiesPage = () => {
         ))}
 
 <div className="w-full flex flex-col justify-center items-center space-y-6 h-full text-2xl md:text-2xl p-6 md:p-0">
-<div className="relative flex items-center w-full md:px-7">
-  <div className="h-[2px] w-12 bg-black  left-[-50px]"></div>
-  <button className="w-full px-6 py-3 bg-blue-950 border-2 border-black text-white font-bold hover:bg-white hover:text-black transition duration-300">
+<div className=" flex items-center w-full md:px-7">
+ 
+  <button className="w-full px-6 py-3 rounded-md bg-blue-950 border-2 border-black text-white font-bold hover:bg-white hover:text-black transition duration-300">
    BUY
   </button>
 </div>
-<div className="relative flex items-center w-full md:px-7">
-  <div className="h-[2px] w-12 bg-black  left-[-50px]"></div>
-  <button className="w-full px-6 py-3 bg-blue-950 border-2 border-black text-white font-bold hover:bg-white hover:text-black transition duration-300">
+<div className=" flex items-center w-full md:px-7">
+  
+  <button className="w-full px-6 py-3 rounded-md bg-blue-950 border-2 border-black text-white font-bold hover:bg-white hover:text-black transition duration-300">
     SELL 
   </button>
 </div>
-<div className="relative flex items-center w-full md:px-7">
-  <div className="h-[2px] w-12 bg-black  left-[-50px]"></div>
-  <button className="w-full px-6 py-3 bg-blue-950 border-2 border-black text-white font-bold hover:bg-white hover:text-black transition duration-300">
+<div className="flex items-center w-full md:px-7">
+  <button className="w-full px-6 py-3 rounded-md bg-blue-950 border-2 border-black text-white font-bold hover:bg-white hover:text-black transition duration-300">
     LEASE
   </button>
 </div>

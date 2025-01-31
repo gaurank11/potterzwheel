@@ -17,6 +17,8 @@ const property_location ="Sector 36A, Gurgaon"
   const brochureUrl = "/Waterside-Residences-Brochure.pdf"; 
   const details = "Waterside Residences";
 
+  const builder ="KRISUMI"
+
   const description = `
     Welcome to Waterside Residences, where luxury living merges with holistic wellness in the heart of Gurgaon's Sector 36A.
     Embrace a lifestyle of opulence and serenity. With premium amenities and picturesque surroundings, Waterside Residences
@@ -76,6 +78,7 @@ const property_location ="Sector 36A, Gurgaon"
       details = {details}
       overview_img = { overview_img}
       property_location = {property_location}
+      builder ={builder}
     />
   );
 };

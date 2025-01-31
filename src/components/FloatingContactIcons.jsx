@@ -8,7 +8,7 @@ const FloatingContactIcons = ({ phoneNumber, email }) => {
   const emailUrl = `mailto:${email}`;
 
   return (
-    <div className="fixed top-1/2 right-5 flex flex-col space-y-3 items-center transform -translate-y-1/2">
+    <div className="fixed top-2/3 right-1 md:right-3 flex flex-col space-y-3 items-center transform -translate-y-1/2">
 
 
       

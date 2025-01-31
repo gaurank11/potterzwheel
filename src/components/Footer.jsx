@@ -34,9 +34,7 @@ const Footer = () => {
     <a href="https://www.facebook.com/profile.php?id=61559495078889" className="text-white hover:text-gray-400">
       <FacebookIcon className="h-5 w-5 md:h-6 md:w-6" />
     </a>
-    <a href="https://www.x.com" className="text-white hover:text-gray-400">
-      <XIcon className="h-5 w-5 md:h-6 md:w-6" />
-    </a>
+    
     <a href="https://www.linkedin.com" className="text-white hover:text-gray-400">
       <LinkedinIcon className="h-5 w-5 md:h-6 md:w-6" />
     </a>
