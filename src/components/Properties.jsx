@@ -8,7 +8,7 @@ const PropertiesPage = () => {
   return (
     <div className="min-h-screen bg-white text-gray-900 px-5 md:px-0 ">
       {/* First Row: 1st Column "01 - Featured Listing" with two images next to it */}
-      <div className="grid grid-cols-1 md:grid-cols-3 ">
+      <div className="grid grid-cols-1 md:grid-cols-3">
         <div className='md:p-5 p-3'>
           <p className="text-6xl font-bold text-right md:text-[81px] text-blue-950">FEATURED</p>
           <p className="text-4xl font-bold text-blue-950 mt-2 text-right md:text-[45px]">LISTINGS</p>
@@ -32,7 +32,7 @@ const PropertiesPage = () => {
             <img
               src={property.img}
               alt={property.name}
-              className="w-full h-auto md:h-80 object-cover md:filter md:grayscale md:group-hover:grayscale-0 transition-all duration-300"
+              className="w-full h-auto md:h-80 object-cover transition-transform duration-300 group-hover:scale-110"
               onClick={() => navigate(property.link)}
             />
 
@@ -70,7 +70,7 @@ const PropertiesPage = () => {
       </div>
 
       {/* Second Row: Three images */}
-      <div className="grid grid-cols-1 sm:grid-cols-3">
+      <div className="grid grid-cols-1 sm:grid-cols-3 ">
         {[
           { img: "https://raw.githubusercontent.com/potterzwhealrealty/photos/main/trevoc/t_home.png", name: "TREVOC PROPERTIES", link: "/trevoc" },
           { img: "https://raw.githubusercontent.com/potterzwhealrealty/photos/main/ss_camasa/ss_homepage.png", name: "SS CAMASA", link: "/camasa" },
@@ -79,8 +79,8 @@ const PropertiesPage = () => {
           <div key={index} className="relative group cursor-pointer w-full">
             <img
               src={property.img}
-              alt={property.name}
-              className="w-full h-auto md:h-80 object-cover  md:filter md:grayscale  md:group-hover:grayscale-0 transition-all duration-300"
+              alt={property.name} className="w-full h-auto md:h-80 object-cover transition-transform duration-300 group-hover:scale-110"
+             
               onClick={() => navigate(property.link)}
             />
              {/* Mobile View: Details Below the Image */}
@@ -128,7 +128,7 @@ const PropertiesPage = () => {
             <img
               src={property.img}
               alt={property.name}
-              className="w-full h-auto md:h-80 object-cover  md:filter md:grayscale  md:group-hover:grayscale-0 transition-all duration-300"
+              className="w-full h-auto md:h-80 object-cover transition-transform duration-300 group-hover:scale-110"
               onClick={() => navigate(property.link)}
             />
 
