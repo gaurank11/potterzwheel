@@ -147,6 +147,7 @@ const ChatBot = () => {
               </button>
               <button onClick={() => window.location.href = "/stamp-duty-calculator"} className="bg-blue-950 text-white py-2 rounded">
                 Stamp Duty Calculator
+                
               </button>
               <button onClick={() => setMenu("properties")} className="bg-black text-white py-2 rounded">
                 Back

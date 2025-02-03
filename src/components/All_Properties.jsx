@@ -86,13 +86,12 @@ const TopProperties = () => {
         className="text-4xl md:text-6xl text-white font-bold bg-black bg-opacity-50 px-6 py-4 rounded-md" 
         style={{ fontFamily: "'NOURD', sans-serif", fontWeight: 'bold' }}
       >
-        Properties
+        Listings
       </h1>
     </section>
     
     <section className="py-10 px-6 bg-gray-100">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-6 md:text-5xl">Top Properties</h2>
 
           {/* Filter Buttons */}
           <div className="flex justify-center mb-8">

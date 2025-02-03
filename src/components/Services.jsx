@@ -23,11 +23,11 @@ const OurServices = () => {
           {/** Service cards */}
           {[
             {
-              title: 'Property Sales and Purchase',
+              title: 'Sales and Purchase',
               bgImage: 'https://assets.upstox.com/content/assets/images/news/property-price.webp',
             },
             {
-              title: 'Property Leasing',
+              title: 'Leasing',
               bgImage: 'https://www.adroitco.in/img/service/leasing-services.webp',
             },
             {

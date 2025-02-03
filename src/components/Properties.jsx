@@ -6,20 +6,22 @@ const PropertiesPage = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-white text-gray-900 px-5 md:px-0 ">
+    <div className="min-h-screen bg-white text-gray-900 px-5 md:px-0 mt-6">
       {/* First Row: 1st Column "01 - Featured Listing" with two images next to it */}
-      <div className="grid grid-cols-1 md:grid-cols-3">
-        <div className='md:p-5 p-3'>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 ">
+        <div className='md:p-5 p-3 '>
           <p className="text-6xl font-bold text-right md:text-[81px] text-blue-950">FEATURED</p>
           <p className="text-4xl font-bold text-blue-950 mt-2 text-right md:text-[45px]">LISTINGS</p>
           {/* View All Properties button */}
           <button
-            className="mt-6 px-6 py-3 bg-transparent border-2 border-black text-black font-semibold rounded-lg hover:bg-blue-950 hover:text-white transition flex items-center space-x-2 ml-auto md:text-2xl"
-            onClick={() => navigate('/properties')}
-          >
-            <span>View All Properties</span>
-            <Plus size={20} />
-          </button>
+  className="mt-6 px-6 py-3 bg-transparent border-2 border-black text-black font-semibold rounded-lg 
+             hover:bg-blue-950 hover:text-white transition flex items-center space-x-2 mx-auto md:text-2xl"
+  onClick={() => navigate('/properties')}
+>
+  <span>View All Properties</span>
+  <Plus size={20} />
+</button>
+
         </div>
 
         {/* Two images in the next two columns */}
@@ -32,7 +34,7 @@ const PropertiesPage = () => {
             <img
               src={property.img}
               alt={property.name}
-              className="w-full h-auto md:h-80 object-cover transition-transform duration-300 group-hover:scale-110"
+              className="w-full h-auto md:h-80 object-cover rounded-md"
               onClick={() => navigate(property.link)}
             />
 
@@ -70,7 +72,7 @@ const PropertiesPage = () => {
       </div>
 
       {/* Second Row: Three images */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 ">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6">
         {[
           { img: "https://raw.githubusercontent.com/potterzwhealrealty/photos/main/trevoc/t_home.png", name: "TREVOC PROPERTIES", link: "/trevoc" },
           { img: "https://raw.githubusercontent.com/potterzwhealrealty/photos/main/ss_camasa/ss_homepage.png", name: "SS CAMASA", link: "/camasa" },
@@ -79,7 +81,7 @@ const PropertiesPage = () => {
           <div key={index} className="relative group cursor-pointer w-full">
             <img
               src={property.img}
-              alt={property.name} className="w-full h-auto md:h-80 object-cover transition-transform duration-300 group-hover:scale-110"
+              alt={property.name} className="w-full h-auto md:h-80 object-cover rounded-md"
              
               onClick={() => navigate(property.link)}
             />
@@ -119,7 +121,7 @@ const PropertiesPage = () => {
       </div>
 
       {/* Third Row: Two images */}
-      <div className="grid grid-cols-1 sm:grid-cols-3">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6">
         {[
           { img: "https://raw.githubusercontent.com/potterzwhealrealty/photos/main/Eldico/eldico_overview.webp", name: "Eldeco Fairway Reserve", link: "/eldico" },
           { img: "https://images.squarespace-cdn.com/content/v1/58487dc4b8a79b6d02499b60/1649818878171-HXGSYXD0JI23307551QB/Francis+York+One+of+the+Most+Beautiful+Homes+For+Sale+in+Illinois+6.jpeg", name: "Property Name", link: "/Krisumi" }
@@ -128,7 +130,7 @@ const PropertiesPage = () => {
             <img
               src={property.img}
               alt={property.name}
-              className="w-full h-auto md:h-80 object-cover transition-transform duration-300 group-hover:scale-110"
+              className="w-full h-auto md:h-80 object-cover rounded-md "
               onClick={() => navigate(property.link)}
             />
 
@@ -152,7 +154,7 @@ const PropertiesPage = () => {
 
 
             {/* Hover Effect: Name in White Strip, View Details in Black Strip */}
-            <div className="absolute inset-x-0 bottom-0 flex justify-between items-center opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
+            <div className="absolute inset-x-0 bottom-0 flex justify-between items-center opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 border-2 border-blue-950">
               <span className="bg-white text-black py-3 px-4 text-lg font-semibold flex-1">
                 {property.name}
               </span>
