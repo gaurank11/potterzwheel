@@ -187,99 +187,99 @@ import emailjs from "emailjs-com";
     <div className="mt-15">
     {/* Popup Form */}
     {showPopup && (
-  <div className="fixed inset-0 flex justify-center items-center bg-transparent px-4 py-6 md:py-12 ">
-    <div className="bg-gray-50 p-6 rounded-lg w-full max-w-4xl flex relative  border-1 border-blue-950 max-h-[70vh] md:max-h-[90vh]">
-      {/* Image Section */}
-      <div className="w-1/2">
-        <img src={overview_img} alt="Property Image" className="w-full h-full object-cover rounded-l-lg " />
-      </div>
+  <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 px-4 py-8 md:py-12">
+    <div className="bg-gray-50 p-6 rounded-lg w-full max-w-lg md:max-w-4xl relative border border-blue-950 max-h-[70vh] md:max-h-[80vh] overflow-auto">
       
-      {/* Form Section */}
-      <div className="w-1/2 p-4 h-full ">
-        <h2 className="text-[12px] md:text-xl font-semibold text-gray-900 text-center">{details}</h2>
-        <p className="text-[10px] md:text-sm text-gray-700 text-center mb-6">{property_location}</p>
+      {/* Image + Form Container */}
+      <div className="flex flex-col md:flex-row">
         
-        <form onSubmit={onFormSubmit} className="space-y-4">
-        <input
-          type="text"
-          value={details}
-          readOnly
-          className="hidden"
-          name="property"
-          id="property"
-        />
-          <input
-            type="text"
-            name="name"
-            id="name"
-            value={formData.name}
-            onChange={handleInputChange}
-            placeholder="Enter Name"
-            required
-            className="block w-full p-2 border-b border-gray-400 bg-transparent outline-none text-gray-900 text-[10px] md:text-lg"
+        {/* Image Section */}
+        <div className="relative w-full md:w-1/2 ">
+          <img
+            src={overview_img}
+            alt="Property Image"
+            className="w-full h-auto md:h-full object-cover rounded-t-lg md:rounded-l-lg"
           />
-          
-          <input
-            type="email"
-            name="email"
-            id="email"
-            value={formData.email}
-            onChange={handleInputChange}
-            placeholder="Enter Email"
-            required
-            className="block w-full p-2 border-b border-gray-400 bg-transparent outline-none text-[10px] md:text-lg"
-          />
-  
-          <input
-            type="tel"
-            name="phone"
-            id="phone"
-            value={formData.phone}
-            onChange={handleInputChange}
-            placeholder="Enter Number"
-            required
-            className="block w-full p-2 border-b border-gray-400 bg-transparent outline-none text-[10px] md:text-lg"
-          />
-  
-          <textarea
-            name="message"
-            id="message"
-            value={formData.message}
-            onChange={handleInputChange}
-            placeholder="Enter Message"
-            rows="2"
-            className="block w-full p-2 border-b border-gray-400 bg-transparent outline-none text-[10px] md:text-lg"
-          ></textarea>
-  
-          <div className="flex items-start">
-            <input
-              id="consent"
-              name="consent"
-              type="checkbox"
-              className="h-4 w-4 text-gray-900 border-gray-300 rounded focus:ring-2 focus:ring-blue-800 mt-1"
-              required
-            />
-             <label htmlFor="terms" className="ml-2 text-[10px] md:text-[18px] text-gray-800">
-      I agree to the{' '}
-      <a href="/termsandconditions" target="_blank" className="text-blue-600 hover:underline">
-        Terms and Conditions
-      </a>{' '}
-      and{' '}
-      <a href="/privacy-policy" target="_blank" className="text-blue-600 hover:underline">
-        Privacy Policy
-      </a>.
-    </label>
+
+          {/* Property Name & Location (Only for Mobile) */}
+          <div className="absolute top-3 left-3 bg-black bg-opacity-50 text-white p-2 rounded-md text-xs md:hidden">
+            <h2 className="font-semibold">{details}</h2>
+            <p>{property_location}</p>
           </div>
-  
-          <button
-            type="submit"
-            className="w-full bg-blue-950 text-white text-[10px] md:text-lg font-semibold py-3 rounded-md mt-4 hover:bg-green-900 transition"
-          >
-            SUBMIT NOW
-          </button>
-        </form>
+        </div>
+
+        {/* Form Section */}
+        <div className="w-full md:w-1/2 p-4">
+          {/* Property Name & Location (Only for Desktop) */}
+          <div className="hidden md:block">
+            <h2 className="text-lg font-semibold text-gray-900 text-center">{details}</h2>
+            <p className="text-sm text-gray-700 mb-4 text-center">{property_location}</p>
+          </div>
+
+          <form onSubmit={onFormSubmit} className="space-y-4">
+            <input
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleInputChange}
+              placeholder="Enter Name"
+              required
+              className="block w-full p-2 border-b border-gray-400 bg-transparent outline-none text-gray-900 text-sm md:text-lg"
+            />
+            
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleInputChange}
+              placeholder="Enter Email"
+              required
+              className="block w-full p-2 border-b border-gray-400 bg-transparent outline-none text-sm md:text-lg"
+            />
+
+            <input
+              type="tel"
+              name="phone"
+              value={formData.phone}
+              onChange={handleInputChange}
+              placeholder="Enter Number"
+              required
+              className="block w-full p-2 border-b border-gray-400 bg-transparent outline-none text-sm md:text-lg"
+            />
+
+            <textarea
+              name="message"
+              value={formData.message}
+              onChange={handleInputChange}
+              placeholder="Enter Message"
+              rows="2"
+              className="block w-full p-2 border-b border-gray-400 bg-transparent outline-none text-sm md:text-lg"
+            ></textarea>
+
+            <div className="flex items-start">
+              <input
+                id="consent"
+                name="consent"
+                type="checkbox"
+                className="h-4 w-4 text-gray-900 border-gray-300 rounded focus:ring-2 focus:ring-blue-800 mt-1"
+                required
+              />
+              <label htmlFor="consent" className="ml-2 text-xs md:text-sm text-gray-800">
+                I authorize company representatives to Call, SMS, Email or WhatsApp me about its products and offers. 
+                This consent overrides any registration for DNC/NDNC.
+              </label>
+            </div>
+
+            <button
+              type="submit"
+              className="w-full bg-blue-950 text-white text-sm md:text-lg font-semibold py-3 rounded-md mt-4 hover:bg-blue-900 transition"
+            >
+              SUBMIT NOW
+            </button>
+          </form>
+        </div>
       </div>
-      
+
       {/* Close button */}
       <button
         onClick={closePopup}
@@ -292,112 +292,109 @@ import emailjs from "emailjs-com";
 )}
 
 {showPopup2 && (
-  <div className="fixed inset-0 flex justify-center items-center bg-transparent px-4 py-6 md:py-12 ">
-  <div className="bg-gray-50 p-6 rounded-lg w-full max-w-4xl flex relative  border-1 border-blue-950 max-h-[70vh] md:max-h-[90vh]">
-    {/* Image Section */}
-    <div className="w-1/2">
-      <img src={overview_img} alt="Property Image" className="w-full h-full object-cover rounded-l-lg " />
-    </div>
-    
-    {/* Form Section */}
-    <div className="w-1/2 p-4 h-full ">
-      <h2 className="text-[12px] md:text-xl font-semibold text-gray-900 text-center">{details}</h2>
-      <p className="text-[10px] md:text-sm text-gray-700 text-center mb-6">{property_location}</p>
+  <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 px-4 py-8 md:py-12">
+    <div className="bg-gray-50 p-6 rounded-lg w-full max-w-lg md:max-w-4xl relative border border-blue-950 max-h-[70vh] md:max-h-[80vh] overflow-auto">
       
-      <form onSubmit={onForm3Submit} className="space-y-4">
-      <input
-        type="text"
-        value={details}
-        readOnly
-        className="hidden"
-        name="property"
-        id="property"
-      />
-        <input
-          type="text"
-          name="name"
-          id="name"
-          value={formData.name}
-          onChange={handleInputChange}
-          placeholder="Enter Name"
-          required
-          className="block w-full p-2 border-b border-gray-400 bg-transparent outline-none text-gray-900 text-[10px] md:text-lg"
-        />
+      {/* Image + Form Container */}
+      <div className="flex flex-col md:flex-row">
         
-        <input
-          type="email"
-          name="email"
-          id="email"
-          value={formData.email}
-          onChange={handleInputChange}
-          placeholder="Enter Email"
-          required
-          className="block w-full p-2 border-b border-gray-400 bg-transparent outline-none text-[10px] md:text-lg"
-        />
-
-        <input
-          type="tel"
-          name="phone"
-          id="phone"
-          value={formData.phone}
-          onChange={handleInputChange}
-          placeholder="Enter Number"
-          required
-          className="block w-full p-2 border-b border-gray-400 bg-transparent outline-none text-[10px] md:text-lg"
-        />
-
-        <textarea
-          name="message"
-          id="message"
-          value={formData.message}
-          onChange={handleInputChange}
-          placeholder="Enter Message"
-          rows="2"
-          className="block w-full p-2 border-b border-gray-400 bg-transparent outline-none text-[10px] md:text-lg"
-        ></textarea>
-
-        <div className="flex items-start">
-          <input
-            id="consent"
-            name="consent"
-            type="checkbox"
-            className="h-4 w-4 text-gray-900 border-gray-300 rounded focus:ring-2 focus:ring-blue-800 mt-1"
-            required
+        {/* Image Section */}
+        <div className="relative w-full md:w-1/2 ">
+          <img
+            src={overview_img}
+            alt="Property Image"
+            className="w-full h-auto md:h-full object-cover rounded-t-lg md:rounded-l-lg"
           />
-           <label htmlFor="terms" className="ml-2 text-[10px] md:text-[18px] text-gray-800">
-    I agree to the{' '}
-    <a href="/termsandconditions" target="_blank" className="text-blue-600 hover:underline">
-      Terms and Conditions
-    </a>{' '}
-    and{' '}
-    <a href="/privacy-policy" target="_blank" className="text-blue-600 hover:underline">
-      Privacy Policy
-    </a>.
-  </label>
+
+          {/* Property Name & Location (Only for Mobile) */}
+          <div className="absolute top-3 left-3 bg-black bg-opacity-50 text-white p-2 rounded-md text-xs md:hidden">
+            <h2 className="font-semibold">{details}</h2>
+            <p>{property_location}</p>
+          </div>
         </div>
 
-        <button
-          type="submit"
-          className="w-full bg-blue-950 text-white text-[10px] md:text-lg font-semibold py-3 rounded-md mt-4 hover:bg-green-900 transition"
-        >
-          SUBMIT NOW
-        </button>
-      </form>
-    </div>
-      
+        {/* Form Section */}
+        <div className="w-full md:w-1/2 p-4">
+          {/* Property Name & Location (Only for Desktop) */}
+          <div className="hidden md:block">
+            <h2 className="text-lg font-semibold text-gray-900 text-center">{details}</h2>
+            <p className="text-sm text-gray-700 mb-4 text-center">{property_location}</p>
+          </div>
+
+          <form onSubmit={onForm3Submit} className="space-y-4">
+            <input
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleInputChange}
+              placeholder="Enter Name"
+              required
+              className="block w-full p-2 border-b border-gray-400 bg-transparent outline-none text-gray-900 text-sm md:text-lg"
+            />
+            
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleInputChange}
+              placeholder="Enter Email"
+              required
+              className="block w-full p-2 border-b border-gray-400 bg-transparent outline-none text-sm md:text-lg"
+            />
+
+            <input
+              type="tel"
+              name="phone"
+              value={formData.phone}
+              onChange={handleInputChange}
+              placeholder="Enter Number"
+              required
+              className="block w-full p-2 border-b border-gray-400 bg-transparent outline-none text-sm md:text-lg"
+            />
+
+            <textarea
+              name="message"
+              value={formData.message}
+              onChange={handleInputChange}
+              placeholder="Enter Message"
+              rows="2"
+              className="block w-full p-2 border-b border-gray-400 bg-transparent outline-none text-sm md:text-lg"
+            ></textarea>
+
+            <div className="flex items-start">
+              <input
+                id="consent"
+                name="consent"
+                type="checkbox"
+                className="h-4 w-4 text-gray-900 border-gray-300 rounded focus:ring-2 focus:ring-blue-800 mt-1"
+                required
+              />
+              <label htmlFor="consent" className="ml-2 text-xs md:text-sm text-gray-800">
+                I authorize company representatives to Call, SMS, Email or WhatsApp me about its products and offers. 
+                This consent overrides any registration for DNC/NDNC.
+              </label>
+            </div>
+
+            <button
+              type="submit"
+              className="w-full bg-blue-950 text-white text-sm md:text-lg font-semibold py-3 rounded-md mt-4 hover:bg-blue-900 transition"
+            >
+              SUBMIT NOW
+            </button>
+          </form>
+        </div>
+      </div>
+
       {/* Close button */}
       <button
         onClick={closePopup2}
-        className="absolute top-3 right-3 text-gray-600 text-2xl"
+        className="absolute top-3 right-3 text-gray-600 text-3xl"
       >
         &times;
       </button>
     </div>
   </div>
 )}
-
-
-
 
 {showSchedulePopup && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">

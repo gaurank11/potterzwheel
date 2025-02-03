@@ -1,21 +1,17 @@
 import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import emailjs from "emailjs-com";
 
 const ChatBot = () => {
-  const [messages, setMessages] = useState([]);
+  const navigate = useNavigate();
+  const [messages, setMessages] = useState([
+    { sender: "bot", text: "Hello! How can I assist you today?" }
+  ]);
   const [input, setInput] = useState("");
   const [formData, setFormData] = useState({ name: "", phone: "", message: "" });
   const [showForm, setShowForm] = useState(false);
   const [showChat, setShowChat] = useState(false);
   const [menu, setMenu] = useState("main"); // Track menu states
-
-  const handleUserInput = (e) => setInput(e.target.value);
-
-  const handleSendMessage = () => {
-    if (!input.trim()) return;
-    setMessages([...messages, { sender: "user", text: input }]);
-    setInput("");
-  };
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -40,7 +36,7 @@ const ChatBot = () => {
     setShowChat(!showChat);
     if (!showChat) {
       setMessages([
-        { sender: "bot", text: "Hello! How can I assist you today?" },
+        { sender: "bot", text: "Hello! How can I assist you today?" }
       ]);
     }
     setShowForm(false);
@@ -54,7 +50,7 @@ const ChatBot = () => {
         onClick={toggleChat}
         className="fixed bottom-5 right-5 p-5 bg-blue-900 text-white rounded-full cursor-pointer shadow-lg hover:bg-blue-800 transition"
       >
-        💬
+       Chat with Us 💬
       </div>
 
       {showChat && (
@@ -66,7 +62,7 @@ const ChatBot = () => {
           </div>
 
           {/* Chat Messages Container */}
-          <div className="h-64 overflow-y-auto p-2 border-b">
+          <div className="h-40 overflow-y-auto p-2 border-b">
             {messages.map((msg, index) => (
               <div
                 key={index}
@@ -77,7 +73,7 @@ const ChatBot = () => {
             ))}
           </div>
 
-          {/* Main Menu */}
+          {/* Main Menu (Appears Immediately) */}
           {menu === "main" && !showForm && (
             <div className="p-3 grid grid-cols-2 gap-2">
               <button onClick={() => setShowForm(true)} className="bg-blue-600 text-white py-2 rounded">
@@ -86,10 +82,10 @@ const ChatBot = () => {
               <button onClick={() => setMenu("properties")} className="bg-blue-600 text-white py-2 rounded">
                 Properties
               </button>
-              <button onClick={() => alert("Interiors section coming soon!")} className="bg-blue-600 text-white py-2 rounded">
+              <button  onClick={() => navigate('/interiors')} className="bg-blue-600 text-white py-2 rounded">
                 Interiors
               </button>
-              <button onClick={() => alert("About Us: We are a real estate platform.")} className="bg-blue-600 text-white py-2 rounded">
+              <button onClick={() => setMenu("about")} className="bg-blue-600 text-white py-2 rounded">
                 About Us
               </button>
             </div>
@@ -97,17 +93,47 @@ const ChatBot = () => {
 
           {/* Properties Menu */}
           {menu === "properties" && (
-            <div className="p-3 grid grid-cols-2 gap-2">
-              <button onClick={() => setMenu("residential")} className="bg-gray-700 text-white py-2 rounded">
-                Residential
+            <div className="p-3 grid grid-cols-1 gap-2">
+              <button onClick={() => setMenu("residential")} className="bg-blue-950 text-white py-2 rounded">
+                Residential (6)
               </button>
-              <button onClick={() => setMenu("commercial")} className="bg-gray-700 text-white py-2 rounded">
-                Commercial
+              <button onClick={() => setMenu("commercial")} className="bg-blue-950 text-white py-2 rounded">
+                Commercial (1)
               </button>
-              <button onClick={() => setMenu("resources")} className="bg-gray-700 text-white py-2 rounded col-span-2">
+              <button onClick={() => setMenu("resources")} className="bg-blue-950 text-white py-2 rounded">
                 Resources
               </button>
-              <button onClick={() => setMenu("main")} className="bg-red-600 text-white py-2 rounded col-span-2">
+              <button onClick={() => setMenu("main")} className="bg-black text-white py-2 rounded">
+                Back
+              </button>
+            </div>
+          )}
+
+          {/* Residential Properties (Scrollable) */}
+          {menu === "residential" && (
+            <div className="p-3">
+              <p className="text-gray-700 text-sm mb-2">Select a Residential Property:</p>
+              <div className="h-40 overflow-y-auto border p-2 rounded">
+                {[...Array(6)].map((_, index) => (
+                  <button key={index} className="bg-blue-950 text-white py-2 rounded w-full mb-2">
+                    Residential Property {index + 1}
+                  </button>
+                ))}
+              </div>
+              <button onClick={() => setMenu("properties")} className="bg-black text-white py-2 rounded w-full mt-2">
+                Back
+              </button>
+            </div>
+          )}
+
+          {/* Commercial Properties */}
+          {menu === "commercial" && (
+            <div className="p-3">
+              <p className="text-gray-700 text-sm mb-2">Select a Commercial Property:</p>
+              <button className="bg-blue-950 text-white py-2 rounded w-full">
+                Commercial Property 1
+              </button>
+              <button onClick={() => setMenu("properties")} className="bg-black text-white py-2 rounded w-full mt-2">
                 Back
               </button>
             </div>
@@ -116,52 +142,21 @@ const ChatBot = () => {
           {/* Resources Menu */}
           {menu === "resources" && (
             <div className="p-3 grid grid-cols-1 gap-2">
-              <button onClick={() => window.location.href = "/emi-calculator"} className="bg-gray-700 text-white py-2 rounded">
+              <button onClick={() => window.location.href = "/emi-calculator"} className="bg-blue-950 text-white py-2 rounded">
                 EMI Calculator
               </button>
-              <button onClick={() => window.location.href = "/stamp-duty-calculator"} className="bg-gray-700 text-white py-2 rounded">
+              <button onClick={() => window.location.href = "/stamp-duty-calculator"} className="bg-blue-950 text-white py-2 rounded">
                 Stamp Duty Calculator
               </button>
-              <button onClick={() => setMenu("properties")} className="bg-red-600 text-white py-2 rounded">
+              <button onClick={() => setMenu("properties")} className="bg-black text-white py-2 rounded">
                 Back
               </button>
             </div>
           )}
 
-          {/* Residential & Commercial Placeholder (Will navigate later) */}
-          {menu === "residential" && (
-            <div className="p-3">
-              <p className="text-gray-700 text-sm mb-2">List of Residential Properties</p>
-              <button className="bg-gray-700 text-white py-2 rounded w-full">
-                Property 1
-              </button>
-              <button className="bg-gray-700 text-white py-2 rounded w-full mt-2">
-                Property 2
-              </button>
-              <button onClick={() => setMenu("properties")} className="bg-red-600 text-white py-2 rounded w-full mt-2">
-                Back
-              </button>
-            </div>
-          )}
-
-          {menu === "commercial" && (
-            <div className="p-3">
-              <p className="text-gray-700 text-sm mb-2">List of Commercial Properties</p>
-              <button className="bg-gray-700 text-white py-2 rounded w-full">
-                Commercial Property 1
-              </button>
-              <button className="bg-gray-700 text-white py-2 rounded w-full mt-2">
-                Commercial Property 2
-              </button>
-              <button onClick={() => setMenu("properties")} className="bg-red-600 text-white py-2 rounded w-full mt-2">
-                Back
-              </button>
-            </div>
-          )}
-
-          {/* Call Back Form */}
+          {/* Call Back Form (Fixed & Scrollable) */}
           {showForm && (
-            <form className="p-3 space-y-3" onSubmit={sendEmail}>
+            <form className="p-3 space-y-3 max-h-64 overflow-auto" onSubmit={sendEmail}>
               <input
                 type="text"
                 placeholder="Your Name"

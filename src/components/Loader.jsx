@@ -14,7 +14,7 @@ const Loader = ({ onFinish }) => {
       <img
         src="/logo.png"
         alt="Loading..."
-        className="w-48 h-32 animate-pulse"
+        className="w-48 h-36 md:w-80 md:h-48 animate-pulse"
       />
     </div>
   );
