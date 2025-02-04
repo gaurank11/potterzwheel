@@ -3,9 +3,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const images = [
-  "https://www.homelane.com/blog/wp-content/uploads/2016/02/shutterstock_145082068-1.jpg",
-  "/slider2.jpg",
-  "/slider3.jpg"
+  "https://raw.githubusercontent.com/potterzwhealrealty/photos/main/interiors/armchair-green-living-room-with-copy-space.webp",
+  "https://raw.githubusercontent.com/potterzwhealrealty/photos/main/interiors/loft-home-office-interior-design.webp",
+  "https://raw.githubusercontent.com/potterzwhealrealty/photos/main/interiors/modern-styled-entryway.webp"
 ];
 
 export default function Slider() {
@@ -13,36 +13,55 @@ export default function Slider() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % images.length);
-    }, 3000);
+      handleNextSlide();
+    }, 7000);
     return () => clearInterval(interval);
   }, []);
 
-  const prevSlide = () => setCurrent((prev) => (prev === 0 ? images.length - 1 : prev - 1));
-  const nextSlide = () => setCurrent((prev) => (prev + 1) % images.length);
+  const handleNextSlide = () => {
+    setCurrent((prev) => (prev + 1) % images.length);
+  };
+
+  const handlePrevSlide = () => {
+    setCurrent((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  };
 
   return (
     <div className="relative w-full h-[500px] overflow-hidden rounded-2xl shadow-lg">
-      <AnimatePresence>
+      <AnimatePresence mode="wait">
+        {/* Old Image */}
         <motion.img
-          key={images[current]}
+          key={`old-${images[current]}`}
           src={images[current]}
           alt="Slide"
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -50 }}
-          transition={{ duration: 0.5 }}
+          initial={{ opacity: 1 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          className="absolute w-full h-full object-cover"
+        />
+
+        {/* New Image with Wipe Effect */}
+        <motion.img
+          key={`new-${images[(current + 1) % images.length]}`}
+          src={images[(current + 1) % images.length]}
+          alt="Slide"
+          initial={{ clipPath: "inset(0% 100% 0% 0%)" }}
+          animate={{ clipPath: "inset(0% 0% 0% 0%)" }}
+          exit={{ clipPath: "inset(0% 0% 0% 100%)" }}
+          transition={{ duration: 2, ease: "easeInOut" }}
           className="absolute w-full h-full object-cover"
         />
       </AnimatePresence>
+
       <button
-        onClick={prevSlide}
+        onClick={handlePrevSlide}
         className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-800 p-2 rounded-full text-white hover:bg-gray-700"
       >
         <ChevronLeft />
       </button>
       <button
-        onClick={nextSlide}
+        onClick={handleNextSlide}
         className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-800 p-2 rounded-full text-white hover:bg-gray-700"
       >
         <ChevronRight />

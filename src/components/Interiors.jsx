@@ -5,35 +5,35 @@ import ServicesSection from "./Interior_Services";
 const processSteps = [
   {
     number: "01",
-    icon: "fal fa-lightbulb-on",
+    icon: "https://raw.githubusercontent.com/potterzwhealrealty/photos/main/interiors/svg/perceptive.svg",
     title: "PERSPECTIVE DEVELOPMENT",
     link: "https://www.potterzwheel.com/#",
     description:
-      "In-depth understanding of client’s tastes & preferences, lifestyle, professions, budget, and functional needs."
+      "In-depth understanding of client’s tastes & Preferences, lifestyle, professions, life stage, budget, aesthetics & functional needs, native inclinations, family members (elderly, kids, pets) and their individual needs, site location and a lot more."
   },
   {
     number: "02",
-    icon: "fal fa-drafting-compass",
+    icon: "https://raw.githubusercontent.com/potterzwhealrealty/photos/main/interiors/svg/concept.svg",
     title: "CONCEPT & RENDERS",
     link: "https://www.potterzwheel.com/#",
     description:
-      "Project outline, budget & timeframes, mood boards, space planning, 2D & 3D renders."
+      "First cut presentation of Project outline, Key offerings, budget & time frames, mood boards, theme and palettes. It is followed by a detailed Space Plan, facilitated with 2D & 3D renders (highlighting placements, colours, lighting, furniture & accessories)."
   },
   {
     number: "03",
-    icon: "fal fa-swatchbook",
+    icon: "https://raw.githubusercontent.com/potterzwhealrealty/photos/main/interiors/svg/material.svg",
     title: "MATERIAL SELECTION",
     link: "https://www.potterzwheel.com/#",
     description:
-      "Finalizing materials, textures, colors, lighting, furniture, and procuring essential fittings."
+      "Finalising of wood & other base materials, finishes, textures, colours & designs, floorings (tiles & marbles) followed by the procurements ranging from lights, curtains, rugs, upholstery and wallpapers to kitchen appliances & fittings, sanitaryware, etc."
   },
   {
     number: "04",
-    icon: "fal fa-digging",
+    icon: "https://raw.githubusercontent.com/potterzwhealrealty/photos/main/interiors/svg/execution.svg",
     title: "EXECUTION",
     link: "https://www.potterzwheel.com/#",
     description:
-      "Manufacturing and on-site installation of furniture with precision and expert craftsmanship."
+      "All woodwork related materials are sent to our in-house workshop, where your factory-made furniture is manufactured with minimal scope of error, by our seasoned craftsmen. Once ready, these are installed at the site by the same team."
   }
 ];
 
@@ -60,19 +60,21 @@ const HowItWorks = () => {
     <section className="bg-gray-100 py-12" id="howitworks">
       <div className="container mx-auto text-center">
         <h2 className="text-3xl font-bold mb-6">Our Working Process</h2>
-        <div className="grid md:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-4 gap-6 p-6">
           {processSteps.map((step, index) => (
             <div key={index} className="bg-white p-6 shadow-lg rounded-lg text-center">
-              <div className="text-4xl font-bold text-gray-700">{step.number}</div>
-              <div className="text-gray-500 text-2xl my-4">
-                <i className={step.icon}></i>
+              <div className="relative">
+                <div className="absolute top-0 right-0 text-7xl font-extrabold text-gray-200">{step.number}</div>
+                <div className="mx-left w-16 h-16 bg-blue-950 flex justify-center items-center rounded-md transition-transform duration-500 hover:rotate-360">
+                  <img src={step.icon} className="w-10 h-10" alt={step.title} />
+                </div>
               </div>
-              <h3 className="text-xl font-semibold">
-                <a href={step.link} className="text-blue-600 hover:underline">
+              <h3 className="text-lg font-semibold mt-4 text-left">
+                <a href={step.link} className="text-black hover:underline">
                   {step.title}
                 </a>
               </h3>
-              <p className="text-gray-600 mt-2">{step.description}</p>
+              <p className="text-gray-600 mt-2 text-sm text-left">{step.description}</p>
             </div>
           ))}
         </div>

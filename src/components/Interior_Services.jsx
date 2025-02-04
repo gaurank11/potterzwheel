@@ -16,7 +16,7 @@ const ServicesSection = () => {
             <div className="image-box bg-white p-6 shadow-lg rounded-lg hover:shadow-xl transition-all duration-300">
               <div className="image-box-thumb mb-6">
                 <img
-                  src="./Home Interior Design Solutions – Customised Interiors_files/9999.png"
+                  src="https://raw.githubusercontent.com/potterzwhealrealty/photos/main/interiors/i1.webp"
                   alt="TURNKEY SERVICES"
                   className="w-full h-auto object-cover rounded-lg"
                 />
@@ -31,7 +31,7 @@ const ServicesSection = () => {
                   </a>
                 </h3>
                 <p className="text-gray-600 mt-4">
-                  Spatial Planning | Floor Plans & Elevations | Theme Curation | Colour Palette Consultation | Lighting Consultation | 2D & 3D Designs | Office Interiors
+                Spatial Planning | Floor Plans & Elevations | Theme Curation | Colour Palette Consultation | Lighting Consultation | 2D & 3D Designs | Office Interiors
                 </p>
               </div>
             </div>
@@ -40,7 +40,7 @@ const ServicesSection = () => {
             <div className="image-box bg-white p-6 shadow-lg rounded-lg hover:shadow-xl transition-all duration-300">
               <div className="image-box-thumb mb-6">
                 <img
-                  src="./Home Interior Design Solutions – Customised Interiors_files/1111111111.png"
+                  src="https://raw.githubusercontent.com/potterzwhealrealty/photos/main/interiors/i2.webp"
                   alt="CUSTOMISED FURNITURE"
                   className="w-full h-auto object-cover rounded-lg"
                 />
@@ -64,7 +64,7 @@ const ServicesSection = () => {
             <div className="image-box bg-white p-6 shadow-lg rounded-lg hover:shadow-xl transition-all duration-300">
               <div className="image-box-thumb mb-6">
                 <img
-                  src="./Home Interior Design Solutions – Customised Interiors_files/111111.png"
+                  src="https://raw.githubusercontent.com/potterzwhealrealty/photos/main/interiors/i3.webp"
                   alt="OTHER SERVICES"
                   className="w-full h-auto object-cover rounded-lg"
                 />
