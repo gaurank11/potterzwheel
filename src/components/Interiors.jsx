@@ -1,6 +1,11 @@
-import React from "react";
+import React, {useState} from "react";
 import Slider from "./Slider";
 import ServicesSection from "./Interior_Services";
+import { Dialog } from "@headlessui/react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
 
 const processSteps = [
   {
@@ -56,6 +61,7 @@ const recentWorks = [
 ];
 
 const HowItWorks = () => {
+
   return (
     <section className="bg-gray-100 py-12" id="howitworks">
       <div className="container mx-auto text-center">
@@ -65,7 +71,7 @@ const HowItWorks = () => {
             <div key={index} className="bg-white p-6 shadow-lg rounded-lg text-center">
               <div className="relative">
                 <div className="absolute top-0 right-0 text-7xl font-extrabold text-gray-200">{step.number}</div>
-                <div className="mx-left w-16 h-16 bg-blue-950 flex justify-center items-center rounded-md transition-transform duration-500 hover:rotate-360">
+                <div className="mx-left w-16 h-16 bg-blue-950 flex justify-center items-center rounded-md transition-transform duration-500 ease-in-out transform hover:rotate-180">
                   <img src={step.icon} className="w-10 h-10" alt={step.title} />
                 </div>
               </div>
@@ -84,24 +90,60 @@ const HowItWorks = () => {
 };
 
 const RecentWork = () => {
+  const [selectedImage, setSelectedImage] = useState(null);
   return (
     <section className="py-12" id="recentwork">
-      <div className="container mx-auto text-center">
-        <h2 className="text-3xl font-bold mb-6">Recent Work</h2>
-        <div className="grid md:grid-cols-3 gap-6">
+    <div className="container mx-auto text-center">
+      <h2 className="text-3xl font-bold mb-6">Recent Work</h2>
+      
+      {/* Swiper Slider */}
+      <Swiper
+          slidesPerView={1} // Mobile: 1 full image
+          breakpoints={{
+            768: { slidesPerView: 1.5, centeredSlides: true }, // Tablet: Full - Half
+            1024: { slidesPerView: 2.2, centeredSlides: true }, // Desktop: Half - Full - Half
+          }}
+          spaceBetween={20}
+          navigation={true}
+          modules={[Navigation]}
+          loop={false} // Ensures proper alignment
+          initialSlide={1} // Starts with proper half-full-half layout
+          centerInsufficientSlides={true} // Prevents unnecessary gaps
+          className="w-full h-full"
+        >
           {recentWorks.map((work, index) => (
-            <div key={index} className="bg-white shadow-lg rounded-lg overflow-hidden">
-              <img src={work.imgSrc} alt={work.title} className="w-full h-64 object-cover" />
-              <div className="p-4">
-                <h3 className="text-xl font-semibold">
-                  <a href={work.link} className="text-blue-600 hover:underline">
-                    {work.title}
-                  </a>
-                </h3>
+            <SwiperSlide key={index}>
+              <div
+                className="bg-white shadow-lg rounded-lg overflow-hidden cursor-pointer"
+                onClick={() => setSelectedImage(work.imgSrc)}
+              >
+                <img
+                  src={work.imgSrc}
+                  alt={work.title}
+                  className="w-full h-64 object-cover"
+                />
+                <div className="p-4">
+                  <h3 className="text-xl font-semibold">{work.title}</h3>
+                </div>
               </div>
-            </div>
+            </SwiperSlide>
           ))}
-        </div>
+        </Swiper>
+
+        {/* Image Zoom Modal */}
+        {selectedImage && (
+          <Dialog open={true} onClose={() => setSelectedImage(null)} className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75">
+            <div className="relative">
+              <button
+                onClick={() => setSelectedImage(null)}
+                className="absolute top-2 right-2 bg-white p-1 rounded-full shadow-md"
+              >
+                ✕
+              </button>
+              <img src={selectedImage} alt="Zoomed" className="max-w-full max-h-screen rounded-lg" />
+            </div>
+          </Dialog>
+        )}
       </div>
     </section>
   );
