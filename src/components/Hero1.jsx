@@ -35,7 +35,7 @@ export default function HeroSection() {
   ];
 
   return (
-    <div className="relative w-full h-screen overflow-hidden bg-black">
+    <div className="relative w-full md:h-[700px] h-[300px] overflow-hidden bg-black">
       {/* Slider */}
       <Slider {...settings} className="w-full h-screen">
         {images.map((image, index) => (
@@ -47,7 +47,7 @@ export default function HeroSection() {
             <img
               src={image}
               alt={`Slide ${index}`}
-              className="absolute top-0 left-0 w-full h-full object-cover"
+              className="absolute w-full h-full object-cover"
             />
 
             {/* Horizontal Line */}

@@ -133,11 +133,7 @@ const TopProperties = () => {
                   className="relative h-48 bg-cover bg-center"
                   style={{ backgroundImage: `url(${property.image})` }}
                 >
-                  <img
-                    src={property.logo}
-                    alt="Logo"
-                    className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-white p-1 rounded-full"
-                  />
+                
                 </div>
 
                 {/* Property Details */}

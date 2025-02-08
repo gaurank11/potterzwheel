@@ -25,12 +25,12 @@ const Trevoc = () => {
   const mapUrl = 'https://maps.app.goo.gl/4yUzCjvTzv4JAmBfA';
 
   const amenities = [
-    { name: 'Top Security', icon: 'https://www.svgrepo.com/show/383733/security-protection-camera-cctv-video-crime-cyber.svg' },
-    { name: 'Ample Parking', icon: 'https://www.svgrepo.com/show/208856/parking-car.svg' },
+    { name: 'Top Security', icon: 'https://raw.githubusercontent.com/potterzwhealrealty/photos/main/Amenities/security.svg' },
+    { name: 'Ample Parking', icon: 'https://raw.githubusercontent.com/potterzwhealrealty/photos/main/Amenities/parking.svg' },
     { name: 'Smart Automation', icon: 'https://www.svgrepo.com/show/519296/smart-life.svg' },
     { name: 'Concierge Services', icon: 'https://www.svgrepo.com/show/455905/hotel-concierge.svg' },
-    { name: 'Infinity Pools', icon: 'https://www.svgrepo.com/show/359888/swimming.svg' },
-    { name: 'Gym', icon: 'https://www.svgrepo.com/show/383987/gym-workout.svg' },
+    { name: 'Infinity Pools', icon: 'https://raw.githubusercontent.com/potterzwhealrealty/photos/main/Amenities/swimming.svg' },
+    { name: 'Gym', icon: 'https://raw.githubusercontent.com/potterzwhealrealty/photos/main/Amenities/gym.svg' },
 
 
    

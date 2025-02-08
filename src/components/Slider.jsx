@@ -27,7 +27,7 @@ export default function Slider() {
   };
 
   return (
-    <div className="relative w-full h-[500px] overflow-hidden rounded-2xl shadow-lg mt-10 pt-6">
+    <div className="relative w-full md:h-[700px] h-[250px] overflow-hidden rounded-2xl shadow-lg mt-10 pt-6">
       <AnimatePresence mode="wait">
         {/* Old Image */}
         <motion.img

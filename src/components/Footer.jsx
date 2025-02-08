@@ -66,7 +66,7 @@ const Footer = () => {
             <p className="text-sm text-gray-400 mt-4">
               <span className="font-bold">Phone:</span> <a  href="tel:+919810360300" className="hover:underline">+91-9810360300 </a> <br />
               <span className="font-bold">Email:</span> <a  href="mailto:hi@potterzwheel.com" className="hover:underline"> hi@potterzwheel.com </a> <br />
-              <span className="font-bold">Website:</span> <a href="https://potterzwheel.com"  target="_blank" className="hover:underline">potterzwheel.com </a>
+
             </p>
           </div>
         </div>

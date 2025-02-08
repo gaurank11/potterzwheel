@@ -612,8 +612,7 @@ import emailjs from "emailjs-com";
   <h2 className="text-3xl font-bold text-center md:text-5xl">
     LOCATION
   </h2>
-  <p className="text-center p-6 text-md md:text-[20px] text-blue-950 font-semibold">Access to Everything, Steps from Everywhere – Your Perfect</p>
-  <p className="text-center text-md md:text-[20px] text-blue-950 font-semibold">Location Awaits</p>
+
   <div className="text-center mt-4 md:px-10">
     <div>
     <img

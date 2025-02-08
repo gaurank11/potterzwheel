@@ -4,11 +4,11 @@ import { FaCogs, FaUsers, FaTrophy } from "react-icons/fa";
 
 const AboutUsPage = () => {
   return (
-    <div>
+    <div className="mt-15">
       {/* Hero Section */}
       <section
-        className="relative h-[70vh] bg-cover bg-center flex items-center justify-center mt-12"
-        style={{ backgroundImage: "url('https://d1hdtc0tbqeghx.cloudfront.net/wp-content/uploads/2024/03/01115727/Best-About-Us-Page-Examples.jpg')" }}
+        className="relative h-[600px] bg-cover bg-center flex items-center justify-center mt-15"
+        style={{ backgroundImage: "url('https://raw.githubusercontent.com/potterzwhealrealty/photos/main/aboutus_hero.webp')" }}
       >
         <motion.h1
           className="text-4xl text-white font-bold px-6 py-4 bg-black bg-opacity-50 rounded-md"
@@ -44,7 +44,7 @@ const AboutUsPage = () => {
           </div>
           <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-6">
             <motion.img
-              src="https://raw.githubusercontent.com/potterzwhealrealty/photos/main/about_img1.png"
+              src="https://raw.githubusercontent.com/potterzwhealrealty/photos/main/ab1.webp"
               alt="Image 1"
               className="rounded-lg shadow-md"
               initial={{ x: "-100vw" }}
@@ -52,7 +52,7 @@ const AboutUsPage = () => {
               transition={{ type: "spring", stiffness: 100 }}
             />
             <motion.img
-              src="https://raw.githubusercontent.com/potterzwhealrealty/photos/main/about_img2.png"
+              src="https://raw.githubusercontent.com/potterzwhealrealty/photos/main/ab2.webp"
               alt="Image 2"
               className="rounded-lg shadow-md"
               initial={{ x: "100vw" }}

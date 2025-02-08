@@ -10,7 +10,7 @@ const PropertiesPage = () => {
       {/* First Row: 1st Column "01 - Featured Listing" with two images next to it */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 ">
         <div className='md:p-5 p-3 '>
-          <p className="text-6xl font-bold text-right md:text-[81px] text-blue-950">FEATURED</p>
+          <p className="text-6xl font-bold text-right md:text-[78px] text-blue-950">FEATURED</p>
           <p className="text-4xl font-bold text-blue-950 mt-2 text-right md:text-[45px]">LISTINGS</p>
           {/* View All Properties button */}
           <button
@@ -154,7 +154,7 @@ const PropertiesPage = () => {
 
 
             {/* Hover Effect: Name in White Strip, View Details in Black Strip */}
-            <div className="absolute inset-x-0 bottom-0 flex justify-between items-center opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 border-2 border-blue-950">
+            <div className="absolute inset-x-0 bottom-0 flex justify-between items-center opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
               <span className="bg-white text-black py-3 px-4 text-lg font-semibold flex-1">
                 {property.name}
               </span>
@@ -170,7 +170,7 @@ const PropertiesPage = () => {
 
         ))}
 
-<div className="w-full flex flex-col justify-center items-center space-y-6 h-full text-2xl md:text-2xl p-6 md:p-0">
+<div className="w-full flex flex-col justify-center items-center space-y-6 h-full text-2xl md:text-2xl p-6 md:p-0 md:mt-12">
 <div className=" flex items-center w-full md:px-7">
  
   <button className="w-full px-6 py-3 rounded-md bg-blue-950 border-2 border-black text-white font-bold hover:bg-white hover:text-black transition duration-300">
