@@ -3,8 +3,16 @@ import { motion } from "framer-motion";
 import { FaCogs, FaUsers, FaTrophy } from "react-icons/fa";
 
 const AboutUsPage = () => {
+
+  const values = [
+    { title: "Customer-Centric Approach", description: "Our clients are at the heart of everything we do. We listen, understand, and tailor our services to meet their unique needs, ensuring a seamless real estate experience." },
+    { title: "Transparency & Honesty", description: "We believe in complete clarity at every step. No hidden charges, no surprises—just straightforward, honest advice." },
+    { title: "Innovation in Real Estate Solutions", description: "We leverage market insights, technology, and fresh perspectives to offer solutions that maximize value for our clients." },
+    { title: "Trust & Long-Term Relationships", description: "Every transaction is an opportunity to build lasting relationships based on integrity and reliability." },
+    { title: "Commitment to Excellence", description: "Whether it's finding the right property, negotiating the best deals, or handling legal formalities, we strive for excellence in every aspect of our service." }
+  ];
   return (
-    <div className="mt-15">
+    <div className="mt-1">
       {/* Hero Section */}
       <section
         className="relative h-[600px] bg-cover bg-center flex items-center justify-center mt-15"
@@ -107,46 +115,14 @@ const AboutUsPage = () => {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold mb-12">Our Values</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="space-y-6">
-              <div className="flex items-start">
-                
+            {values.map((value, index) => (
+              <div key={index} className="flex items-start">
                 <div className="ml-4">
-                  <h3 className="text-2xl md:text-3xl font-bold">Integrity</h3>
-                  <p className="text-lg md:text-xl">
-                    We value honesty, transparency, and integrity in every aspect of our work.
-                  </p>
+                  <h3 className="text-2xl md:text-3xl font-bold">{value.title}</h3>
+                  <p className="text-lg md:text-xl">{value.description}</p>
                 </div>
               </div>
-              <div className="flex items-start">
-                
-                <div className="ml-4">
-                  <h3 className="text-2xl md:text-3xl font-bold">Innovation</h3>
-                  <p className="text-lg md:text-xl">
-                    Our commitment to creativity and innovation drives us to think outside the box.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="space-y-6">
-              <div className="flex items-start">
-               
-                <div className="ml-4">
-                  <h3 className="text-2xl md:text-3xl font-bold ">Quality</h3>
-                  <p className="text-lg md:text-xl">
-                    We strive for excellence and ensure high standards in everything we do.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start">
-              
-                <div className="ml-4">
-                  <h3 className="text-2xl md:text-3xl font-bold">Sustainability</h3>
-                  <p className="text-lg md:text-xl">
-                    We are committed to protecting the environment and fostering sustainability.
-                  </p>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>

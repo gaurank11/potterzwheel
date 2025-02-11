@@ -8,21 +8,44 @@ const ClientPartners = () => {
     "/MVN_group.png",
   ];
 
+  // Duplicate images for seamless infinite scrolling
+  const duplicatedImages = [...images, ...images];
+
   const settings = {
     infinite: true,
-    speed: 500,
-    slidesToShow: 3,
+    speed: 3000, // Adjust for smoother movement
+    slidesToShow: 5, // Show more icons at once
     slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 0,
+    cssEase: "linear", // Smooth scrolling effect
+    arrows: false,
+    dots: false,
+    pauseOnHover: false,
   };
 
   return (
-    <Slider {...settings}>
-      {images.map((image, index) => (
-        <div key={index}>
-          <img src={image} alt={`Client ${index + 1}`} />
-        </div>
-      ))}
-    </Slider>
+    <div className="flex flex-col items-center justify-center py-4">
+      {/* Centered Heading */}
+      <h1 className="text-xl md:text-4xl font-bold mb-6 text-center">
+        Our Clients and Partners
+      </h1>
+
+      {/* Centered Slider */}
+      <div className="w-full max-w-5xl mt-5">
+        <Slider {...settings}>
+          {duplicatedImages.map((image, index) => (
+            <div key={index} className="px-2 flex justify-center">
+              <img 
+                src={image} 
+                alt={`Client ${index + 1}`} 
+                className="w-16 h-auto" // Adjust size here
+              />
+            </div>
+          ))}
+        </Slider>
+      </div>
+    </div>
   );
 };
 

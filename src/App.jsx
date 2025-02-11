@@ -23,6 +23,7 @@ import Camasa from "./pages/SS_Camasa";
 import Sobha from "./pages/sobha_altus";
 import Loader from "./components/Loader"; // Import Loader Component
 import Eldico from "./pages/Eldico";
+import Waterfall from "./pages/waterfall";
 
 export default function App() {
   const location = useLocation();
@@ -70,6 +71,7 @@ export default function App() {
             <Route path="/camasa" element={<Camasa />} />
             <Route path="/sobha" element={<Sobha />} />
             <Route path="/eldico" element={<Eldico/>} />
+            <Route path="/waterfall" element={<Waterfall/>} />
             
           </Routes>
           <FloatingContactIcons  phoneNumber={businessPhoneNumber} />

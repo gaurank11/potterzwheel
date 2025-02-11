@@ -26,8 +26,8 @@ const PropertiesPage = () => {
 
         {/* Two images in the next two columns */}
         {[
-          { img: "https://raw.githubusercontent.com/potterzwhealrealty/photos/main/Krisumi_Homepage.png", name: "KRISUMI PROPERTIES", link: "/Krisumi", price: "$500,000" },
-          { img: "https://raw.githubusercontent.com/potterzwhealrealty/photos/main/mvn/overview_img.jpg", name: "MVN PROPERTIES", link: "/mvn", price: "$750,000" },
+          { img: "https://raw.githubusercontent.com/potterzwhealrealty/photos/main/Krisumi_Homepage.png", name: "WATERSIDE RESIDENCES", link: "/Krisumi", price: "4 cr" },
+          { img: "https://raw.githubusercontent.com/potterzwhealrealty/photos/main/mvn/overview_img.jpg", name: "MVN MALL", link: "/mvn", price: "27 lakhs (Investment only)" },
         ].map((property, index) => (
           <div key={index} className="relative group cursor-pointer w-full">
             {/* Image */}
@@ -52,7 +52,7 @@ const PropertiesPage = () => {
            {/* Default: Price & Property Name in White Text */}
            <div className="absolute bottom-4 left-4 text-white text-lg font-semibold 
                 hidden lg:block md:group-hover:opacity-0 transition-opacity duration-300">
-               <p>{property.price}</p>
+               <p>Starting From - {property.price}</p>
                <p>{property.name}</p>
           </div>
             {/* Hover Effect: Name in White Strip, View Details in Black Strip */}
@@ -74,9 +74,9 @@ const PropertiesPage = () => {
       {/* Second Row: Three images */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6">
         {[
-          { img: "https://raw.githubusercontent.com/potterzwhealrealty/photos/main/trevoc/t_home.png", name: "TREVOC PROPERTIES", link: "/trevoc" },
-          { img: "https://raw.githubusercontent.com/potterzwhealrealty/photos/main/ss_camasa/ss_homepage.png", name: "SS CAMASA", link: "/camasa" },
-          { img: "https://raw.githubusercontent.com/potterzwhealrealty/photos/main/sobha_altus/sobha_home.jpeg", name: "SOBHA ALTUS", link: "/sobha" }
+          { img: "https://raw.githubusercontent.com/potterzwhealrealty/photos/main/trevoc/t_home.png", name: "TREVOC PROPERTIES", link: "/trevoc",  price: "6 cr" },
+          { img: "https://raw.githubusercontent.com/potterzwhealrealty/photos/main/ss_camasa/ss_homepage.png", name: "SS CAMASA", link: "/camasa", price: "3.20 cr"},
+          { img: "https://raw.githubusercontent.com/potterzwhealrealty/photos/main/sobha_altus/sobha_home.jpeg", name: "SOBHA ALTUS", link: "/sobha", price: "" }
         ].map((property, index) => (
           <div key={index} className="relative group cursor-pointer w-full">
             <img
@@ -100,7 +100,7 @@ const PropertiesPage = () => {
             {/* Default: Price & Property Name in White Text */}
             <div className="absolute bottom-4 left-4 text-white text-lg font-semibold 
                 hidden lg:block md:group-hover:opacity-0 transition-opacity duration-300">
-               <p>{property.price}</p>
+               <p>Starting From - {property.price}</p>
                <p>{property.name}</p>
           </div>
 
@@ -123,8 +123,8 @@ const PropertiesPage = () => {
       {/* Third Row: Two images */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6">
         {[
-          { img: "https://raw.githubusercontent.com/potterzwhealrealty/photos/main/Eldico/eldico_overview.webp", name: "Eldeco Fairway Reserve", link: "/eldico" },
-          { img: "https://images.squarespace-cdn.com/content/v1/58487dc4b8a79b6d02499b60/1649818878171-HXGSYXD0JI23307551QB/Francis+York+One+of+the+Most+Beautiful+Homes+For+Sale+in+Illinois+6.jpeg", name: "Property Name", link: "/Krisumi" }
+          { img: "https://raw.githubusercontent.com/potterzwhealrealty/photos/main/Eldico/eldico_overview.webp", name: "Eldeco Fairway Reserve", link: "/eldico", price:"3.5 cr" },
+          { img: "https://raw.githubusercontent.com/potterzwhealrealty/photos/main/waterfall/waterfall_img.webp", name: "WATERFALL RESIDENCE", link: "/waterfall", price:"2.20 cr" }
         ].map((property, index) => (
           <div key={index} className="relative group cursor-pointer w-full">
             <img
@@ -147,7 +147,7 @@ const PropertiesPage = () => {
             </div>
            <div className="absolute bottom-4 left-4 text-white text-lg font-semibold 
                 hidden lg:block md:group-hover:opacity-0 transition-opacity duration-300">
-               <p>{property.price}</p>
+               <p>Starting From - {property.price}</p>
                <p>{property.name}</p>
           </div>
       
@@ -170,7 +170,7 @@ const PropertiesPage = () => {
 
         ))}
 
-<div className="w-full flex flex-col justify-center items-center space-y-6 h-full text-2xl md:text-2xl p-6 md:p-0 md:mt-12">
+<div className="w-full flex flex-col justify-center items-center space-y-6 h-full text-2xl md:text-2xl p-6 md:p-0 ">
 <div className=" flex items-center w-full md:px-7">
  
   <button className="w-full px-6 py-3 rounded-md bg-blue-950 border-2 border-black text-white font-bold hover:bg-white hover:text-black transition duration-300">
