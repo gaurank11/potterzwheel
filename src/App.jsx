@@ -24,6 +24,8 @@ import Sobha from "./pages/sobha_altus";
 import Loader from "./components/Loader"; // Import Loader Component
 import Eldico from "./pages/Eldico";
 import Waterfall from "./pages/waterfall";
+import Blog from "./pages/Blog";
+import Aeroone from "./pages/Aeroone";
 
 export default function App() {
   const location = useLocation();
@@ -72,7 +74,8 @@ export default function App() {
             <Route path="/sobha" element={<Sobha />} />
             <Route path="/eldico" element={<Eldico/>} />
             <Route path="/waterfall" element={<Waterfall/>} />
-            
+            <Route path="/blog" element={<Blog/>} />
+            <Route path="/aero" element={<Aeroone/>} />
           </Routes>
           <FloatingContactIcons  phoneNumber={businessPhoneNumber} />
           <ChatBot />

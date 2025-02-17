@@ -40,18 +40,19 @@ const CookieConsent = () => {
             Privacy Policy
           </a>
         <div>
-          <button
-            onClick={handleAccept}
-            className="bg-white hover:bg-gray-400 text-black px-4 py-2 rounded mr-2"
-          >
-            Accept All
-          </button>
-          <button
-            onClick={handleReject}
-            className="bg-black hover:bg-gray-800 text-white px-4 py-2 rounded"
-          >
-            Reject All
-          </button>
+        <button
+  onClick={handleAccept}
+  className="bg-white hover:bg-gray-400 text-black px-4 py-2 w-30 text-center rounded mr-2 mb-2"
+>
+  Accept All
+</button>
+<button
+  onClick={handleReject}
+  className="bg-black hover:bg-gray-800 text-white px-5 py-2 w-30 text-center rounded mr-2"
+>
+  Reject All
+</button>
+
         </div>
       </div>
     </div>

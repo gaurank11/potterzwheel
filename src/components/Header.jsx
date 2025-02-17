@@ -25,6 +25,7 @@ const Header = () => {
       ],
     },
     { name: "Interiors", link: "/interiors" },
+    { name: "Blog", link: "/blog" },
     {
       name: "About Us",
       link: "/about",

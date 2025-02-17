@@ -65,6 +65,25 @@ const propertiesData = [
     logo: '/Real-Estate.jpg',
     link: '/camasa'
   },
+  {
+    id: 7,
+    name: 'Waterfall Residence',
+    price: '',
+    type: 'Residential',
+    address: 'Sector- 36A Dwarka Expressway, Gurgaon',
+    image: 'https://raw.githubusercontent.com/potterzwhealrealty/photos/main/waterfall/waterfall_img.webp',
+    link: '/waterfall'
+  },
+  {
+    id: 8,
+    name: 'Aero One',
+    price: '',
+    type: 'Residential',
+    address: 'Sector- 37D Dwarka Expressway, Gurgaon',
+    image: 'https://www.realtorprojects.com/project_pics/MVN%20Aero%20One%20banner-32581.jpg',
+    logo: '/Real-Estate.jpg',
+    link: '/aero'
+  },
 ];
 
 const TopProperties = () => {

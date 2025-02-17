@@ -55,6 +55,7 @@ const AboutUsPage = () => {
               src="https://raw.githubusercontent.com/potterzwhealrealty/photos/main/ab1.webp"
               alt="Image 1"
               className="rounded-lg shadow-md"
+              style={{ width: "320px", height: "250px", objectFit: "cover" }}
               initial={{ x: "-100vw" }}
               animate={{ x: 0 }}
               transition={{ type: "spring", stiffness: 100 }}
@@ -63,6 +64,7 @@ const AboutUsPage = () => {
               src="https://raw.githubusercontent.com/potterzwhealrealty/photos/main/ab2.webp"
               alt="Image 2"
               className="rounded-lg shadow-md"
+              style={{ width: "320px", height: "250px", objectFit: "cover" }}
               initial={{ x: "100vw" }}
               animate={{ x: 0 }}
               transition={{ type: "spring", stiffness: 100 }}
