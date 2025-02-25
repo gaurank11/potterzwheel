@@ -52,21 +52,26 @@ const PropertiesPage = () => {
            {/* Default: Price & Property Name in White Text */}
            <div className="absolute bottom-4 left-4 text-white text-lg font-semibold 
                 hidden lg:block md:group-hover:opacity-0 transition-opacity duration-300">
-               <p>Starting From - {property.price}</p>
+          
                <p>{property.name}</p>
           </div>
             {/* Hover Effect: Name in White Strip, View Details in Black Strip */}
-            <div className="absolute inset-x-0 bottom-0 flex justify-between items-center opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
-              <span className="bg-white text-black py-3 px-4 text-lg font-semibold flex-1">
-                {property.name}
-              </span>
-              <button
-                className="bg-blue-950 text-white px-4 py-3 font-semibold"
-                onClick={() => navigate(property.link)}
-              >
-                View Details
-              </button>
-            </div>
+            <div className="absolute inset-x-0 bottom-0 flex justify-between items-center opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 bg-white p-4">
+  {/* Property Name & Price */}
+  <div className="flex flex-col">
+    <span className="text-black text-lg font-semibold">{property.name}</span>
+    <span className="text-gray-600 text-sm">Starting From - {property.price}</span>
+  </div>
+
+  {/* View Details Button */}
+  <button
+    className="bg-blue-950 text-white px-4 py-3 font-semibold"
+    onClick={() => navigate(property.link)}
+  >
+    View Details
+  </button>
+</div>
+
           </div>
         ))}
       </div>
@@ -76,7 +81,7 @@ const PropertiesPage = () => {
         {[
           { img: "https://raw.githubusercontent.com/potterzwhealrealty/photos/main/trevoc/t_home.png", name: "TREVOC PROPERTIES", link: "/trevoc",  price: "6 cr" },
           { img: "https://raw.githubusercontent.com/potterzwhealrealty/photos/main/ss_camasa/ss_homepage.png", name: "SS CAMASA", link: "/camasa", price: "3.20 cr"},
-          { img: "https://raw.githubusercontent.com/potterzwhealrealty/photos/main/sobha_altus/sobha_home.jpeg", name: "SOBHA ALTUS", link: "/sobha", price: "" }
+          { img: "https://raw.githubusercontent.com/potterzwhealrealty/photos/main/sobha_altus/sobha_home.jpeg", name: "SOBHA ALTUS", link: "/sobha", price: "1.55 cr" }
         ].map((property, index) => (
           <div key={index} className="relative group cursor-pointer w-full">
             <img
@@ -100,22 +105,27 @@ const PropertiesPage = () => {
             {/* Default: Price & Property Name in White Text */}
             <div className="absolute bottom-4 left-4 text-white text-lg font-semibold 
                 hidden lg:block md:group-hover:opacity-0 transition-opacity duration-300">
-               <p>Starting From - {property.price}</p>
+     
                <p>{property.name}</p>
           </div>
 
             {/* Hover Effect: Name in White Strip, View Details in Black Strip */}
-            <div className="absolute inset-x-0 bottom-0 flex justify-between items-center opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
-              <span className="bg-white text-black py-3 px-4 text-lg font-semibold flex-1">
-                {property.name}
-              </span>
-              <button
-                className="bg-blue-950 text-white px-4 py-3 font-semibold"
-                onClick={() => navigate(property.link)}
-              >
-                View Details
-              </button>
-            </div>
+            <div className="absolute inset-x-0 bottom-0 flex justify-between items-center opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 bg-white p-4">
+  {/* Property Name & Price */}
+  <div className="flex flex-col">
+    <span className="text-black text-lg font-semibold">{property.name}</span>
+    <span className="text-gray-600 text-sm">Starting From - {property.price}</span>
+  </div>
+
+  {/* View Details Button */}
+  <button
+    className="bg-blue-950 text-white px-4 py-3 font-semibold"
+    onClick={() => navigate(property.link)}
+  >
+    View Details
+  </button>
+</div>
+
           </div>
         ))}
       </div>
@@ -147,24 +157,28 @@ const PropertiesPage = () => {
             </div>
            <div className="absolute bottom-4 left-4 text-white text-lg font-semibold 
                 hidden lg:block md:group-hover:opacity-0 transition-opacity duration-300">
-               <p>Starting From - {property.price}</p>
                <p>{property.name}</p>
           </div>
       
 
 
             {/* Hover Effect: Name in White Strip, View Details in Black Strip */}
-            <div className="absolute inset-x-0 bottom-0 flex justify-between items-center opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
-              <span className="bg-white text-black py-3 px-4 text-lg font-semibold flex-1">
-                {property.name}
-              </span>
-              <button
-                className="bg-blue-950 text-white px-4 py-3 font-semibold"
-                onClick={() => navigate(property.link)}
-              >
-                View Details
-              </button>
-            </div>
+            <div className="absolute inset-x-0 bottom-0 flex justify-between items-center opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 bg-white p-4">
+  {/* Property Name & Price */}
+        <div className="flex flex-col">
+    <span className="text-black text-lg font-semibold">{property.name}</span>
+    <span className="text-gray-600 text-sm">Starting From - {property.price}</span>
+  </div>
+
+  {/* View Details Button */}
+  <button
+    className="bg-blue-950 text-white px-4 py-3 font-semibold"
+    onClick={() => navigate(property.link)}
+  >
+    View Details
+  </button>
+</div>
+
           </div>
 
 

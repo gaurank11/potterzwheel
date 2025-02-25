@@ -4,8 +4,8 @@ const posts = [
   {
     id: 1,
     title: "Modern Interior Design Trends",
-    description: "Explore the latest trends in interior design for 2024.",
-    image: "https://cdn.prod.website-files.com/60082405abda1c4b76109f76/615454d3d3ca4fdb6fbd67a7_rsz_1-min%20copy.jpg",
+    description: "Explore the latest trends in interior design for 2025.",
+    image: "https://raw.githubusercontent.com/potterzwhealrealty/photos/main/blog.webp",
   },
   {
     id: 2,
@@ -23,15 +23,14 @@ const posts = [
 
 export default function Blog() {
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold text-center mb-6 mt-10">PotterzWheel Blogs</h1>
+    <div className=" mx-auto py-8">
       
       {/* Featured Post */}
       <div className="relative w-full mb-8">
         <img
           src={posts[0].image}
           alt={posts[0].title}
-          className="w-full h-64 object-cover rounded-xl shadow-md"
+          className="h-[50vh] md:h-[70vh] w-full  object-cover bg-center flex items-center justify-center"
         />
         <div className="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-40 text-white p-4 rounded-xl">
           <h2 className="text-2xl font-bold">{posts[0].title}</h2>

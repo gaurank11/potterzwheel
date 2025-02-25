@@ -17,12 +17,12 @@ export default function HeroSection() {
   };
 
   const images = [
-    "https://raw.githubusercontent.com/potterzwhealrealty/photos/main/img1.jpg",
-    "https://raw.githubusercontent.com/potterzwhealrealty/photos/main/img2.jpg",
-    "https://raw.githubusercontent.com/potterzwhealrealty/photos/main/img3.jpg",
-    "https://raw.githubusercontent.com/potterzwhealrealty/photos/main/img4.jpg",
-    "https://raw.githubusercontent.com/potterzwhealrealty/photos/main/img5.jpg",
-    "https://raw.githubusercontent.com/potterzwhealrealty/photos/main/img6.jpg",
+    "https://raw.githubusercontent.com/potterzwhealrealty/photos/main/img1.webp",
+    "https://raw.githubusercontent.com/potterzwhealrealty/photos/main/img2.webp",
+    "https://raw.githubusercontent.com/potterzwhealrealty/photos/main/img3.webp",
+    "https://raw.githubusercontent.com/potterzwhealrealty/photos/main/img4.webp",
+    "https://raw.githubusercontent.com/potterzwhealrealty/photos/main/img5.webp",
+    "https://raw.githubusercontent.com/potterzwhealrealty/photos/main/img6.webp",
   ];
 
   const texts = [

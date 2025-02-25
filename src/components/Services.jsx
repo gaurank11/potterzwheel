@@ -24,27 +24,27 @@ const OurServices = () => {
           {[
             {
               title: 'Sales and Purchase',
-              bgImage: 'https://assets.upstox.com/content/assets/images/news/property-price.webp',
+              bgImage: 'https://raw.githubusercontent.com/potterzwhealrealty/photos/main/Services/Sales%20and%20purchase.webp',
             },
             {
               title: 'Leasing',
-              bgImage: 'https://www.adroitco.in/img/service/leasing-services.webp',
+              bgImage: 'https://raw.githubusercontent.com/potterzwhealrealty/photos/main/Services/LEASING.webp',
             },
             {
               title: 'Legal Paperwork Consultancy',
-              bgImage: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAxlMl9dj_hxpqpPN32MtLQV6cW_LNfs8dBw&s',
+              bgImage: 'https://raw.githubusercontent.com/potterzwhealrealty/photos/main/Services/high-angle-man-signing-contract-new-home.webp',
             },
             {
               title: 'Interior Design Services',
-              bgImage: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-jccE9AT7yTJwUnYX1LJ0_oeAASCNSV3RRA&s',
+              bgImage: 'https://raw.githubusercontent.com/potterzwhealrealty/photos/main/Services/INTERIOR%20DESIGN%20SERVICES.webp',
             },
             {
               title: 'Property Management Services',
-              bgImage: 'https://constrofacilitator.com/wp-content/uploads/2023/06/home-inspection-jpg.webp',
+              bgImage: 'https://raw.githubusercontent.com/potterzwhealrealty/photos/main/Services/PROPERTY%20MANAGMENT%20SERVICES.webp',
             },
             {
               title: 'Serving the NRI Market',
-              bgImage: 'https://www.mindspring.co.in/images/services/industrial-consulting/industrial-consulting.jpg',
+              bgImage: 'https://raw.githubusercontent.com/potterzwhealrealty/photos/main/Services/NRI.webp',
             },
           ].map((service, index) => (
             <div

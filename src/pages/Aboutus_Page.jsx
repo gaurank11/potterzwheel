@@ -78,7 +78,7 @@ const AboutUsPage = () => {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between space-y-12 md:space-y-0 md:space-x-12">
           <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-6">
             <motion.img
-              src="https://raw.githubusercontent.com/potterzwhealrealty/photos/main/vikas_awasthi.jpg" 
+              src="https://raw.githubusercontent.com/potterzwhealrealty/photos/main/vikas_awasthi.webp" 
               alt="Vishal Awasthi"
               className="rounded-lg shadow-md"
               style={{ width: "250px", height: "250px", objectFit: "cover" }}
@@ -87,7 +87,7 @@ const AboutUsPage = () => {
               transition={{ type: "spring", stiffness: 100 }}
             />
             <motion.img
-              src="https://raw.githubusercontent.com/potterzwhealrealty/photos/main/amandeep_photo.jpg"
+              src="https://raw.githubusercontent.com/potterzwhealrealty/photos/main/malhotra.webp"
               alt="Amandeep Malhotra"
               className="rounded-lg shadow-md"
               style={{ width: "250px", height: "250px", objectFit: "fit" }}

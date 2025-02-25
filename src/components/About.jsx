@@ -12,7 +12,7 @@ const AboutUs = () => {
           {/* Founder 1 */}
           <div className="founder bg-white shadow-xl rounded-xl p-8 transform transition duration-300 hover:scale-105 hover:shadow-2xl text-white">
             <img
-              src="https://raw.githubusercontent.com/potterzwhealrealty/photos/main/vikas_awasthi.jpg"
+              src="https://raw.githubusercontent.com/potterzwhealrealty/photos/main/vikas_awasthi.webp"
               alt="Vishal Awasthi"
               className="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-gray-900"
             />
@@ -25,7 +25,7 @@ const AboutUs = () => {
           {/* Founder 2 */}
           <div className="founder bg-white shadow-xl rounded-xl p-8 transform transition duration-300 hover:scale-105 hover:shadow-2xl">
             <img
-              src="https://raw.githubusercontent.com/potterzwhealrealty/photos/main/malhotra.png" 
+              src="https://raw.githubusercontent.com/potterzwhealrealty/photos/main/malhotra.webp" 
               alt="Amandeep Malhotra"
               className="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-gray-900"
             />

@@ -60,10 +60,10 @@ const ChatBot = () => {
 
           {menu === "main" && !showForm && (
             <div className="p-3 grid grid-cols-1 gap-2">
-              <button onClick={() => setMenu("buyProperty")} className="bg-blue-600 text-white py-2 rounded">Looking to Buy</button>
-              <button onClick={() => setMenu("leaseProperty")} className="bg-blue-600 text-white py-2 rounded">Looking to Lease/Rent</button>
-              <button onClick={() => setMenu("sellProperty")} className="bg-blue-600 text-white py-2 rounded">Selling/Leasing My Property</button>
-              <button onClick={() => setMenu("inquiry")} className="bg-blue-600 text-white py-2 rounded">General Inquiry</button>
+              <button onClick={() => setMenu("buyProperty")} className="bg-blue-950 text-white py-2 rounded">Looking to Buy</button>
+              <button onClick={() => setMenu("leaseProperty")} className="bg-blue-950 text-white py-2 rounded">Looking to Lease/Rent</button>
+              <button onClick={() => setMenu("sellProperty")} className="bg-blue-950 text-white py-2 rounded">Selling/Leasing My Property</button>
+              <button onClick={() => setMenu("inquiry")} className="bg-blue-950 text-white py-2 rounded">General Inquiry</button>
             </div>
           )}
 
