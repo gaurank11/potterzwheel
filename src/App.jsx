@@ -52,9 +52,7 @@ export default function App() {
 
   return (
     <div>
-      {loading ? (
-        <Loader /> // Show Loader first
-      ) : (
+      
         <>
           <Header />
           <Routes>
@@ -90,7 +88,7 @@ export default function App() {
           <ChatBot />
           <Footer />
         </>
-      )}
+  
     </div>
   );
 }
