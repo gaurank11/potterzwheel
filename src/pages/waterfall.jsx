@@ -10,7 +10,7 @@ const Waterfall = () => {
     'https://raw.githubusercontent.com/potterzwhealrealty/photos/main/waterfall/wt-5.webp',
     'https://raw.githubusercontent.com/potterzwhealrealty/photos/main/waterfall/wt-6.webp',
   ];
-const  overview_img = "https://raw.githubusercontent.com/potterzwhealrealty/photos/main/Krisumi_Homepage.png";
+const  overview_img = "https://raw.githubusercontent.com/potterzwhealrealty/photos/main/waterfall/waterfall_img.webp";
 
 const property_location ="Sector- 36A Dwarka Expressway, Gurgaon"
 
@@ -29,12 +29,12 @@ const property_location ="Sector- 36A Dwarka Expressway, Gurgaon"
   const mapUrl = 'https://www.google.com/maps/dir//Krisumi+Waterfall+Residences+Gurgaon+Sector+36A+Gurugram,+Haryana+122002/@28.4170455,76.973437,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0x390d3daba8918f95:0x5c81fa76593240e6!2m2!1d76.973437!2d28.4170455?entry=ttu&g_ep=EgoyMDI1MDIwNS4xIKXMDSoASAFQAw%3D%3D';
 
   const amenities = [
-    { name: 'Round the Clock Security', icon: 'https://raw.githubusercontent.com/potterzwhealrealty/photos/main/Amenities/security.svg' },
-    { name: '24 Hours Electricity and Waterm', icon: 'https://raw.githubusercontent.com/potterzwhealrealty/photos/main/Amenities/power.svg' },
-    { name: '100% Power Back-up', icon: 'https://raw.githubusercontent.com/potterzwhealrealty/photos/main/Amenities/power.svg' },
+    { name: 'Round the Clock Security', icon: 'https://raw.githubusercontent.com/potterzwhealrealty/photos/main/Amenities/a1.svg' },
+    { name: '24 Hours Electricity and Waterm', icon: 'https://raw.githubusercontent.com/potterzwhealrealty/photos/main/Amenities/a2.svg' },
+    { name: '100% Power Back-up', icon: 'https://raw.githubusercontent.com/potterzwhealrealty/photos/main/Amenities/a3.svg' },
     { name: 'Open & Covered Parking Spaces', icon: 'https://raw.githubusercontent.com/potterzwhealrealty/photos/main/Amenities/parking.svg' },
-    { name: 'All the Lobbies are Air-conditioned', icon: 'https://raw.githubusercontent.com/potterzwhealrealty/photos/main/Amenities/gym.svg' },
-    { name: 'Swimming Pools', icon: 'https://raw.githubusercontent.com/potterzwhealrealty/photos/main/Amenities/swimming.svg' },
+    { name: 'All the Lobbies are Air-conditioned', icon: 'https://raw.githubusercontent.com/potterzwhealrealty/photos/main/Amenities/a6.svg' },
+    { name: 'Swimming Pools', icon: 'https://raw.githubusercontent.com/potterzwhealrealty/photos/main/Amenities/a8.svg' },
 
 
    

@@ -493,18 +493,18 @@ import emailjs from "emailjs-com";
         </div>
       )}
 
-      {/* Images Section (Grid Layout) */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-0 ">
-        {images.map((image, index) => (
-          <div key={index} className="flex justify-center items-center">
-            <img
-              src={image}
-              alt={`Property image ${index + 1}`}
-              className="w-full h-auto md:h-80 object-cover"
-            />
-          </div>
-        ))}
-      </div>
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-0">
+  {images.map((image, index) => (
+    <div key={index} className="flex justify-center items-center">
+      <img
+        src={image}
+        alt={`Property image ${index + 1}`}
+        className="w-full h-auto md:h-80 object-fit"
+        loading="lazy" // Lazy loading added here
+      />
+    </div>
+  ))}
+</div>
 
   <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8 md:px-20 px-8 ">
  

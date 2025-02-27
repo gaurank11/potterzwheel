@@ -7,7 +7,7 @@ export default function HeroSection() {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 1000, // Smooth transition speed
+    speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
@@ -26,7 +26,7 @@ export default function HeroSection() {
   ];
 
   const texts = [
-    "Transparent. Tailored. Totally worth it.  ",
+    "Transparent. Tailored. Totally worth it.",
     "Turning dreams into doorsteps.",
     "Smart investments, seamless returns.",
     "High returns, low hassle—that’s how we roll",
@@ -35,47 +35,23 @@ export default function HeroSection() {
   ];
 
   return (
-    <div className="w-screen h-screen overflow-hidden bg-black">
-      {/* Slider */}
-      <Slider {...settings} className="w-screen h-screen">
+    <div className="w-full h-[70vh] md:h-screen overflow-hidden bg-black">
+      <Slider {...settings} className="w-full h-full">
         {images.map((image, index) => (
-          <div
-            key={index}
-            className="relative w-full h-screen flex items-center justify-center"
-          >
-            {/* Background Image */}
-            <img
-              src={image}
-              alt={`Slide ${index}`}
-              className="absolute w-screen h-full object-cover"
-            />
+          <div key={index} className="relative w-full h-[70vh] md:h-screen flex items-center justify-center">
+            <img src={image} alt={`Slide ${index}`} className="absolute w-full h-full object-cover" />
 
-            {/* Horizontal Line */}
-            <div className="absolute top-1/2 left-0 w-full h-[2px] bg-white opacity-50 transform -translate-y-1/2 m-0 p-0"></div>
+            <div className="absolute top-1/2 left-0 w-full h-[2px] bg-white opacity-50 transform -translate-y-1/2"></div>
 
-            {/* Text Box */}
-            <div
-              className="absolute top-1/2 w-full transform -translate-y-1/2 flex items-center justify-center px-4"
-              style={{
-                height: "20%",
-              }}
-            >
-              <div
-                className="relative text-white text-center px-4 md:px-6 py-2 md:py-4 rounded-lg bg-black/50 backdrop-blur-md animate-slide-fullvw"
-                style={{
-                  width: "fit-content",
-                }}
-              >
-                <p className="text-base sm:text-lg md:text-2xl font-semibold">
-                  {texts[index]}
-                </p>
+            <div className="absolute top-1/2 w-full transform -translate-y-1/2 flex items-center justify-center px-4">
+              <div className="relative text-white text-center px-6 py-3 md:py-4 rounded-lg bg-black/50 backdrop-blur-md animate-slide-fullvw">
+                <p className="text-lg sm:text-xl md:text-2xl font-semibold">{texts[index]}</p>
               </div>
             </div>
           </div>
         ))}
       </Slider>
 
-      {/* Animation Styles */}
       <style jsx>{`
         @keyframes slide-fullvw {
           0% {
@@ -93,34 +69,6 @@ export default function HeroSection() {
 
         .animate-slide-fullvw {
           animation: slide-fullvw 3s ease-in-out forwards;
-        }
-
-        /* Mobile-Specific Adjustments */
-        @media (max-width: 640px) {
-          .absolute {
-            padding: 10px 20px;
-          }
-
-          /* Make the image full width and height on mobile */
-          .slick-slide img {
-            width: 100% !important;
-            height: 100% !important;
-            object-fit: cover; /* Ensure the image fully covers the screen */
-          }
-
-          .text-base {
-            font-size: 0.9rem; /* Smaller text on mobile */
-          }
-
-          /* Adjust the horizontal line to be thinner on mobile */
-          .slick-slide .absolute.top-1\/2.left-0.w-full {
-            height: 1px !important; /* Slimmer line on mobile */
-          }
-
-          /* Adjust the text box padding for mobile */
-          .text-center {
-            padding: 10px 15px;
-          }
         }
       `}</style>
     </div>

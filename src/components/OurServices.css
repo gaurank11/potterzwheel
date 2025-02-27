@@ -10,12 +10,20 @@
     top: 50%;
     left: 50%;
     transform: translate3d(-50%, -50%, 0);
-    width: 285px; /* Initial width of the border */
-  height: 84px; /* Initial height of the border */
+    width: 315px; /* Initial width of the border */
+  height: 105px; /* Initial height of the border */
     border: 3px solid #fff;
     transition: all 0.4s ease-in-out;
 
   }
+
+ /* Responsive design for mobile */
+@media (max-width: 768px) {
+  .service-card .scale-animation {
+    width: 240px; /* Mobile size */
+    height: 95px;  /* Mobile size */
+  }
+}
   
   .service-card:hover .scale-animation {
     width: 214px; /* Expanding to a width of 214px */

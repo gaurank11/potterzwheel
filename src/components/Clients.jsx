@@ -6,6 +6,7 @@ const ClientPartners = () => {
     "/Krisumi logo.png",
     "/Real-Estate.jpg",
     "/MVN_group.png",
+    "/logo-icon.svg"
   ];
 
   // Duplicate images for seamless infinite scrolling
@@ -35,11 +36,11 @@ const ClientPartners = () => {
       <div className="w-full max-w-5xl mt-5">
         <Slider {...settings}>
           {duplicatedImages.map((image, index) => (
-            <div key={index} className="px-2 flex justify-center">
+            <div key={index} className="px-4 flex items-center justify-center">
               <img 
                 src={image} 
                 alt={`Client ${index + 1}`} 
-                className="w-16 h-auto" // Adjust size here
+                className="w-32 h-24 object-contain" // Ensures all logos have equal height
               />
             </div>
           ))}

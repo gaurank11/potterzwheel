@@ -11,6 +11,9 @@ const Trevoc = () => {
     'https://raw.githubusercontent.com/potterzwhealrealty/photos/main/trevoc/t6.jpeg',
   ];
 
+  const  overview_img = "https://raw.githubusercontent.com/potterzwhealrealty/photos/main/trevoc/t_home.png";
+
+
 
   const brochureUrl = "/trevoc/TREVOC.pdf"; 
   const details = "Trevoc Royal Residences";
@@ -24,13 +27,25 @@ const Trevoc = () => {
   const mapImage = 'https://raw.githubusercontent.com/potterzwhealrealty/photos/main/trevoc/t_map.jpeg';
   const mapUrl = 'https://maps.app.goo.gl/4yUzCjvTzv4JAmBfA';
 
+  // const amenities = [
+  //   { name: 'Top Security', icon: 'https://raw.githubusercontent.com/potterzwhealrealty/photos/main/Amenities/a1.svg' },
+  //   { name: 'Ample Parking', icon: 'https://raw.githubusercontent.com/potterzwhealrealty/photos/main/Amenities/parking.svg' },
+  //   { name: 'Smart Automation', icon: 'https://www.svgrepo.com/show/519296/smart-life.svg' },
+  //   { name: 'Concierge Services', icon: 'https://www.svgrepo.com/show/455905/hotel-concierge.svg' },
+  //   { name: 'Infinity Pools', icon: 'https://raw.githubusercontent.com/potterzwhealrealty/photos/main/Amenities/a8.svg' },
+  //   { name: 'Gym', icon: 'https://raw.githubusercontent.com/potterzwhealrealty/photos/main/Amenities/gym.svg' },
+
+
+   
+  // ];
+
   const amenities = [
-    { name: 'Top Security', icon: 'https://raw.githubusercontent.com/potterzwhealrealty/photos/main/Amenities/security.svg' },
-    { name: 'Ample Parking', icon: 'https://raw.githubusercontent.com/potterzwhealrealty/photos/main/Amenities/parking.svg' },
-    { name: 'Smart Automation', icon: 'https://www.svgrepo.com/show/519296/smart-life.svg' },
-    { name: 'Concierge Services', icon: 'https://www.svgrepo.com/show/455905/hotel-concierge.svg' },
-    { name: 'Infinity Pools', icon: 'https://raw.githubusercontent.com/potterzwhealrealty/photos/main/Amenities/swimming.svg' },
-    { name: 'Gym', icon: 'https://raw.githubusercontent.com/potterzwhealrealty/photos/main/Amenities/gym.svg' },
+    { name: 'Round the Clock Security', icon: 'https://raw.githubusercontent.com/potterzwhealrealty/photos/main/Amenities/a1.svg' },
+    { name: '24 Hours Electricity and Waterm', icon: 'https://raw.githubusercontent.com/potterzwhealrealty/photos/main/Amenities/a2.svg' },
+    { name: '100% Power Back-up', icon: 'https://raw.githubusercontent.com/potterzwhealrealty/photos/main/Amenities/a3.svg' },
+    { name: 'Open & Covered Parking Spaces', icon: 'https://raw.githubusercontent.com/potterzwhealrealty/photos/main/Amenities/parking.svg' },
+    { name: 'All the Lobbies are Air-conditioned', icon: 'https://raw.githubusercontent.com/potterzwhealrealty/photos/main/Amenities/a6.svg' },
+    { name: 'Swimming Pools', icon: 'https://raw.githubusercontent.com/potterzwhealrealty/photos/main/Amenities/a8.svg' },
 
 
    
@@ -67,6 +82,7 @@ const Trevoc = () => {
       pdfUrl ={brochureUrl}
       location = {location}
       handleOpenInMap={handleOpenInMap}
+      overview_img = { overview_img}
       details = {details}
     />
   );

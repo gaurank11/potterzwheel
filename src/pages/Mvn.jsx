@@ -3,15 +3,16 @@ import PropertyDetails from '../components/Properties_Details';
 
 const Mvn = () => {
   const images = [
-    '/mvn/m2.jpg',
-    '/mvn/m4.png',
-    '/mvn/m5.png',
-    '/mvn/m1.jpg',
-    '/mvn/m3.jpg',
-    '/mvn/m6.png',
+    'https://raw.githubusercontent.com/potterzwhealrealty/photos/main/mvn/m1.webp',
+    'https://raw.githubusercontent.com/potterzwhealrealty/photos/main/mvn/m4.webp',
+    'https://raw.githubusercontent.com/potterzwhealrealty/photos/main/mvn/m5.webp',
+    'https://raw.githubusercontent.com/potterzwhealrealty/photos/main/mvn/m2.webp',
+    'https://raw.githubusercontent.com/potterzwhealrealty/photos/main/mvn/m3.webp',
+    'https://raw.githubusercontent.com/potterzwhealrealty/photos/main/mvn/m6.webp',
   ];
   const brochureUrl = "/mvn/mvn_mall_brochure.pdf"; 
 
+  const  overview_img = "https://raw.githubusercontent.com/potterzwhealrealty/photos/main/mvn/m1.webp";
   const details = "MVN MALL";
 
   const description = `
@@ -22,7 +23,7 @@ There are dedicated floors thoughtfully curated to focus on a specific category,
 
   const price = ''
 
-  const mapImage = '/mvn/mvn_map.png';
+  const mapImage = 'https://raw.githubusercontent.com/potterzwhealrealty/photos/main/mvn/mvn_map.webp';
   const mapUrl = 'https://maps.app.goo.gl/sn4RJyQviRLFTubU9';
 
   const amenities = [
@@ -70,6 +71,7 @@ There are dedicated floors thoughtfully curated to focus on a specific category,
       location = {location}
       handleOpenInMap={handleOpenInMap}
       details = {details}
+      overview_img = { overview_img}
     />
   );
 };

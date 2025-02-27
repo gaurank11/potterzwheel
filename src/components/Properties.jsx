@@ -27,7 +27,7 @@ const PropertiesPage = () => {
         {/* Two images in the next two columns */}
         {[
           { img: "https://raw.githubusercontent.com/potterzwhealrealty/photos/main/Krisumi_Homepage.png", name: "WATERSIDE RESIDENCES", link: "/Krisumi", price: "4 cr" },
-          { img: "https://raw.githubusercontent.com/potterzwhealrealty/photos/main/mvn/overview_img.jpg", name: "MVN MALL", link: "/mvn", price: "27 lakhs (Investment only)" },
+          { img: "https://raw.githubusercontent.com/potterzwhealrealty/photos/main/mvn/m1.webp", name: "MVN MALL", link: "/mvn", price: "27 lakhs (Investment only)" },
         ].map((property, index) => (
           <div key={index} className="relative group cursor-pointer w-full">
             {/* Image */}
