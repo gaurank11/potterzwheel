@@ -158,49 +158,7 @@ const AboutUsPage = () => {
           </div>
         </div>
       </section>
-       {/* Timeline Section */}
-       <section className="py-20 px-6 bg-white text-black">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12">
-            Timeline and Milestones in Our Pursuit to Shape Tomorrow
-          </h2>
-          <div className="space-y-6">
-            <div className="flex items-center space-x-6">
-              <div className="w-24 h-24 bg-blue-900 rounded-full flex items-center justify-center text-xl font-bold text-white">
-                2021
-              </div>
-              <div>
-                <h3 className="text-2xl font-semibold">Foundation</h3>
-                <p className="text-lg">
-                  We laid the foundation of PotterzWheel with a vision to shape a sustainable future.
-                </p>
-              </div>
-            </div>
-            <div className="flex items-center space-x-6">
-              <div className="w-24 h-24 bg-blue-900 rounded-full flex items-center justify-center text-xl font-bold text-white">
-                2022
-              </div>
-              <div>
-                <h3 className="text-2xl font-semibold">Expansion</h3>
-                <p className="text-lg">
-                  We expanded our services and built strategic partnerships to better serve our clients.
-                </p>
-              </div>
-            </div>
-            <div className="flex items-center space-x-6">
-              <div className="w-24 h-24 bg-blue-900 rounded-full flex items-center justify-center text-xl font-bold text-white">
-                2023
-              </div>
-              <div>
-                <h3 className="text-2xl font-semibold">Innovation</h3>
-                <p className="text-lg">
-                  Introduced advanced tools and technologies to further elevate our services.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+  
     </div>
   );
 };

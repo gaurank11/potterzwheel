@@ -5,7 +5,6 @@ import Emi from "./pages/emi";
 import Home from "./pages/Home";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import StampDutyCalculator from "./pages/stamp";
 import Krisumi from "./pages/Krisumi";
 import Mvn from "./pages/Mvn";
 import FloatingContactIcons from "./components/FloatingContactIcons";
@@ -60,7 +59,7 @@ export default function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/about" element={<AboutUsPage />} />
             <Route path="/resources/emi" element={<Emi />} />
-            <Route path="/resources/stamp_duty" element={<StampDutyCalculator />} />
+            {/* <Route path="/resources/stamp_duty" element={<StampDutyCalculator />} /> */}
             <Route path="/Krisumi" element={<Krisumi />} />
             <Route path="/mvn" element={<Mvn />} />
             <Route path="/trevoc" element={<Trevoc />} />

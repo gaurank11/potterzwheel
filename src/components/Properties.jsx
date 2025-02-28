@@ -40,8 +40,8 @@ const PropertiesPage = () => {
 
             {/* Mobile View: Details Below the Image */}
             <div className="md:hidden flex flex-col items-left mx-6 text-left mt-3">
-              <p className="text-xl font-bold text-black">Starting From - {property.price}</p>
-              <p className="text-md text-gray-700">{property.name}</p>
+            <p className="text-xl font-bold text-black">{property.name}</p>
+            <p className="text-sm  text-black">Starting From - {property.price}</p>
               <button
                 className="mt-3 px-6 py-2 w-1/2 mb-4 bg-transparent border-black border-2 text-black font-semibold hover:bg-black transition"
                 onClick={() => navigate(property.link)}
@@ -92,8 +92,8 @@ const PropertiesPage = () => {
             />
              {/* Mobile View: Details Below the Image */}
              <div className="md:hidden flex flex-col items-left mx-6 text-left mt-3">
-              <p className="text-xl font-bold text-black">Starting From - {property.price}</p>
-              <p className="text-md text-gray-700">{property.name}</p>
+             <p className="text-xl font-bold text-black">{property.name}</p>
+             <p className="text-sm  text-black">Starting From - {property.price}</p>
               <button
                 className="mt-3 px-6 py-2 w-1/2 mb-4 bg-transparent border-black border-2 text-black font-semibold hover:bg-black transition"
                 onClick={() => navigate(property.link)}
@@ -146,8 +146,8 @@ const PropertiesPage = () => {
 
              {/* Mobile View: Details Below the Image */}
              <div className="md:hidden flex flex-col items-left mx-6 text-left mt-3">
-              <p className="text-xl font-bold text-black">Starting From - {property.price}</p>
-              <p className="text-md text-gray-700">{property.name}</p>
+              <p className="text-xl font-bold text-black">{property.name}</p>
+              <p className="text-sm text-black">Starting From - {property.price}</p>
               <button
                 className="mt-3 px-6 py-2 w-1/2 mb-4 bg-transparent border-black border-2 text-black font-semibold hover:bg-black transition"
                 onClick={() => navigate(property.link)}
