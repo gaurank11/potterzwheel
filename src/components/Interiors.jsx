@@ -65,7 +65,7 @@ const HowItWorks = () => {
   return (
     <section className="bg-gray-100 py-12" id="howitworks">
       <div className="container mx-auto text-center">
-        <h2 className="text-3xl font-bold mb-6">Our Working Process</h2>
+        <h2 className="text-4xl font-bold mb-6 text-blue-950">OUR WORKING PROCESS</h2>
         <div className="grid md:grid-cols-4 gap-6 p-6">
           {processSteps.map((step, index) => (
             <div key={index} className="bg-white p-6 shadow-lg rounded-lg text-center">
@@ -94,7 +94,7 @@ const RecentWork = () => {
   return (
     <section className="py-12" id="recentwork">
     <div className="container mx-auto text-center">
-      <h2 className="text-3xl font-bold mb-6">Recent Work</h2>
+      <h2 className="text-4xl font-bold mb-6 text-blue-950">RECENT WORK</h2>
       
       {/* Swiper Slider */}
       <Swiper

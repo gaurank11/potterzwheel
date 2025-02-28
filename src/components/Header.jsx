@@ -20,7 +20,6 @@ const Header = () => {
     {
       name: "Resources",
       dropdown: [
-        { name: "Stamp Duty Calculator", link: "/resources/stamp_duty" },
         { name: "EMI Calculator", link: "/resources/emi" },
       ],
     },

@@ -20,7 +20,7 @@ const propertiesData = [
     price: '',
     type: 'Commercial',
     address: 'Sector 37D, Gurgaon, Haryana',
-    image: '/mvn/overview_img.jpg',
+    image: 'https://raw.githubusercontent.com/potterzwhealrealty/photos/main/mvn/m1.webp',
     logo: '/MVN_group.png',
     link: '/mvn'
   },

@@ -28,7 +28,7 @@ const ClientPartners = () => {
   return (
     <div className="flex flex-col items-center justify-center py-4">
       {/* Centered Heading */}
-      <h1 className="text-xl md:text-4xl font-bold mb-6 text-center">
+      <h1 className="text-xl md:text-4xl font-bold mb-6 text-center text-blue-950">
         Our Clients and Partners
       </h1>
 

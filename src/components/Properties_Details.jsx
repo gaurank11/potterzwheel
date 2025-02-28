@@ -578,7 +578,7 @@ import emailjs from "emailjs-com";
               Schedule a Showing
             </button>
             <button className="px-6 py-3 bg-blue-950 border-2  text-white font-semibold  hover:bg-white transition hover:text-black hover:border-black">
-              View More Listings
+              View More
             </button>
           </div>
           <div className="mt-5 flex flex-col items-center md:items-start md:mt-10 md:mx-20 ">

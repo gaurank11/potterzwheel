@@ -26,7 +26,7 @@ const PropertiesPage = () => {
 
         {/* Two images in the next two columns */}
         {[
-          { img: "https://raw.githubusercontent.com/potterzwhealrealty/photos/main/Krisumi_Homepage.png", name: "WATERSIDE RESIDENCES", link: "/Krisumi", price: "4 cr" },
+          { img: "https://raw.githubusercontent.com/potterzwhealrealty/photos/main/Krisumi_Homepage.png", name: "KRISUMI WATERSIDE RESIDENCES", link: "/Krisumi", price: "4 cr" },
           { img: "https://raw.githubusercontent.com/potterzwhealrealty/photos/main/mvn/m1.webp", name: "MVN MALL", link: "/mvn", price: "27 lakhs (Investment only)" },
         ].map((property, index) => (
           <div key={index} className="relative group cursor-pointer w-full">
@@ -134,7 +134,7 @@ const PropertiesPage = () => {
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6">
         {[
           { img: "https://raw.githubusercontent.com/potterzwhealrealty/photos/main/Eldico/eldico_overview.webp", name: "Eldeco Fairway Reserve", link: "/eldico", price:"3.5 cr" },
-          { img: "https://raw.githubusercontent.com/potterzwhealrealty/photos/main/waterfall/waterfall_img.webp", name: "WATERFALL RESIDENCE", link: "/waterfall", price:"2.20 cr" }
+          { img: "https://raw.githubusercontent.com/potterzwhealrealty/photos/main/waterfall/waterfall_img.webp", name: "KRISUMI WATERFALL RESIDENCE", link: "/waterfall", price:"2.20 cr", sector: "Sector- 36A Dwarka Expressway, Gurgaon" }
         ].map((property, index) => (
           <div key={index} className="relative group cursor-pointer w-full">
             <img
@@ -162,22 +162,38 @@ const PropertiesPage = () => {
       
 
 
-            {/* Hover Effect: Name in White Strip, View Details in Black Strip */}
-            <div className="absolute inset-x-0 bottom-0 flex justify-between items-center opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 bg-white p-4">
-  {/* Property Name & Price */}
-        <div className="flex flex-col">
-    <span className="text-black text-lg font-semibold">{property.name}</span>
+        {/* Hover Effect: Name in White Strip, View Details in Black Strip */}
+<div className="absolute inset-x-0 bottom-0 flex justify-between items-center opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 bg-white p-4">
+  
+  {/* Property Name & Price with Sector */}
+  <div className="flex flex-col">
+    <div className="flex items-center">
+
+      
+      {/* Property Name */}
+      <span className="text-black text-lg font-semibold">{property.name}</span>
+    </div>
+
     <span className="text-gray-600 text-sm">Starting From - {property.price}</span>
   </div>
 
-  {/* View Details Button */}
-  <button
-    className="bg-blue-950 text-white px-4 py-3 font-semibold"
-    onClick={() => navigate(property.link)}
-  >
-    View Details
-  </button>
+  {/* View Details Section */}
+  <div className="flex flex-col items-end">
+    {/* Sector Name (Above View Details) */}
+    <span className="bg-gray-300 text-black text-[10px] font-bold px-2 py-1 rounded mb-2 ">
+      {property.sector}
+    </span>
+
+    {/* View Details Button */}
+    <button
+      className="bg-blue-950 text-white px-4 py-3 font-semibold"
+      onClick={() => navigate(property.link)}
+    >
+      View Details
+    </button>
+  </div>
 </div>
+
 
           </div>
 

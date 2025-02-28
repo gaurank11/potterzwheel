@@ -32,8 +32,8 @@ const ServicesSection = () => {
     <section id="services" className="bg-gray-100 py-16">
       <div className="container mx-auto px-10">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-800">
-            <span>OUR SERVICE PORTFOLIO</span>
+          <h2 className="text-4xl font-bold text-blue-950">
+            OUR SERVICE PORTFOLIO
           </h2>
         </div>
 
